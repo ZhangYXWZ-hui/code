@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=0"
+    />
+    <meta charset="UTF-8" content="content" />
+    <title>小宝营销云 小宝招商 获客更简单 企业一站式营销云平台[官网]</title>
+    <meta name="keywords" content="自动化营销，SCRM获客，招商外包，精准营销" />
+    <meta
+      name="description"
+      content="小宝营销云,互联网SCRM自动化营销平台。以大数据、自动化营销、SCRM获客、外包招商、加盟代理、AI外呼、短信、邮件、智能名片等精准营销，提供全渠道招商和营销获客服务，实现商机筛选、转化、客户培育到成交。"
+    />
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script
+      type="text/javascript"
+      src="https://webapi.amap.com/maps?v=1.4.7&key=4849f64a3b15ad6e92b2632bfb0f0d0a"
+    ></script>
+    <style>
+      html,
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .m-modal {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 10;
+      }
+      #container {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="m-modal">
+      <div id="container"></div>
+    </div>
+  </body>
+  <script src="./js/jquery.js"></script>
+  <script>
+    var _url = window.location.href;
+    console.log(_url, _url.match(/type=\d+/g), "==");
+    var _type = _url.match(/type=\d+/g)[0].replace("type=", "");
+    if (_type == 1) {
+      var map = new AMap.Map("container", {
+        resizeEnable: true,
+        zoom: 18,
+        center: [120.01998, 30.28077] //默认的地图中心经纬度
+      });
+
+      //　　在地图上设置marker点
+      var markerTemp = new AMap.Marker({
+        position: [120.01998, 30.28077], //  里面是经纬度
+        offset: new AMap.Pixel(-21, -21), //偏移量，默认以marker左上角位置为基准点
+        map: map
+      });
+    } else {
+      var map = new AMap.Map("container", {
+        resizeEnable: true,
+        zoom: 18,
+        center: [119.982764, 30.276584] //默认的地图中心经纬度
+      });
+
+      //　　在地图上设置marker点
+      var markerTemp = new AMap.Marker({
+        position: [119.982764, 30.276584], //  里面是经纬度
+        offset: new AMap.Pixel(-21, -21), //偏移量，默认以marker左上角位置为基准点
+        map: map
+      });
+    }
+  </script>
+  <script type="text/javascript">
+    var cnzz_protocol =
+      "https:" == document.location.protocol ? "https://" : "http://";
+    document.write(
+      unescape(
+        "%3Cspan id='cnzz_stat_icon_1262031719'%3E%3C/span%3E%3Cscript src='" +
+          cnzz_protocol +
+          "s13.cnzz.com/z_stat.php%3Fid%3D1262031719%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"
+      )
+    );
+  </script>
+</html>
