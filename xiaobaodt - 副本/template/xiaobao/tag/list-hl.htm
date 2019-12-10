@@ -1,0 +1,10 @@
+{loop $tags $i $t}
+<div class="uk-width-2-5" {if $i==1}style="margin-left:-20px"{/if}>	
+	<div class="uk-text-center uk-position-absolute">	
+	<a href="{$t[linkurl]}" target="_blank" title="{$t[alt]}"><img src="{$t[thumb]}" alt=""></a>
+	</div>
+	<div class="introduce">
+		<p class="uk-text-fristIndent-desc"><a href="{$t[linkurl]}" target="_blank" title="{$t[alt]}">{$t[title]}</a></p>
+	</div>
+</div>
+{/loop}

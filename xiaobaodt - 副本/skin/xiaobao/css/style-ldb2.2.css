@@ -1,0 +1,64 @@
+@import url(../css/uikit.min.css);
+@import url(../base.css);
+@import url(../iconfont/iconfont.css);
+.colorGray { background-color: #f7f7f7; }
+
+.container { width: 1200px; overflow: hidden; margin: 0 auto; }
+
+.ranking { background-color: white; padding: 0 10px; border: 1px solid #ececec; }
+.ranking .rankTit li h3 a { display: block; padding-bottom: 15px; border-bottom: 2px solid #ebebeb; text-decoration: none; color: #666; }
+.ranking .rankTit .uk-active h3 a { border-bottom: 2px solid #df481f; }
+.ranking .rankTit2 li h3 a { display: block; padding-bottom: 15px; text-decoration: none; color: #666; }
+.ranking .rankTit2 li h3 a i { font-size: 24px; color: #ff4800; }
+.ranking .rankCon { margin: 0; padding: 5px 10px; }
+.ranking .rankCon .rankConTit { color: #b3b3b3; }
+.ranking .rankCon li { list-style: none; }
+.ranking .rankCon li span { width: 20px; height: 20px; line-height: 20px; display: inline-block; border-radius: 100%; background-color: #f08200; text-align: center; color: white; }
+.ranking .rankCon .icon-shangsheng { color: #f08200; }
+.ranking .rankCon .rankConBor { border: 1px dashed #e8e8e8; margin: 8px 0; }
+.ranking .rankConGray li span { width: 20px; height: 20px; line-height: 20px; display: inline-block; border-radius: 100%; background-color: #999; text-align: center; color: white; }
+.ranking .rankConGray .icon-xiajiang { color: #48abf8; }
+.ranking .rankPic img { width: 100%; }
+.ranking .rankBor { margin-top: 15px; border: 1px solid #ebcaa2; }
+.ranking .rankTit3 h3 { padding: 0 10px; height: 45px; line-height: 45px; background-image: -webkit-linear-gradient(to top, #ffcd90, #fff8e3); background-image: linear-gradient(to top, #ffcd90, #fff8e3); border-bottom: 0.8px solid #ececec; }
+.ranking .rankTit3 h3 i { font-size: 24px; }
+.ranking .rankTit3 h3 .icon-shipinyinliao { color: #f08200; }
+.ranking .rankTit3 h3 .icon-qiche-copy { color: #59b8e9; }
+.ranking .rankTit3 h3 .icon-iconset0457 { color: #f4479c; }
+.ranking .rankTit3 h3 .icon-shoubiao { color: #4a8bec; }
+.icon-xiajiang {
+    color: #48abf8;
+}
+.ranking2 { border: none; }
+
+.uk-heading-line { overflow: hidden; }
+
+.uk-heading-line > * { display: inline-block; position: relative; }
+
+.uk-heading-line > :before { right: 100%; margin-right: .6em; }
+
+.uk-heading-line > :before, .uk-heading-line > :after { content: ""; position: absolute; top: calc(50% - (1px / 2)); width: 2000px; border-bottom: 1px solid #f08200; }
+
+.proTit { padding: 15px 0; }
+.proTit h3 { width: 380px; margin: 0 auto; }
+
+.proRankCon { background-color: white; border: 1px solid #ebcaa2; padding: 15px; overflow: hidden; }
+.proRankCon ul { margin: 0; padding: 0; }
+.proRankCon ul li { float: left; list-style: none; line-height: 20px; }
+.proRankCon ul .icon-shangsheng { color: #f08200; }
+.proRankCon ul .proRan-1 { width: 5%; }
+.proRankCon ul .proRan-1 span { width: 20px; height: 20px; line-height: 20px; display: inline-block; border-radius: 100%; background-color: #f08200; text-align: center; color: white; }
+.proRankCon ul .proRan-2 { width: 35%; }
+.proRankCon ul .proRan-3 { width: 25%; }
+.proRankCon ul .proRan-4 { width: 25%; }
+.proRankCon ul .proRan-5 { width: 10%; }
+.proRankCon ul .proRan-6 p { text-align: justify; line-height: 1.8; color: #939393; margin: 0; }
+.proRankCon ul .proRan-7 { width: 100%; }
+.proRankCon ul .proRanDesc { /*width: 1168px;
+background: url(../images/pic-ldb2.jpg) no-repeat;*/ border: 1px solid #f0f0f0; padding: 8px; margin-top: 10px; width: 99%; /*p{ width: 1122px;
+}*/ }
+.proRankCon ul .proRanBor { border: 1px solid #f0f0f0; margin: 15px 0 0; }
+.proRankCon ul .proRanGray span { background-color: #999999; }
+.proRankCon .proRanTit { color: #b3b3b3; }
+
+/*# sourceMappingURL=style-ldb2.2.css.map */

@@ -1,0 +1,8 @@
+<?php exit;?>2019-05-30 17:16:41&nbsp;<img data-type="content-1" src="https://zs-images.51lick.com/ware/files/other/images/20181203/1543816645706204.jpg" data-url="https://zs-images.51lick.com/ware/files/other/images/20181203/1543816645706204.jpg" data-txt="" title="" alt="" /><br />
+<img data-type="content-1" src="https://zs-images.51lick.com/ware/files/other/images/20181203/1543816682400203.jpg" data-url="https://zs-images.51lick.com/ware/files/other/images/20181203/1543816682400203.jpg" data-txt="" title="" alt="" /><br />
+<br />
+<p align="center"><b><span dir="LTR">公司简介</span></b></p>
+<p>&nbsp;</p>
+<p>&nbsp;<span dir="LTR">波比英语创始团队来自一线互联网公司与知名教育机构，拥有十多年互联网产品、技术、市场运营和丰富教研经验。外籍教研团队成员毕业于哥伦比亚大学，斯坦福</span><span dir="LTR">大学等美国名校的儿童心理学和英语教育专业。波比英语团队</span><span dir="LTR">用</span><span dir="LTR">先进的技术手段变革中国传统儿童英语启蒙模式，提升教育质量与公平性。</span></p>
+<p>&nbsp;<span dir="LTR">波比英语</span><span dir="LTR">隶属北京褚时科技有限公司，于2018年6月</span><span dir="LTR">完成千万元天使轮融资，投资方为</span><span dir="LTR">曾荣获</span><span dir="LTR">中国早期投资机构30强</span><span dir="LTR">的</span><span dir="LTR">明势资本。</span><span dir="LTR">截止2018年11月，用户量累计超过50万，河北，河南，山东，江浙沪等地</span><span dir="LTR">合作</span><span dir="LTR">渠道商超过40家和幼儿园超过百所。</span><span dir="LTR">波比英语</span><span dir="LTR">已经和山东教育卫视，中国儿童中心，中国儿童网，</span><span dir="LTR">中国家庭教育学会</span><span dir="LTR">，</span><span dir="LTR">全国少年儿童社区教育</span><span dir="LTR">专业委员会</span><span dir="LTR">以及</span><span dir="LTR">国家体育场（鸟巢）</span><span dir="LTR">达成战略合作。</span></p>
+<br type="_moz" />

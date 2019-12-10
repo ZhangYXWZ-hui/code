@@ -1,0 +1,97 @@
+{template 'header', $template}
+
+	<!-- 主体 -->
+	<div class="list_bg">
+		<div class="w1180 goods_con">
+			<div class="bread_curb">
+				<a href="{$COM[linkurl]}">小宝招商</a> > <a href="{$COM[linkurl]}">{$COM[company]}</a> > <a href="{$MENU[$menuid][linkurl]}">资讯中心</a>
+			</div>
+			
+			<div class="goods_list">
+			{if $itemid}	
+				<div class="goods_left">
+					<div class="message_info">
+						<h1>{$title}</h1>
+						<p class="time">{timetodate($addtime, 3)}</p>
+						<div class="message_body">
+						{$content}
+						</div>
+					</div>
+					<div class="artice_nav">
+						<div class="pre"><a href="">上一篇：<!--{tag("moduleid=21&condition=status=3 and addtime<$addtime&pagesize=1&order=addtime desc&template=list-np", -1)}--></a></div>
+						<div class="next"><a href="">下一篇：<!--{tag("moduleid=21&condition=status=3 and addtime>$addtime&pagesize=1&order=addtime asc&template=list-np", -1)}--></a></div>
+					</div>
+				</div>
+			{else}
+			<div class="goods_left">
+					<ul class="message_list">
+					{loop $lists $v}
+						<li>
+							<div class="zx_img"><a href="{$v[linkurl]}"><img src="{$v[thumb]}" alt="{$v[title]}"></a></div>
+							<div class="zx_con">
+								<h2><a href="{$v[linkurl]}" title="{$v[title]}">{$v[title]}</a></h2>
+								<p>{dsubstr($v[introduce],100,'')}</p>
+								<h3>{timetodate($v[addtime], 3)}</h3>
+							</div>
+						</li>
+					{/loop}
+					</ul>
+					<ul class="page_list">
+						{$pages}
+						<li class="bor"><a href="">共有<!--{php echo (round($items/$pagesize)+1);}-->页</a></li>
+					</ul>
+				</div>
+			{/if}
+			<!-- 右边的部分 -->
+			<div class="goods_right">
+				<div class="goods_right_bor">
+					<div class="goods_right_top">
+						<h4>{$COM[company]}</h4>
+						<table>
+							<tr>
+								<td width="60">企业认证</td>
+								<td width="120">{if $COM[vemail]}邮箱认证&nbsp;{/if}
+								{if $COM[vmobile]}手机认证&nbsp;{/if}
+								{if $COM[vtruename]}实名认证&nbsp;{/if}
+								{if $COM[vcompany]}企业认证&nbsp;{/if}</td>
+							</tr>
+							<tr>
+								<td>主营行业</td>
+								<td>{$COM[business]}</td>
+							</tr>
+							<tr>
+								<td>联系电话</td>
+								<td>{$COM[telephone]}</td>
+							</tr>
+							<tr>
+								<td style="vertical-align: top">企业地址</td>
+								<td>{$COM[address]}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<div class="goods_right_bottom goods_right_bottom2">
+					<div class="title">
+						<p>推荐项目<a href="{userurl($username, 'file=info', $domain)}">更多&gt;</a></p>
+					</div>
+					<dl>
+						<!--{php $jiameng=tag("moduleid=22&condition=status>2 and username='$username'&pagesize=4&order=edittime desc&fields=itemid,title,linkurl,areaid,catid,thumb,edittime,pinpai,chuangli,moshi,touzi,yongjin,xuanshang&template=null");}-->
+					{loop $jiameng $i $t}
+						<dd>
+							<div class="right_pic"><a href="{if $homeurl}{$t[linkurl]}{else}{userurl($username, 'file=info&itemid='.$t['itemid'], $domain)}{/if}"><img src="{$t[thumb]}" alt="{$t[title]}"></a></div>
+							<div class="right_intro">
+								<h3><a href="{if $homeurl}{$t[linkurl]}{else}{userurl($username, 'file=info&itemid='.$t['itemid'], $domain)}{/if}" title="{$t[title]}">{dsubstr($t[title],20,'...')}</a></h3>
+								<p>地区：{area_pos($t[areaid], ' ')}</p>
+								<p>投资：{$t[touzi]}万</p>
+							</div>
+						</dd>
+					{/loop}
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{template 'footer', $template}

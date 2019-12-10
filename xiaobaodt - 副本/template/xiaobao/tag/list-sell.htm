@@ -1,0 +1,3 @@
+{loop $tags $k $t}
+<li><span {if $k < 3 }class="hots"{/if}>{$k+1}</span>&nbsp;&nbsp;<a href="{userurl($t[username], 'file=sell&itemid='.$t['itemid'], $domain)}" title="{$t[title]}" target="_blank" title="{$t[title]}">{dsubstr($t[title],26,'...')}</a></li>
+{/loop}		

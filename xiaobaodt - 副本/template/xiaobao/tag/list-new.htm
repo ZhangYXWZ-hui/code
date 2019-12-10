@@ -1,0 +1,6 @@
+{loop $tags $i $t}
+<li>
+    <h2><a href="{$t[linkurl]}" target="_blank" title="{$t[alt]}">{$t[title]}</a></h2>
+    <small>{friend_date($t[addtime])}</small>
+</li>
+{/loop}

@@ -1,0 +1,12 @@
+{loop $tags $i $t}
+<li>
+	<div id="" class="img">
+		<a href="{$t[linkurl]}" title="{$t[alt]}"><img src="{$t[thumb]}" alt=""></a>
+	</div>
+	<div id="" class="text">
+		<h2><a href="{$t[linkurl]}" title="{$t[alt]}">{$t[title]}</a></h2>
+		<p>{dsubstr($t[introduce],160,'...')}</p>
+		<span class="">{cat_pass($t[catid], 'catname')}    {timetodate($t[addtime], $datetype)}</span>
+	</div>
+</li>
+{/loop}

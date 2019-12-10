@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+input{
+    outline: none;
+}
+ul li{
+    list-style-type: none;
+}
+button{
+    border: none;
+    outline: none;
+}
+.floated{
+    float: left;
+}
+
+/*header*/
+.header .head-top{
+    width: 100%;
+    height: 36px;
+    background: #333;
+    font-size: 12px;
+    color: #999;
+    overflow: hidden;
+}
+.topcont{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    line-height: 36px;
+}
+.topspan{
+    margin-right: 15px;
+}
+.orange{
+    color: #f08200;
+    cursor: pointer;
+}
+.orange:hover{
+    color: #f08200;
+}
+.gove{
+    margin-right: 80px;
+    color: yellow;
+}
+.gove:hover{
+    color: yellow;
+}
+.white{
+    color: #fff;
+}
+.header .head-end{
+    width: 100%;
+    height: 95px;
+}
+.endcont{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+.searchbox{
+    padding: 32px 0px 0px;
+    width: 498px;
+    height: 92px;
+    /* margin-left: 30px; */
+    position: relative;
+}
+.search-tx{
+    width: 420px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    line-height: 24px;
+    text-indent: 72px;
+    border: 2px solid #f08200;
+    border-right: 4px solid #f08200;
+}
+.search-btn{
+    background: #f08200;
+    color: #fff;
+    border: none;
+    width: 70px;
+    position: absolute;
+    top: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 38px;
+}
+.hot{
+    color: #999;
+    font-size: 12px;
+    margin-top: 8px;
+}
+.extbtn{
+    padding-top: 32px;
+}
+.extbtn .btnlist{
+    display: inline-block;
+    width: 98px;
+    height: 38px;
+    line-height: 35px;
+    text-align: center;
+    color: #333333;
+    border: 1px solid #dddddd;
+}
+.extbtn .btnlist a{
+    color: #000;
+}
+.extbtn .btnlist a:hover{
+    color: #000;
+}
+.firstbtn{
+    margin-left: 65px;
+}
+
+/*maincontent*/
+    /*menu 轮播图*/
+.banner{
+    background: #f7f7f7;
+}
+.menu{
+    width: 1200px;
+    height: 465px;
+    margin: 0 auto;
+}
+.menulist p{
+    display: inline-block;
+    font-size: 14px;
+    background: #f08200;
+    color: #fff;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+.menulist li{
+    position: relative;
+    background: #fff;
+    color: #333;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 20px
+}
+.menulist li i{
+    position: absolute;
+    right: 40px;
+}
+.mainmenu{
+    display: none;
+    width: 400px;
+    height: 462px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 290px;
+    z-index: 1000;
+}
+#slide{
+    height: 462px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.pic-list{
+    width: 400%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pic-list li{
+    float: left;
+}
+.pic-list li img{
+    width: 100%;
+    height: 100%; 
+}
+#slide .btn{
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    background: white;
+    font-size: 25px;
+    line-height: 38px;
+    text-align: center;
+    transition: all 1s;
+    transform: translateY(-50%);
+}
+.next{
+    right: 0;
+}
+.icon-list{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.icon-list li{
+    float: left;
+    margin: 0 5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+}
+.icon-list .active{
+    background: #fff;
+}
+/*footer部分*/
+.footer{
+    width: 100%;
+    /* height: 232px; */
+    margin-top: 36px;
+    padding-top: 32px;
+    background: #333;
+}
+.footercont{
+    width: 1200px;
+    height: 163px;
+    margin: 0 auto;
+    border-bottom: 1px solid #545454;
+}
+.gywm{
+    margin-left: 35px;
+    width: 100px;
+    color: #d0d0d0;
+}
+.gywm ul{
+    padding-top: 10px;
+}
+.gywm li{
+    height: 25px;
+    line-height: 25px;
+}
+.gywm a{
+    color: #d0d0d0
+}
+.gywm a:hover{
+    color: #d0d0d0
+}
+.weixin img{
+    margin-left: 15px;
+    cursor: pointer;
+}
+.lxwm{
+    color: #d0d0d0;
+    margin-left: 60px;
+}
+.lxwm h3{
+    font-size: 16px;
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+.lxwm p{
+    font-size: 24px;
+}
+.lxwm a{
+    display: block;
+    background: #f08200;
+    border: 1px solid #f08200;
+    color: #fff;
+    width: 90px;
+    height: 35px;
+    padding: 0 12px;
+    border-radius: 5px;
+    margin-top: 15px;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+.lxwm a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.keyword p{
+    text-align: center;
+    color: #949494;
+    font-size: 16px;
+    padding: 5px 0px 20px 0px;
+    margin: 0;
+}

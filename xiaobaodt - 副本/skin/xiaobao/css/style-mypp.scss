@@ -1,0 +1,106 @@
+@import "../css/uikit.min.css";
+@import "../base.css";
+.braPic {
+    div {
+        width: 232px;
+        height: 191px;
+    }
+    span {
+        display: inline-block;
+        width: 160px;
+        height: 80px;
+        line-height: 80px;
+        top: 50%;
+        margin-top: -40px;
+        left: 50%;
+        margin-left: -80px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.75);
+        font-family: "Microsoft YaHei";
+        font-size: 18px;
+    }
+    img {
+        padding: 15px 0;
+    }
+}
+
+.wines {
+    .winesCru {
+        li {
+            line-height: 24px;
+        }
+    }
+    .winesCon {
+        .winConRed {
+            background-color: #c83b3b;
+            h2 {
+                color: white;
+                padding-top: 75px;
+            }
+            span {
+                display: inline-block;
+                background-color: white;
+                padding: 10px;
+                font-size: 20px;
+                color: #c83b3b;
+            }
+            .winCoTit {
+                padding-left: 30px;
+                h2 {
+                    font-size: 30px;
+                }
+                span {
+                    margin-top: 20px;
+                }
+            }
+            img {
+                padding: 55px 0 38px 0;
+                width: 187px;
+                height: 321px;
+            }
+        }
+        .winConGreen {
+            background-color: #bec24a;
+            .winCoTit {
+                span {
+                    color: #bec24a
+                }
+            }
+        }
+        .winConBlue{
+            background-color: #3b63c8;
+            .winCoTit{
+                span{
+                    color: #3b63c8
+                }
+            }
+        }
+        .winConBox {
+            padding: 10px;
+            border: 1px solid #efefef;
+            width: 220px;
+            height: 230px;
+            overflow: hidden;
+            .winConSTred {
+                color: #e31939;
+            }
+            p {
+                line-height: 1.5;
+                margin: 10px 0;
+            }
+            span {
+                color: #999;
+            }
+            img{
+                width: 220px;
+                height: 150px;
+            }
+        }
+    }
+    .winesAD {
+        height: 98px;
+        line-height: 98px;
+        overflow: hidden;
+        text-align: center;
+    }
+}

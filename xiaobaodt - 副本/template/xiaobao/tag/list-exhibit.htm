@@ -1,0 +1,9 @@
+{loop $tags $k $t}
+<li>
+<a href="{$t[linkurl]}" target="_blank" title="{$t[alt]}">{$t[title]}</a>
+<div id="" class="other">
+	<div class="settimeTwo" endTime="{timetodate($t[fromtime])}"></div>
+	<span>{$t[city]}</span>
+</div>
+</li>
+{/loop}		

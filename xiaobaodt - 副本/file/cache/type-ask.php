@@ -1,0 +1,1 @@
+<?php defined('IN_DESTOON') or exit('Access Denied'); return array (6 => array ('typeid' => '6','parentid' => '0','typename' => '请联系qq113844','style' => '',),); ?>

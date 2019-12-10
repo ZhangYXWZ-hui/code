@@ -1,0 +1,1 @@
+var DTPath = "http://www.xiaobaodt.com:80/";var SKPath = "http://www.xiaobaodt.com:80/skin/xiaobao/";var MEPath = "http://www.xiaobaodt.com:80/member/";var DTEditor = "fckeditor";var CKDomain = ".xiaobaodt.com";var CKPath = "/";var CKPrex = "DTi_";

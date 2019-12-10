@@ -1,0 +1,3 @@
+<?php exit;?>2017-06-27 16:15:19<span style="white-space: normal; word-spacing: 0px; text-transform: none; float: none; color: rgb(0,0,0); font: 13px/23px Verdana, Arial; widows: 1; display: inline !important; letter-spacing: normal; background-color: rgb(255,255,255); text-indent: 0px; -webkit-text-stroke-width: 0px">中国北京世纪赢佳生物技术有限公司属于远景国际集团下属企业，是一个集研发、生产以及销售为一体，集团目前有员工500多名和技术人员30多名。目前拥有以下自主品牌，护舒宝、娇爽、苏菲、圣满、她等。<br />
+产品有3大系列：1、家庭护理贴系列2、家庭保健洗化系列3、家庭健康系列50多个产品。<br />
+目前合作的有：家乐福、大润发、欧尚、世纪联华、易初莲花、迪亚天天、永辉超市等多家大型零售企业。我公司以诚信、创新积极、永恒的企业精神为宗旨，不断研发迎合市场的新产品，做到人无我有、人有我优。圣满追求至高品质、创造美满生活！</span>

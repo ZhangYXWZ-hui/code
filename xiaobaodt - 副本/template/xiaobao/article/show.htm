@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="renderer" content="webkit">
+    <title>{if $seo_title}{$seo_title}{else}{if $head_title}{$head_title}{$DT[seo_delimiter]}{/if}{if $city_sitename}{$city_sitename}{else}{$DT[sitename]}{/if}{/if}</title>
+	{if $head_keywords}
+	<meta name="keywords" content="{$head_keywords}"/>
+	{/if}
+	{if $head_description}
+	<meta name="description" content="{$head_description}"/>
+	{/if}
+	{if $head_mobile}
+	<meta http-equiv="mobile-agent" content="format=html5;url={$head_mobile}">
+	{/if}
+	<link rel="stylesheet" href="/skin/xiaobao/base.css">
+    <link rel="stylesheet" href="/skin/xiaobao/css/uikit.min.css">
+	<link rel="stylesheet" href="/skin/xiaobao/css/news.css">
+	<script src="/skin/xiaobao/js/jquery.min.js"></script>
+	<script type="text/javascript" src="{DT_STATIC}file/script/config.js"></script>
+	<script type="text/javascript" src="{DT_STATIC}file/script/common.js"></script>
+	<script>
+    $(function () {
+        $('.nav li').hover(function () {
+            $('span', this).stop().css('height', '2px');
+            $('span', this).animate({
+                left: '0',
+                width: '100%',
+                right: '0'
+            }, 200);
+        }, function () {
+            $('span', this).stop().animate({
+                left: '50%',
+                width: '0'
+            }, 200);
+        });
+    });
+
+</script>
+</head>
+
+<body>
+  <div class="header">
+        <!--header top-->
+        <div class="top">
+            <div class="w1180">
+                <div class="w1180">
+                <div class="topleft" >
+				<span id="destoon_member"></span>
+				<span>新增<i><!--{php $newuser=tag("table=member&condition=groupid in (6,7) and regtime >24*3600*30&fields=count(userid) as num&template=null");}-->
+				{$newuser[0]["num"]}</i>商户，共<i><!--{php $user=tag("table=member&condition=groupid in (6,7)&fields=count(userid) as num&template=null");}-->
+				{$user[0]["num"]}</i>商户<i><!--{php $product=tag("moduleid=5&condition=status>2&fields=count(itemid) as num&template=null");}-->
+				{$product[0]["num"]}</i>产品</span></div>
+                <div class="topright">
+                    <span>客服热线：</span> <span class="tell">{$DT[telephone]}</span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="TrHeader container">
+        <div class="TrHeadLeft">
+            <div class="TrHeadLogo">
+                <a href="/"><img src="{$DT[logo]}" alt="" class="uk-float-left"></a>
+            </div>
+            <div class="TrHeadTrade">
+                <h1>{$MOD[name]}</h1>
+            </div>
+        </div>
+        <div class="TrHeadRight">
+            <ul>
+                <li class="active"><a href='/'>首页</a><span></span></li>
+                <li ><a href='{$MOD[linkurl]}'>{$MOD[name]}首页</a><span></span></li>
+                {loop $maincat $k $v}
+					{if $k <5}
+					<li><a href="{$MOD[linkurl]}{$v[linkurl]}">{set_style($v[catname],$v[style])}</a><span></span></li>
+					{/if}
+				{/loop}
+            </ul>
+        </div>
+    </div>
+
+    <!--Article-->
+    <div class="Article">
+		<div class="pos w1180 pt" >当前位置: <a href="{$MODULE[1][linkurl]}">小宝招商网</a> &raquo; <a href="{$MOD[linkurl]}">{$MOD[name]}</a> &raquo; {cat_pos($CAT, ' &raquo; ')} &raquo; 正文</div>
+        <div class="container">
+            <div class="ArticleLeft">
+                <div class="ArticleTit">
+                    <h1>{$title}</h1>
+                    <small>{$adddate}</small>
+                </div>
+                <div class="ArticleBody">
+
+                    <p>{$content}</p>
+
+                </div>
+                <div class="ArticleBre">
+                    <ul>
+                        <li>上一篇:<!--{tag("moduleid=$moduleid&condition=status=3 and addtime<$addtime&areaid=$cityid&pagesize=1&order=addtime desc&template=list-np", -1)}--></li>
+                        <li>下一篇:<!--{tag("moduleid=$moduleid&condition=status=3 and addtime>$addtime&areaid=$cityid&pagesize=1&order=addtime asc&template=list-np", -1)}--></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ArticleRight">
+                <div class="ArticleRigLa">
+                    <h6>文章标签</h6>
+                    <ul class="BrLab">
+						{loop $keytags $k $t}
+						{if $k < 12 }
+                        <li><span><a href="{$MOD[linkurl]}{rewrite('search.php?kw='.urlencode($t))}">{$t}</a></span></li>
+                        {/if}
+						{/loop}
+                    </ul>
+                </div>
+                <div class="ArticleRigLaList">
+                    <h4>新闻快讯</h4>
+                    <ul class="ArticleRigLaListCon">
+						<!--{tag("moduleid=$moduleid&condition=status=3&areaid=$cityid&order=".$MOD[order]."&pagesize=10&target=_blank&template=list-new")}-->
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+	<div id="" class="clear"></div>
+	{template 'footer'} 
+</body>
+</html>

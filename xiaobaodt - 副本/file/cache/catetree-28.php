@@ -1,0 +1,1 @@
+<option value="87">酒</option><option value="94">粮油调味品</option><option value="95">饮料</option><option value="106">休闲食品</option><option value="113">冷冻生鲜</option><option value="123">保健食品</option><option value="302">高科技</option><option value="464">日化日用品</option><option value="465">农副产品</option><option value="466">其它</option></select>

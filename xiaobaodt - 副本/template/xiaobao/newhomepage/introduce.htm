@@ -1,0 +1,66 @@
+{template 'header', $template}
+<!-- 主体 -->
+	<div class="list_bg">
+		<div class="w1180 goods_con">
+			<div class="bread_curb">
+				<a href="{$COM[linkurl]}">小宝招商</a> > <a href="{$COM[linkurl]}">{$COM[company]}</a> > <a href="{$MENU[$menuid][linkurl]}">公司简介</a>
+			</div>
+			<div class="goods_list">
+				<div class="goods_left goods_left_bor">
+					<div class="good_info">
+						<div class="title title2">
+							<p>企业简介</p>
+						</div>
+
+						<p class="introduce">{$content}</p>
+
+						<div class="title">
+							<p>产品展示<a href="{userurl($username, 'file=sell', $domain)}">更多&gt;</a></p>
+						</div>
+
+						<ul class="goods_left_list bor goods_left_list2">
+						<!--{php $tags=tag("moduleid=5&condition=status>2 and username='$username'&pagesize=4&order=rand() desc&fields=itemid,title,linkurl,thumb,edittime,hits,jine&template=null");}-->
+						{loop $tags $i $t}
+							<li>
+								<div class="good_pic"><a href="{if $homeurl}{$t[linkurl]}{else}{userurl($username, 'file=sell&itemid='.$t['itemid'], $domain)}{/if}" title="{$t[alt]}"><img src="{imgurl($t[thumb])}" alt="{$t[alt]}" style="width:185px;height:135px"></a></div>
+								<h2><a href="{if $homeurl}{$t[linkurl]}{else}{userurl($username, 'file=sell&itemid='.$t['itemid'], $domain)}{/if}" title="{$t[alt]}">{dsubstr($t[title],40,'')}</a></h2>
+							</li>
+						{/loop}
+							
+						</ul>
+
+					</div>
+				</div>
+			<!-- 右边的部分 -->
+			<div class="goods_right">
+				<div class="goods_right_bor">
+					<div class="goods_right_top">
+						<h4>{$COM[company]}</h4>
+						<table>
+							<tr>
+								<td width="60">企业认证</td>
+								<td width="120">{if $COM[vemail]}邮箱认证&nbsp;{/if}
+								{if $COM[vmobile]}手机认证&nbsp;{/if}
+								{if $COM[vtruename]}实名认证&nbsp;{/if}
+								{if $COM[vcompany]}企业认证&nbsp;{/if}</td>
+							</tr>
+							<tr>
+								<td>主营行业</td>
+								<td>{$COM[business]}</td>
+							</tr>
+							<tr>
+								<td>联系电话</td>
+								<td>{$COM[telephone]}</td>
+							</tr>
+							<tr>
+								<td style="vertical-align: top">企业地址</td>
+								<td>{$COM[address]}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{template 'footer', $template}

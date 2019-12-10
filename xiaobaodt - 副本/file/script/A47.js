@@ -1,0 +1,1 @@
+<img src="/skin/xiaobao/images/pic_110.png" class="uk-align-center">

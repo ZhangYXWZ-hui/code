@@ -1,0 +1,1 @@
+document.write('<a href="http://www.xiaobaodt.com:80/api/redirect-htm-aid-20.html" target="_blank" ><img src="/file/upload/201705/18/180240781.jpg" width="228" height="161" alt="休闲食品"/></a>');
