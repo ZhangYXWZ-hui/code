@@ -32,6 +32,26 @@
             right: 0;
             color: #000;
         }
+        .dao{
+            width:60px;
+            padding: 0;
+            text-align: center;
+            right: 50px;
+            top: 200px;
+            background: #f9f9f9;
+        }
+        .dao li{
+            height: 30px;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        .dao li:hover{
+            background: orange;
+            color: #fff;
+        }
+        .on{
+            background: orange;
+        }
     </style>
 </head>
 
@@ -96,8 +116,8 @@
             <div class="indexmenu">
                 <ul>
                     <li><a class="first" href="../../index.html">首页</a></li>
-                    <li><a href="">中餐</a></li>
-                    <li><a href="">甜品</a></li>
+                    <li><a href="chin.html">中餐</a></li>
+                    <li><a href="suger.html">甜品</a></li>
                     <li><a href="">小吃</a></li>
                     <li><a href="">快餐</a></li>
                     <li><a href="">饮品</a></li>
@@ -115,6 +135,7 @@
     <div class="wrap">
         <div class="left-ad fixed">
             <span>热门项目</span>
+            <button>x</button>
             <img src="../../imags/left-ad1.gif" alt="">
             <img src="../..//imags/left-ad2.gif" alt="">
             <img src="../../imags/left-ad3.gif" alt="">
@@ -125,6 +146,7 @@
         </div>
         <div class="right-ad fixed">
             <span>热门项目</span>
+            <button>x</button>
             <img src="../../imags/left-ad1.gif" alt="">
             <img src="../../imags/left-ad2.gif" alt="">
             <img src="../../imags/left-ad3.gif" alt="">
@@ -133,8 +155,23 @@
             <img src="../../imags/left-ad6.gif" alt="">
             <img src="../../imags/left-ad7.jpg" alt="">
         </div>
-
-        <div class="ad flexed">
+        <div class="dao fixed">
+            <ul>
+                <li class="chin">中餐</li>
+                <li class="suger">甜品</li>
+                <li class="snack">小吃</li>
+                <li class="fast-food">快餐</li>
+                <li class="drinking">饮品</li>
+                <li class="coffee">咖啡</li>
+                <li class="western-food">西餐</li>
+                <li class="baking">烘焙</li>
+                <li class="tea">茶叶</li>
+                <li class="deli">熟食</li>
+                <li class="cooking">料理</li>
+                <li class="noodle">面馆</li>
+            </ul>
+        </div>
+        <div id="chin" class="ad flexed">
             <h3>中餐<a href="">查看更多></a></h3>
             <div class="big box">
                 <img src="../../imags/ad1.jpg" alt="">
@@ -191,7 +228,7 @@
                 <img src="../../imags/ad3.gif" alt="">
             </div>
         </div>
-        <div class="ad flexed">
+        <div id="suger" class="ad flexed">
             <h3>甜品<a href="">查看更多></a></h3>
             <div class="big box">
                 <img src="../../imags/ad1.jpg" alt="">
@@ -248,7 +285,7 @@
                 <img src="../../imags/ad3.gif" alt="">
             </div>
         </div>
-        <div class="ad flexed">
+        <div id="snack" class="ad flexed">
             <h3>小吃<a href="">查看更多></a></h3>
             <div class="big box">
                 <img src="../../imags/ad1.jpg" alt="">
@@ -305,7 +342,7 @@
                 <img src="../../imags/ad3.gif" alt="">
             </div>
         </div>
-        <div class="ad flexed">
+        <div id="fast-food" class="ad flexed">
             <h3>快餐<a href="">查看更多></a></h3>
             <div class="big box">
                 <img src="../../imags/ad1.jpg" alt="">
@@ -362,7 +399,7 @@
                 <img src="../../imags/ad3.gif" alt="">
             </div>
         </div>
-        <div class="ad flexed">
+        <div id="drinking" class="ad flexed">
             <h3>饮品<a href="">查看更多></a></h3>
             <div class="big box">
                 <img src="../../imags/ad1.jpg" alt="">
@@ -419,7 +456,7 @@
                 <img src="../../imags/ad3.gif" alt="">
             </div>
         </div>
-        <div class="ad flexed">
+        <div id="coffee" class="ad flexed">
             <h3>咖啡<a href="">查看更多></a></h3>
             <div class="big box">
                 <img src="../../imags/ad1.jpg" alt="">
@@ -476,7 +513,7 @@
                 <img src="../../imags/ad3.gif" alt="">
             </div>
         </div>
-        <div class="ad flexed">
+        <div id="western-food" class="ad flexed">
             <h3>西餐<a href="">查看更多></a></h3>
             <div class="big box">
                 <img src="../../imags/ad1.jpg" alt="">
@@ -533,7 +570,7 @@
                 <img src="../../imags/ad3.gif" alt="">
             </div>
         </div>
-        <div class="ad flexed">
+        <div id="baking" class="ad flexed">
             <h3>烘焙<a href="">查看更多></a></h3>
             <div class="big box">
                 <img src="../../imags/ad1.jpg" alt="">
@@ -590,7 +627,7 @@
                 <img src="../../imags/ad3.gif" alt="">
             </div>
         </div>
-        <div class="ad flexed">
+        <div id="tea" class="ad flexed">
             <h3>茶叶<a href="">查看更多></a></h3>
             <div class="big box">
                 <img src="../../imags/ad1.jpg" alt="">
@@ -647,7 +684,7 @@
                 <img src="../../imags/ad3.gif" alt="">
             </div>
         </div>
-        <div class="ad flexed">
+        <div id="deli" class="ad flexed">
             <h3>熟食<a href="">查看更多></a></h3>
             <div class="big box">
                 <img src="../../imags/ad1.jpg" alt="">
@@ -704,7 +741,7 @@
                 <img src="../../imags/ad3.gif" alt="">
             </div>
         </div>
-        <div class="ad flexed">
+        <div id="cooking" class="ad flexed">
             <h3>料理<a href="">查看更多></a></h3>
             <div class="big box">
                 <img src="../../imags/ad1.jpg" alt="">
@@ -761,7 +798,7 @@
                 <img src="../../imags/ad3.gif" alt="">
             </div>
         </div>
-        <div class="ad flexed">
+        <div id="noodle" class="ad flexed">
             <h3>面馆<a href="">查看更多></a></h3>
             <div class="big box">
                 <img src="../../imags/ad1.jpg" alt="">
@@ -873,7 +910,29 @@
         </div>
     </div>
     <script>
-        
+        $('.fixed button').on('click',function(){
+            $(this).parent().css('display','none')
+        });
+        let subliH = $('.dao li').eq(0).outerHeight(true);
+        $(window).scroll(function(){
+            let length = $('.wrap').find(".ad").length;
+            for(let i = length-1;i>=0;i--){
+                let subtop = $('.wrap').find(".ad").eq(i).offset().top;
+                if($(window).scrollTop() >= subtop - subliH*(i+1)-200){
+                    $('.dao li').removeClass('on');
+                    $('.dao li').eq(i).addClass('on');
+                    break;
+                }
+            }
+        })
+        $('.dao li').on('click',function(){        
+            let index = $(this).index();
+            a = $('.wrap').find(".ad").eq(index);
+            b = a.offset().top;
+            $(this).addClass('on').siblings().removeClass("on");
+            $("body,html").animate({scrollTop:b-subliH*index-200},400);
+        })
+        $('.dao li').eq(0).attr('class','on');
     </script>
 </body>
 </html>
