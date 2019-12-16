@@ -1,6 +1,6 @@
 .bread{
     width: 1170px;
-    margin: 0 auto;
+    margin: 35px auto 0;
 }
 .bread .breadcrumb{
     background: #fff;
@@ -25,7 +25,10 @@
     border-right: 0;
 }
 .mess span{
-    padding-top: 10px;
+    padding-top: 10px!important;
+}
+.pleft{
+    padding-left: 15px!important;
 }
 .messcont{
     padding-left: 20px;
