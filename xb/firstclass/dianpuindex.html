@@ -88,7 +88,7 @@
                     <span class="glyphicon glyphicon-star star"></span>
                 </div>
                 <div class="col-lg-2 col-lg-offset-5">
-                    <a href="dianpu.html">
+                    <a href="">
                         <span class="glyphicon glyphicon-book"></span>
                         <p>项目详情</p>
                     </a>
@@ -149,6 +149,20 @@
             <p>版权所有 ©杭州日思夜享数据科技有限公司 2015-2019 保留一切权利 浙ICP备16005407号-5</p>
         </div>
     </div>
+    <script>
+        //获取地址栏参数
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+        let url = GetQueryString('name');
+        console.log(url);
+
+        //跳转页面
+        $('.dtop a').attr('href','dianpu.html?name='+url);
+    </script>
 </body>
 
 </html>

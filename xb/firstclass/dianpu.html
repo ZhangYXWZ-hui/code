@@ -5,26 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="shortcut icon" href="../images/favicon.ico" />
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="css/dianpu.css">
     <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <script src="../js/jquery-2.2.4.js"></script>
     <script src="../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="../js/data.js"></script>
     <title>Document</title>
     <style>
-        .head-menu{
+        .head-menu {
             margin-top: 0;
             background: orange;
         }
-        .indexmenu{
+
+        .indexmenu {
             width: 1200px;
             margin: 0 auto;
         }
-        .indexmenu li a{
+
+        .indexmenu li a {
             width: 100px;
-            color: #fff!important;
+            color: #fff !important;
         }
+
         .dao {
             display: none;
             width: 100px;
@@ -60,8 +64,8 @@
                 <div class="col-lg-6">
                     <span class="topspan">你好</span>
                     <span class="topspan">欢迎来到小宝招商加盟网！</span>
-                    <span class="topspan">新增<span class="gold">359</span>家企业，共<span
-                            class="gold">5139</span>家企业，<span class="gold">6812</span>个项目</span>
+                    <span class="topspan">新增<span class="gold">359</span>家企业，共<span class="gold">5139</span>家企业，<span
+                            class="gold">6812</span>个项目</span>
                 </div>
                 <div class="col-lg-3 col-lg-offset-3">
                     <a class="topspan gove" href="http://www.51lick.com">小宝官网</a>
@@ -116,25 +120,41 @@
             <div class="col-lg-3 box-border border-right"></div>
             <div class="col-lg-6 box-border border-right">
                 <h4>【ucc干洗】 ucc干洗诚邀加盟</h4>
-                <div class="mess">
-                    <p><span class="col-lg-12 pleft">投资金额<span class="messcont big">5~10</span>万</p>
+                <div class="mess program">
+                    <p><span class="col-lg-12 pleft">投资金额<span id="money" myAttr='money' class="messcont big"></span>
+                    </p>
+                    <p><span class="col-lg-12 pleft">所属行业<span id="instudry" myAttr='instudry'
+                                class="messcont"></span></span></p>
+                    <p><span class="col-lg-6 pleft">成立时间<span id="time" myAttr='time'
+                                class="messcont"></span></span><span class="col-lg-6 pleft">门店总数<span id="count"
+                                myAttr='count' class="messcont"></span></span></p>
+                    <p><span class="col-lg-6 pleft">加盟区域<span id="area" myAttr='area'
+                                class="messcont"></span></span><span class="col-lg-6 pleft">适合人群<span id="people"
+                                myAttr='people' class="messcont"></span></span></p>
+                    <p><span class="col-lg-12 pleft">经营范围<span id="scope" myAttr='scope' class="messcont"></span></span>
+                    </p>
+                    <!-- <p><span class="col-lg-12 pleft">投资金额<span class="messcont big">5~10</span>万</p>
                     <p><span class="col-lg-12 pleft">所属行业<span class="messcont">干洗</span></span></p>
                     <p><span class="col-lg-6 pleft">成立时间<span class="messcont">2013-06-07</span></span><span
                             class="col-lg-6 pleft">门店总数<span class="messcont">10000家</span></span></p>
                     <p><span class="col-lg-6 pleft">加盟区域<span class="messcont">全国</span></span><span
                             class="col-lg-6 pleft">适合人群<span class="messcont">自由创业</span></span></p>
-                    <p><span class="col-lg-12 pleft">经营范围<span class="messcont">干洗店加盟</span></span></p>
+                    <p><span class="col-lg-12 pleft">经营范围<span class="messcont">干洗店加盟</span></span></p> -->
                 </div>
                 <div class="col-lg-12">小宝加盟广告</div>
             </div>
             <div class="col-lg-3 box-border">
                 <h3>公司信息</h3>
-                <img src=".//dry-cleaning/images/ucc.jpg" alt="">
-                <div class="mess">
-                    <p><span class="pleft">公司名称<span class="messcont">上海云端洗烫设备集团有限公司</span></p>
-                    <p><span class="pleft">企业性质<span class="messcont">有限责任公司</span></p>
-                    <p><span class="pleft">注册资金<span class="messcont">1000万元</span></span class="pleft"></p>
-                    <p><span class="pleft">所在地点<span class="messcont">上海市宝山区沪太</span></span class="pleft"></p>
+                <!-- <img src=".//dry-cleaning/images/ucc.jpg" alt=""> -->
+                <div class="mess company">
+                    <p><span class="pleft">公司名称<span id="name" myAttr="name" class="messcont"></span></p>
+                    <p><span class="pleft">企业性质<span myAttr="nature" class="messcont"></span></p>
+                    <p><span class="pleft">注册资金<span myAttr="funds" class="messcont"></span></span class="pleft"></p>
+                    <p><span class="pleft">所在地点<span myAttr="location" class="messcont"></span></span class="pleft"></p>
+                    <!-- <p><span class="pleft">公司名称<span id="name" class="messcont">上海云端洗烫设备集团有限公司</span></p>
+                    <p><span class="pleft">企业性质<span id="nature" class="messcont">有限责任公司</span></p>
+                    <p><span class="pleft">注册资金<span id="funds" class="messcont">1000万元</span></span class="pleft"></p>
+                    <p><span class="pleft">所在地点<span id="location" class="messcont">上海市宝山区沪太</span></span class="pleft"></p> -->
                 </div>
             </div>
         </div>
@@ -142,37 +162,37 @@
             <div class="pro-part pro-detail">
                 <div class="col-lg-9">
                     <h3>项目详情</h3>
-                    <div class="table">
+                    <div class="table details">
                         <div class="col-lg-2 table-box pleft">品牌名称</div>
-                        <div class="col-lg-4 table-box pleft">ucc干洗</div>
+                        <div class="col-lg-4 table-box pleft" myAttr='title'></div>
                         <div class="col-lg-2 table-box pleft">投资金额</div>
-                        <div class="col-lg-4 table-box pleft">5~10万</div>
+                        <div class="col-lg-4 table-box pleft" myAttr='money'></div>
                         <div class="col-lg-2 table-box pleft">成立日期</div>
-                        <div class="col-lg-4 table-box pleft">2013-06-07</div>
+                        <div class="col-lg-4 table-box pleft" myAttr='time'></div>
                         <div class="col-lg-2 table-box pleft">门店总数</div>
-                        <div class="col-lg-4 table-box pleft">10000</div>
+                        <div class="col-lg-4 table-box pleft" myAttr='count'></div>
                         <div class="col-lg-2 table-box pleft">经营范围</div>
-                        <div class="col-lg-4 table-box pleft">干洗店加盟</div>
+                        <div class="col-lg-4 table-box pleft" myAttr='scope'></div>
                         <div class="col-lg-2 table-box pleft">适合人群</div>
-                        <div class="col-lg-4 table-box pleft">自由创业</div>
+                        <div class="col-lg-4 table-box pleft" myAttr='people'></div>
                         <div class="col-lg-2 table-box pleft">加盟区域</div>
-                        <div class="col-lg-4 table-box pleft">全国</div>
+                        <div class="col-lg-4 table-box pleft" myAttr='area'></div>
                         <div class="col-lg-2 table-box pleft">是否有区域授权</div>
-                        <div class="col-lg-4 table-box pleft">是</div>
+                        <div class="col-lg-4 table-box pleft" myAttr='auth'></div>
                         <div class="col-lg-2 table-box pleft">品牌发源地</div>
-                        <div class="col-lg-4 table-box pleft">上海</div>
+                        <div class="col-lg-4 table-box pleft" myAttr='birthplace'></div>
                         <div class="col-lg-2 table-box pleft">合同期限</div>
-                        <div class="col-lg-4 table-box pleft"></div>
+                        <div class="col-lg-4 table-box pleft" myAttr='contract'></div>
                         <div class="col-lg-2 table-box pleft">培训期限</div>
-                        <div class="col-lg-4 table-box pleft"></div>
+                        <div class="col-lg-4 table-box pleft" myAttr='train'></div>
                         <div class="col-lg-2 table-box pleft">特许使用费</div>
-                        <div class="col-lg-4 table-box pleft"></div>
+                        <div class="col-lg-4 table-box pleft" myAttr='royalties'></div>
                         <div class="col-lg-2 table-box pleft">营业条件要求</div>
-                        <div class="col-lg-4 table-box pleft"></div>
+                        <div class="col-lg-4 table-box pleft" myAttr='condition'></div>
                         <div class="col-lg-2 table-box pleft">保证金</div>
-                        <div class="col-lg-4 table-box pleft"></div>
+                        <div class="col-lg-4 table-box pleft" myAttr='margin'></div>
                         <div class="col-lg-2 table-box pleft">加盟费</div>
-                        <div class="col-lg-4 table-box pleft"></div>
+                        <div class="col-lg-4 table-box pleft" myAttr='initial'></div>
                         <div class="col-lg-2 table-box pleft"></div>
                         <div class="col-lg-4 table-box pleft"></div>
                     </div>
@@ -245,14 +265,41 @@
         </div>
     </div>
     <script>
+        //获取地址栏参数
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+        let url = GetQueryString('name');
+        console.log(url)
+
+        //数据导入
+        let data = JSON.parse(mess);
+        $(function () {
+            for (let item in data[url].dianpu.program) {
+                $('.program span[myAttr=' + item + ']').html(data[url].dianpu.program[item])
+            };
+
+            for (let item in data[url].dianpu.company) {
+                $('.company span[myAttr=' + item + ']').html(data[url].dianpu.company[item])
+            };
+
+            for (let item in data[url].dianpu.program) {
+                $('.details div[myAttr=' + item + ']').html(data[url].dianpu.program[item])
+            };
+        })
+
+
 
         //浏览器右侧导航定位
         let subliH = $('.dao li').eq(0).outerHeight(true);
         $(window).scroll(function () {
-            if($(document).scrollTop()>100){
-                $('.dao').show(500)
-            }else{
-                $('.dao').hide()
+            if ($(document).scrollTop() > 100) {
+                $('.dao').show(500);
+            } else {
+                $('.dao').hide();
             }
             let length = $('.wrap').find(".pro-part").length;
             for (let i = length - 1; i >= 0; i--) {
