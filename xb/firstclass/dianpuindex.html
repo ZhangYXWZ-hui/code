@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <script src="../js/jquery-2.2.4.js"></script>
     <script src="../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="../js/data.js"></script>
     <title>Document</title>
     <style>
         .head-menu{
@@ -77,7 +78,7 @@
         <div class="dtop">
             <div class="dianputitle">
                 <div class="col-lg-2">
-                    <img src="./dry-cleaning/images/ucc.jpg" alt="">
+                    <img src="./fastmoving/images/ucc.jpg" alt="">
                 </div>
                 <div class="col-lg-3 title">
                     <h2>ucc干洗<span class="dvip">V1</span></h2>
@@ -159,7 +160,9 @@
         }
         let url = GetQueryString('name');
         console.log(url);
-
+        //数据录入
+        let data = JSON.parse(mess);
+        $('title').html('小宝加盟网 '+data[url].dianpu.program['title']);
         //跳转页面
         $('.dtop a').attr('href','dianpu.html?name='+url);
     </script>

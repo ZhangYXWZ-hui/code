@@ -34,7 +34,8 @@
     color: #bbb;
 }
 .dianputitle a:hover{
-    color: #aaa;
+    /* color: #aaa; */
+    color: orange;
     text-decoration: none;
 }
 .dianputitle a span{

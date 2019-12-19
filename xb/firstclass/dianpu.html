@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <script src="../js/jquery-2.2.4.js"></script>
     <script src="../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../dist/css/share.min.css">
+    <script src="../dist/js/jquery.share.min.js"></script>
     <script src="../js/data.js"></script>
     <title>Document</title>
     <style>
@@ -53,6 +55,14 @@
         .on {
             background: orange;
             color: #fff;
+        }
+        .xbad{
+            height: 50px;
+            margin-top: 20px;
+        }
+        .share{
+            margin-left: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -112,8 +122,8 @@
         <div class="bread">
             <ol class="breadcrumb">
                 <li><a href="../index.html">首页</a></li>
-                <li><a href="../firstclass/dry-cleaning/dry-cleaning.html">干洗</a></li>
-                <li class="active">ucc干洗加盟</li>
+                <li></li>
+                <li class="active"></li>
             </ol>
         </div>
         <div class="detail">
@@ -133,28 +143,36 @@
                                 myAttr='people' class="messcont"></span></span></p>
                     <p><span class="col-lg-12 pleft">经营范围<span id="scope" myAttr='scope' class="messcont"></span></span>
                     </p>
-                    <!-- <p><span class="col-lg-12 pleft">投资金额<span class="messcont big">5~10</span>万</p>
-                    <p><span class="col-lg-12 pleft">所属行业<span class="messcont">干洗</span></span></p>
-                    <p><span class="col-lg-6 pleft">成立时间<span class="messcont">2013-06-07</span></span><span
-                            class="col-lg-6 pleft">门店总数<span class="messcont">10000家</span></span></p>
-                    <p><span class="col-lg-6 pleft">加盟区域<span class="messcont">全国</span></span><span
-                            class="col-lg-6 pleft">适合人群<span class="messcont">自由创业</span></span></p>
-                    <p><span class="col-lg-12 pleft">经营范围<span class="messcont">干洗店加盟</span></span></p> -->
                 </div>
-                <div class="col-lg-12">小宝加盟广告</div>
+                <div class="col-lg-12 xbad">小宝加盟广告</div>
+                <div class="share col-lg-10">   
+                    <div id="share-2"></div>  
+                </div>
             </div>
             <div class="col-lg-3 box-border">
-                <h3>公司信息</h3>
-                <!-- <img src=".//dry-cleaning/images/ucc.jpg" alt=""> -->
+                <h3 style="padding-left: 15px;">公司信息</h3>
+                <img src="./fastmoving/images/ucc.jpg" alt="">
                 <div class="mess company">
                     <p><span class="pleft">公司名称<span id="name" myAttr="name" class="messcont"></span></p>
                     <p><span class="pleft">企业性质<span myAttr="nature" class="messcont"></span></p>
                     <p><span class="pleft">注册资金<span myAttr="funds" class="messcont"></span></span class="pleft"></p>
                     <p><span class="pleft">所在地点<span myAttr="location" class="messcont"></span></span class="pleft"></p>
-                    <!-- <p><span class="pleft">公司名称<span id="name" class="messcont">上海云端洗烫设备集团有限公司</span></p>
-                    <p><span class="pleft">企业性质<span id="nature" class="messcont">有限责任公司</span></p>
-                    <p><span class="pleft">注册资金<span id="funds" class="messcont">1000万元</span></span class="pleft"></p>
-                    <p><span class="pleft">所在地点<span id="location" class="messcont">上海市宝山区沪太</span></span class="pleft"></p> -->
+                </div>
+                <div>
+                    <ul class="dpicon flexed">
+                        <li>
+                            <span class="dicon beian"></span>
+                            <b>备案企业</b>
+                        </li>
+                        <li>
+                            <span class="dicon renzheng"></span>
+                            <b>企业认证</b>
+                        </li>
+                        <li>
+                            <span class="dicon baozhang"></span>
+                            <b>投资保障</b>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -265,6 +283,10 @@
         </div>
     </div>
     <script>
+        //页面分享
+        $('#share-2').share({
+            sites: ['qzone', 'qq', 'weibo', 'wechat']
+        });
         //获取地址栏参数
         function GetQueryString(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -273,11 +295,27 @@
             return null;
         }
         let url = GetQueryString('name');
-        console.log(url)
+
+        // 404页面判断
+        let flog = false;
+        let data = JSON.parse(mess);
+        for(let item in data){
+            if(url === item){
+                flog = true;
+            }
+        }
+        if(flog ==false){
+            location.href = '../404.html';
+        }
 
         //数据导入
-        let data = JSON.parse(mess);
+        // let data = JSON.parse(mess);
         $(function () {
+            let title = data[url].dianpu.program['title'];
+            $('title').html('小宝加盟网 '+title);
+            $('.bread li').eq(1).html(data[url].dianpu.program['instudry']);
+            $('.bread li').eq(2).html(title);
+            $('.box-border h4').html('【'+title+'】'+title+'诚邀加盟')
             for (let item in data[url].dianpu.program) {
                 $('.program span[myAttr=' + item + ']').html(data[url].dianpu.program[item])
             };
@@ -290,8 +328,6 @@
                 $('.details div[myAttr=' + item + ']').html(data[url].dianpu.program[item])
             };
         })
-
-
 
         //浏览器右侧导航定位
         let subliH = $('.dao li').eq(0).outerHeight(true);

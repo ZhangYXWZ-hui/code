@@ -26,6 +26,10 @@ a{
 .col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{
     padding: 0!important;
 }
+.flexed{
+    display: flex;
+    justify-content: space-around;
+}
 /*header*/
 .header .head-top{
     width: 100%;
