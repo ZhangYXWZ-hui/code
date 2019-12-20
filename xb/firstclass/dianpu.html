@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta itemprop="name" content="标题"/>
+    <meta itemprop="description" content="摘要"/>
+    <meta itemprop="image" content="图片"/>
     <link rel="shortcut icon" href="../images/favicon.ico" />
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="css/dianpu.css">
@@ -14,7 +17,7 @@
     <link rel="stylesheet" href="../dist/css/share.min.css">
     <script src="../dist/js/jquery.share.min.js"></script>
     <script src="../js/data.js"></script>
-    <title>Document</title>
+    <title></title>
     <style>
         .head-menu {
             margin-top: 0;
@@ -62,7 +65,22 @@
         }
         .share{
             margin-left: 20px;
-            margin-top: 20px;
+            margin-top: 30px;
+        }
+        .show img{
+            width: 280px;
+            height: 290px;
+            margin: 0 auto;
+        }
+        .p-list{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .p-list img{
+            width: 90px;
+            height: 90px;
+            margin: 5px auto 0;
         }
     </style>
 </head>
@@ -127,8 +145,17 @@
             </ol>
         </div>
         <div class="detail">
-            <div class="col-lg-3 box-border border-right"></div>
-            <div class="col-lg-6 box-border border-right">
+            <div class="col-lg-3 box-border border-right">
+                <div class="show">
+                    <img src="../images/banner1.jpg" alt="">
+                </div>
+                <div class="p-list">
+                    <img src="../images/banner1.jpg" alt="">
+                    <img src="../images/banner2.jpg" alt="">
+                    <img src="../images/banner3.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-5 box-border border-right">
                 <h4>【ucc干洗】 ucc干洗诚邀加盟</h4>
                 <div class="mess program">
                     <p><span class="col-lg-12 pleft">投资金额<span id="money" myAttr='money' class="messcont big"></span>
@@ -332,7 +359,7 @@
         //浏览器右侧导航定位
         let subliH = $('.dao li').eq(0).outerHeight(true);
         $(window).scroll(function () {
-            if ($(document).scrollTop() > 100) {
+            if ($(document).scrollTop() > 200) {
                 $('.dao').show(500);
             } else {
                 $('.dao').hide();
@@ -357,6 +384,22 @@
             }, 400);
         })
         $('.dao li').eq(0).attr('class', 'on');
+
+        //轮播
+        let index = 1;
+        setInterval(function(){
+            index++;
+            $('.show img').attr('src','../images/banner'+index+'.jpg');
+            if(index == 3){
+                index = 0;
+            };
+            console.log(index)
+        },2000);
+
+        $('.p-list img').on('click',function(){
+            // console.log($(this).attr('src'))
+            $('.show img').attr('src',$(this).attr('src'))
+        })
     </script>
 </body>
 

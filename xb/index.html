@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>小宝招商加盟网-众包招商加盟网站</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
@@ -35,7 +36,7 @@
         <div class="head-end">
             <div class="endcont">
                 <div class="col-lg-3">
-                    <a href="">
+                    <a href="index.html">
                         <img src="./images/logo.png" alt="小宝招商加盟网">
                     </a>
                 </div>
@@ -832,7 +833,7 @@
         // timeId = setInterval(slider, 50);
 
         //图片跳转
-        $('img').on('click', function () {
+        $('img[myAttr]').on('click', function () {
             window.open("firstclass/dianpuindex.html?name=xiaobao")
             // location.href = 'firstclass/dianpuindex.html?name=xiaobao'
         })
