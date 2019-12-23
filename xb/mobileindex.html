@@ -4,9 +4,194 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/rem.js"></script>
+    <script src="./js/data.js"></script>
+    <!-- <link rel="stylesheet" href="bootstrap-3.3.7/dist/css/bootstrap.min.css"> -->
+    <script src="js/jquery-2.2.4.js"></script>
+    <!-- <script src="bootstrap-3.3.7/dist/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/icon-mobile/iconfont.css">
     <title>Document</title>
+    <style>
+        
+    </style>
 </head>
 <body>
-    
+    <div class="header flexed">
+        <i class="iconfont icon-category"></i>
+        <img src="./images/AD.jpg" alt="">
+        <i></i>
+    </div>
+    <div class="wrap">
+        <div class="banner">
+            <div class="slide">
+                <ul class="pic-list">
+                    <li><img src="./images/1111.jpg"></li>
+                    <li><img src="./images/2222.jpg"></li>
+                    <li><img src="./images/3333.jpg"></li>
+                    <li><img src="./images/1111.jpg"></li>
+                </ul>
+                <ul class="icon-list">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="part">
+                <ul class="flexed">
+                    <li>
+                        <i class="iconfont icon-canyin darkorange"></i>
+                        <span>餐饮</span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-education-1-copy darkblue"></i>
+                        <span>教育培训</span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-xiaofeipin red"></i>
+                        <span>快消</span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-baojian blue"></i>
+                        <span>保健</span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-muyingchanpin"></i>
+                        <span>母婴</span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-jiancai purple"></i>
+                        <span>建材</span>
+                    </li>    
+                </ul>
+            </div>
+            <p>查看更多</p>
+            <div class="part next_menu" style="display: none;">
+                <ul class="flexed">
+                    <li>
+                        <i class="iconfont icon-fuzhuang darkblue"></i>
+                        <span>服装</span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-lingshou red"></i>
+                        <span>零售</span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-hebingxingzhuang blue"></i>
+                        <span>酒店</span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-jiafang"></i>
+                        <span>家纺</span>
+                    </li>
+                    <li>
+                        <i class="iconfont icon-jiaju purple"></i>
+                        <span>家具</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="hot">
+            <p class="reco">热门推荐</p>
+            <ul>
+                <li class="flexed">
+                    <img src="./firstclass/fastmoving/images/ucc.jpg" alt="">
+                    <div class="mess">
+                        <span class="title">ucc干洗</span>
+                        <p>经营产品：<span>干洗店加盟</span></p>
+                        <p>店数数量：<span>10000家</span></p>
+                        <p>投资金额：<span class="money">￥5~10万</span></p>
+                    </div>
+                </li>
+                <li class="flexed">
+                    <img src="./firstclass/fastmoving/images/ucc.jpg" alt="">
+                    <div class="mess">
+                        <span class="title">ucc干洗</span>
+                        <p>经营产品：<span>干洗店加盟</span></p>
+                        <p>店数数量：<span>10000家</span></p>
+                        <p>投资金额：<span class="money">￥5~10万</span></p>
+                    </div>
+                </li>
+                <li class="flexed">
+                    <img src="./firstclass/fastmoving/images/ucc.jpg" alt="">
+                    <div class="mess">
+                        <span class="title">ucc干洗</span>
+                        <p>经营产品：<span>干洗店加盟</span></p>
+                        <p>店数数量：<span>10000家</span></p>
+                        <p>投资金额：<span class="money">￥5~10万</span></p>
+                    </div>
+                </li>
+                <li class="flexed">
+                    <img src="./firstclass/fastmoving/images/ucc.jpg" alt="">
+                    <div class="mess">
+                        <span class="title">ucc干洗</span>
+                        <p>经营产品：<span>干洗店加盟</span></p>
+                        <p>店数数量：<span>10000家</span></p>
+                        <p>投资金额：<span class="money">￥5~10万</span></p>
+                    </div>
+                </li>
+                <li class="flexed">
+                    <img src="./firstclass/fastmoving/images/ucc.jpg" alt="">
+                    <div class="mess">
+                        <span class="title">ucc干洗</span>
+                        <p>经营产品：<span>干洗店加盟</span></p>
+                        <p>店数数量：<span>10000家</span></p>
+                        <p>投资金额：<span class="money">￥5~10万</span></p>
+                    </div>
+                </li>
+            </ul>
+            <div class="more_pro">
+                更多热门项目
+            </div>
+        </div> 
+        <div class="article">
+
+        </div>
+    </div>
+
 </body>
+<script>
+    //首页菜单
+    $('.menu p').on('click',function(){
+        $(this).css('display','none')
+        $('.next_menu').slideDown(500)
+    })
+    //轮播图
+    $(function () {
+            var timer = null; //声明一个全局定时器
+            var index = 0;
+            function next() {
+                index++;
+                if (index > 2) {
+                    /*
+                    当图片到最后一张时跳回第一张，本例中在最后一张中放入了第一张的图片，为实现无缝切换图片的效果。
+                    */
+                    $(".pic-list").animate({
+                        left: -(index) * 375
+                    }, 500);
+                    index = 0;
+                    $(".pic-list").animate({
+                        left: 0
+                    }, 0); //
+                }
+                $(".pic-list").animate({
+                    left: -index * 375
+                }, 500);
+                iconHover(index);
+            }
+            function auto() {
+                timer = setInterval(function () { //设置自动播放的定时器
+                    next();
+                    iconHover(index);
+                }, 2000)
+            }
+            auto();
+            //实现被选图片对应圆点图标索引更新
+            function iconHover(index) {
+                $(".icon-list li").eq(index).addClass("active").siblings().removeClass("active");
+            }
+        })
+</script>
 </html>

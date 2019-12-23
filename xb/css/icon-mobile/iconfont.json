@@ -1,0 +1,121 @@
+{
+  "id": "1577459",
+  "name": "xb-mobile",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6272",
+      "name": "家纺",
+      "font_class": "jiafang",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "6689",
+      "name": "母婴产品",
+      "font_class": "muyingchanpin",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "652921",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "1029213",
+      "name": "教育",
+      "font_class": "education-1-copy",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "1354913",
+      "name": "建材",
+      "font_class": "jiancai",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "1446463",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "2076324",
+      "name": "餐饮",
+      "font_class": "canyin",
+      "unicode": "e8a4",
+      "unicode_decimal": 59556
+    },
+    {
+      "icon_id": "3370324",
+      "name": "保健",
+      "font_class": "baojian",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "4838205",
+      "name": "消费品",
+      "font_class": "xiaofeipin",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "5810238",
+      "name": "right",
+      "font_class": "right",
+      "unicode": "e7f9",
+      "unicode_decimal": 59385
+    },
+    {
+      "icon_id": "6345962",
+      "name": "left",
+      "font_class": "left",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "7448489",
+      "name": "家具",
+      "font_class": "jiaju",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "7519249",
+      "name": "零售",
+      "font_class": "lingshou",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "7843633",
+      "name": "酒店",
+      "font_class": "hebingxingzhuang",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "8619877",
+      "name": "实景酷后台-服装",
+      "font_class": "fuzhuang",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "11488000",
+      "name": "category",
+      "font_class": "category",
+      "unicode": "e747",
+      "unicode_decimal": 59207
+    }
+  ]
+}

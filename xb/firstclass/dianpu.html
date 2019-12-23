@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta itemprop="name" content="标题"/>
-    <meta itemprop="description" content="摘要"/>
-    <meta itemprop="image" content="图片"/>
+    <!-- <meta name="title" content="标题"/>
+    <meta name="description" content="摘要"/>
+    <meta name="image" content="../images/logo.png"/> -->
     <link rel="shortcut icon" href="../images/favicon.ico" />
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="css/dianpu.css">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../dist/css/share.min.css">
     <script src="../dist/js/jquery.share.min.js"></script>
     <script src="../js/data.js"></script>
-    <title></title>
+    <title>ucc干洗诚邀加盟</title>
     <style>
         .head-menu {
             margin-top: 0;
@@ -178,7 +178,7 @@
             </div>
             <div class="col-lg-3 box-border">
                 <h3 style="padding-left: 15px;">公司信息</h3>
-                <img src="./fastmoving/images/ucc.jpg" alt="">
+                <img id="logo" src="./fastmoving/images/ucc.jpg" alt="">
                 <div class="mess company">
                     <p><span class="pleft">公司名称<span id="name" myAttr="name" class="messcont"></span></p>
                     <p><span class="pleft">企业性质<span myAttr="nature" class="messcont"></span></p>
@@ -197,7 +197,7 @@
                         </li>
                         <li>
                             <span class="dicon baozhang"></span>
-                            <b>投资保障</b>
+                            <b>金融支持</b>
                         </li>
                     </ul>
                 </div>
@@ -310,10 +310,7 @@
         </div>
     </div>
     <script>
-        //页面分享
-        $('#share-2').share({
-            sites: ['qzone', 'qq', 'weibo', 'wechat']
-        });
+        
         //获取地址栏参数
         function GetQueryString(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -324,14 +321,14 @@
         let url = GetQueryString('name');
 
         // 404页面判断
-        let flog = false;
+        let flag = false;
         let data = JSON.parse(mess);
         for(let item in data){
             if(url === item){
-                flog = true;
+                flag = true;
             }
         }
-        if(flog ==false){
+        if(flag ==false){
             location.href = '../404.html';
         }
 
@@ -355,6 +352,15 @@
                 $('.details div[myAttr=' + item + ']').html(data[url].dianpu.program[item])
             };
         })
+
+        //页面分享
+        $('#share-2').share({
+            url: window.location.href,
+            title: $('.box-border h4').html(),
+            // description:$('.box-border h4').html(),
+            // image: '../images/logo.png',
+            sites: ['qzone', 'qq', 'weibo', 'wechat']
+        });
 
         //浏览器右侧导航定位
         let subliH = $('.dao li').eq(0).outerHeight(true);

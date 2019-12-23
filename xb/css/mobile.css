@@ -1,0 +1,196 @@
+/* 初始化 */
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style-type: none;
+}
+.flexed{
+    display: flex;
+    justify-content: space-around;
+}
+html {
+    font-size : 20px!important;
+}
+@media only screen and (min-width: 401px){
+    html {
+        font-size: 25px !important;
+    }
+}
+@media only screen and (min-width: 428px){
+    html {
+        font-size: 26.75px !important;
+    }
+}
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 30px !important;
+    }
+}
+@media only screen and (min-width: 569px){
+    html {
+        font-size: 35px !important;
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 40px !important;
+    }
+}
+
+/* header部分 */
+.header{
+    width: 100%;
+    height: 2.5rem;
+    border-bottom: .05rem solid #ccc;
+}
+.header i{
+    display: inline-block;
+    width: 1.3rem;
+    height: 100%;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    padding-left: .5rem;
+}
+.header img{
+    height: 2.5rem;
+    width: 14rem;
+}
+
+/* banner部分 */
+.slide {
+    margin: .5rem 0;
+    height: 6rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.pic-list {
+    width: 400%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pic-list li {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+.pic-list li img {
+    width: 100%;
+    height: 100%;
+}
+.icon-list {
+    position: absolute;
+    bottom: .5rem;
+    left: 80%;
+    transform: translateX(-50%);
+}
+.icon-list li {
+    float: left;
+    margin: 0 .25rem;
+    height: .5rem;
+    width: .5rem;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+.icon-list .active {
+    background: orange;
+}
+
+/* 菜单部分 */
+.part ul{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.part li{
+    width: 33%;
+    margin-bottom: .5rem;
+}
+.part i{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: #fff;
+    background: orange;
+    line-height: 2.5rem;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.part span{
+    font-size: .8rem;
+    display: block;
+    text-align: center;
+}
+.menu{
+    padding-bottom: .5rem;
+    border-bottom: .05rem solid #ccc;
+}
+.menu p{
+    text-align: center;
+    font-size: .8rem;
+}
+.darkorange{
+    background: darkorange!important;
+}
+.red{
+    background: red!important;
+}
+.darkblue{
+    background: darkblue!important;
+}
+/* .green{
+    background: green!important;
+} */
+.blue{
+    background: rgb(7, 131, 168)!important;
+}
+.purple{
+    background: rgb(139, 16, 139)!important;
+}
+
+/* 热门推荐 */
+.hot{
+    margin-top: .5rem;
+    border-top: .05rem solid #ccc;
+    border-bottom: .05rem solid #ccc;
+}
+.hot .reco{
+    font-size: .8rem;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    letter-spacing: .2rem;
+}
+.hot li{
+    padding: .5rem 1rem;
+    border-bottom: .05rem solid #ccc;
+}
+.hot img{
+    width: 5rem;
+    height: 5rem;
+}
+.mess{
+    width: calc(100% - 5rem);
+    height: 5rem;
+    font-size: .8rem;
+    padding-left: .5rem;
+}
+.title{
+    font-weight: 600;
+}
+.mess p{
+    padding-top: .1rem;
+}
+.money{
+    font-size: .9rem;
+}
+.more_pro{
+    text-align: center;
+    font-size: .9rem;
+    padding: .5rem 0;
+}
