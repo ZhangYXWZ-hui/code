@@ -57,7 +57,17 @@ html {
     height: 2.5rem;
     width: 14rem;
 }
-
+.header p{
+    width: 14rem;
+    height: 2.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+}
+.top{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
 /* banner部分 */
 .slide {
     margin: .5rem 0;
@@ -144,14 +154,32 @@ html {
 .darkblue{
     background: darkblue!important;
 }
-/* .green{
-    background: green!important;
-} */
 .blue{
     background: rgb(7, 131, 168)!important;
 }
 .purple{
     background: rgb(139, 16, 139)!important;
+}
+.menu_box li{
+    padding: .7rem 1rem;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+}
+.menu_box i{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+.menu_box span{
+    padding-left: 1rem;
+    font-size: 1.1rem;
+    position: absolute;
+    top: .7rem;    
+}
+.menu_box .right{
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
 }
 
 /* 热门推荐 */
@@ -160,7 +188,7 @@ html {
     border-top: .05rem solid #ccc;
     border-bottom: .05rem solid #ccc;
 }
-.hot .reco{
+.reco{
     font-size: .8rem;
     padding-top: .5rem;
     padding-left: .5rem;
@@ -193,4 +221,64 @@ html {
     text-align: center;
     font-size: .9rem;
     padding: .5rem 0;
+}
+
+/* 行业资讯 */
+.article ul{
+    margin-top: .5rem;
+    background: #fff;
+}
+.article>ul>li{
+    color: #aaa;
+    font-size: .8rem;
+    padding-bottom: .5rem;
+    border-bottom: .05rem;
+}
+.a_active{
+    color: #000!important;
+    border-bottom: .05rem solid darkorange!important;
+}
+.a_mess{
+    padding: 0 1rem;
+}
+.a_show ul{
+    margin-left: 1.25rem;
+}
+.a_show li{
+    font-size: .8rem;
+    padding-bottom: .25rem;
+    list-style-type: square;
+}
+/*footer部分*/
+.blank{
+    height: 2.5rem;
+}
+.footer{
+    width: 100%;
+    height: 2.5rem;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    border-top: .05rem solid #ccc;
+}
+.footer li{
+    width: 50%;
+    height: 2.5rem;
+    text-align: center;
+}
+.footer span{
+    display: block;
+    font-size: 1.2rem;
+}
+.footer p{
+    font-size: .7rem;
+}
+.left span{
+    font-size: 1.5rem;
+}
+.left p{
+    margin-top: -0.25rem;
+}
+.right span{
+    padding-top: .15rem;
 }
