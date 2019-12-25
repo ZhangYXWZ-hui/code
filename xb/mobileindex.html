@@ -28,10 +28,10 @@
         <div class="banner">
             <div class="slide">
                 <ul class="pic-list">
-                    <li><img src="./images/1111.jpg"></li>
-                    <li><img src="./images/2222.jpg"></li>
-                    <li><img src="./images/3333.jpg"></li>
-                    <li><img src="./images/1111.jpg"></li>
+                    <li store=''><img src="./images/1111.jpg"></li>
+                    <li store=''><img src="./images/2222.jpg"></li>
+                    <li store=''><img src="./images/3333.jpg"></li>
+                    <li store=''><img src="./images/1111.jpg"></li>
                 </ul>
                 <ul class="icon-list">
                     <li class="active"></li>
@@ -43,27 +43,27 @@
         <div class="menu">
             <div class="part">
                 <ul class="flexed">
-                    <li>
+                    <li myAttr='canyin'>
                         <i class="iconfont icon-canyin darkorange"></i>
                         <span>餐饮</span>
                     </li>
-                    <li>
+                    <li myAttr='edu'>
                         <i class="iconfont icon-education-1-copy darkblue"></i>
                         <span>教育培训</span>
                     </li>
-                    <li>
+                    <li myAttr='fastmoving'>
                         <i class="iconfont icon-xiaofeipin red"></i>
                         <span>快消</span>
                     </li>
-                    <li>
+                    <li myAttr='health'>
                         <i class="iconfont icon-baojian blue"></i>
                         <span>保健</span>
                     </li>
-                    <li>
+                    <li myAttr='mother'>
                         <i class="iconfont icon-muyingchanpin"></i>
                         <span>母婴</span>
                     </li>
-                    <li>
+                    <li myAttr='building'>
                         <i class="iconfont icon-jiancai purple"></i>
                         <span>建材</span>
                     </li>
@@ -72,23 +72,23 @@
             <p>查看更多</p>
             <div class="part next_menu" style="display: none;">
                 <ul class="flexed">
-                    <li>
+                    <li myAttr='clothing'>
                         <i class="iconfont icon-fuzhuang darkblue"></i>
                         <span>服装</span>
                     </li>
-                    <li>
+                    <li myAttr='retail'>
                         <i class="iconfont icon-lingshou red"></i>
                         <span>零售</span>
                     </li>
-                    <li>
+                    <li myAttr='hotel'>
                         <i class="iconfont icon-hebingxingzhuang blue"></i>
                         <span>酒店</span>
                     </li>
-                    <li>
+                    <li myAttr='textiles'>
                         <i class="iconfont icon-jiafang"></i>
                         <span>家纺</span>
                     </li>
-                    <li>
+                    <li myAttr='furniture'>
                         <i class="iconfont icon-jiaju purple"></i>
                         <span>家具</span>
                     </li>
@@ -98,7 +98,7 @@
         <div class="hot">
             <p class="reco">热门推荐</p>
             <ul>
-                <li class="flexed">
+                <li class="flexed" store=''>
                     <img src="./firstclass/fastmoving/images/ucc.jpg" alt="">
                     <div class="mess">
                         <span class="title">ucc干洗</span>
@@ -107,7 +107,7 @@
                         <p>投资金额：<span class="money">￥5~10万</span></p>
                     </div>
                 </li>
-                <li class="flexed">
+                <li class="flexed" store=''>
                     <img src="./firstclass/fastmoving/images/ucc.jpg" alt="">
                     <div class="mess">
                         <span class="title">ucc干洗</span>
@@ -116,7 +116,7 @@
                         <p>投资金额：<span class="money">￥5~10万</span></p>
                     </div>
                 </li>
-                <li class="flexed">
+                <li class="flexed" store=''>
                     <img src="./firstclass/fastmoving/images/ucc.jpg" alt="">
                     <div class="mess">
                         <span class="title">ucc干洗</span>
@@ -125,7 +125,7 @@
                         <p>投资金额：<span class="money">￥5~10万</span></p>
                     </div>
                 </li>
-                <li class="flexed">
+                <li class="flexed" store=''>
                     <img src="./firstclass/fastmoving/images/ucc.jpg" alt="">
                     <div class="mess">
                         <span class="title">ucc干洗</span>
@@ -134,7 +134,7 @@
                         <p>投资金额：<span class="money">￥5~10万</span></p>
                     </div>
                 </li>
-                <li class="flexed">
+                <li class="flexed" store=''>
                     <img src="./firstclass/fastmoving/images/ucc.jpg" alt="">
                     <div class="mess">
                         <span class="title">ucc干洗</span>
@@ -272,6 +272,17 @@
     })
     $('.footer .right').on('click',function(){
         location.href = 'mobile/menu.html'
+    })
+    //跳转
+    $('[myAttr]').on('click', function () {
+        // window.open("firstclass/dianpuindex.html?name=xiaobao")
+        location.href = 'mobile/bigClass.html?class='+$(this).attr('myAttr')
+        // console.log($(this).attr('myAttr'))
+    })
+    $('[store]').on('click', function () {
+        // window.open("firstclass/dianpuindex.html?name=xiaobao")
+        location.href = 'mobile/m_dianpu.html?name='+$(this).attr('store')
+        // console.log($(this).attr('myAttr'))
     })
 </script>
 

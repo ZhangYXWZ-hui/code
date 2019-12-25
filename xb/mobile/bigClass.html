@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/rem.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="../css/icon-mobile/iconfont.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header flexed top">
+        <i class="iconfont icon-left back"></i>
+        <p>项目分类</p>
+        <i></i>
+    </div>
+    <div class="blank"></div>
+    
+    <div class="smallClass flexed">
+    </div>
+    <div class="hot">
+        <p class="reco">热门推荐</p>
+        <ul>
+            <li class="flexed" store=''>
+                <img src="../firstclass/fastmoving/images/ucc.jpg" alt="">
+                <div class="mess">
+                    <span class="title">ucc干洗</span>
+                    <p>经营产品：<span class='instudry'>干洗店加盟</span></p>
+                    <p>店数数量：<span class='count'>10000家</span></p>
+                    <p>投资金额：<span class="money">￥5~10万</span></p>
+                </div>
+            </li>
+            <li class="flexed" store=''>
+                <img src="../firstclass/fastmoving/images/ucc.jpg" alt="">
+                <div class="mess">
+                    <span class="title">ucc干洗</span>
+                    <p>经营产品：<span class='instudry'>干洗店加盟</span></p>
+                    <p>店数数量：<span class='count'>10000家</span></p>
+                    <p>投资金额：<span class="money">￥5~10万</span></p>
+                </div>
+            </li>
+            <li class="flexed" store=''>
+                <img src="../firstclass/fastmoving/images/ucc.jpg" alt="">
+                <div class="mess">
+                    <span class="title">ucc干洗</span>
+                    <p>经营产品：<span class='instudry'>干洗店加盟</span></p>
+                    <p>店数数量：<span class='count'>10000家</span></p>
+                    <p>投资金额：<span class="money">￥5~10万</span></p>
+                </div>
+            </li>
+            <li class="flexed" store=''>
+                <img src="../firstclass/fastmoving/images/ucc.jpg" alt="">
+                <div class="mess">
+                    <span class="title">ucc干洗</span>
+                    <p>经营产品：<span class='instudry'>干洗店加盟</span></p>
+                    <p>店数数量：<span class='count'>10000家</span></p>
+                    <p>投资金额：<span class="money">￥5~10万</span></p>
+                </div>
+            </li>
+            <li class="flexed" store=''>
+                <img src="../firstclass/fastmoving/images/ucc.jpg" alt="">
+                <div class="mess">
+                    <span class="title">ucc干洗</span>
+                    <p>经营产品：<span class='instudry'>干洗店加盟</span></p>
+                    <p>店数数量：<span class='count'>10000家</span></p>
+                    <p>投资金额：<span class="money">￥5~10万</span></p>
+                </div>
+            </li>
+        </ul>
+        <div class="more_pro">
+            更多项目
+        </div>
+    </div>
+    <div class="blank"></div>
+    <div class="footer">
+        <ul class="flexed">
+            <li class="left">
+                <span class="iconfont icon-home"></span>
+                <p>首页</p>
+            </li>
+            <li class="right">
+                <span class="iconfont icon-search"></span>
+                <p>菜单</p>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    //header
+    $('.top').css('background', $('.smallClass').css('background'))
+    //具体分类
+    for(let i=0;i<11;i++){
+        let link = $('<span myAttr='+'canyin'+'>'+'餐饮'+'</span>');
+        $('.smallClass').append(link);
+    }
+    //footer
+    $('.footer').css('background', $('.smallClass').css('background'))
+    $('.footer .left').on('click', function () {
+        location.href = '../mobileindex.html'
+    })
+    $('.footer .right').on('click', function () {
+        location.href = 'menu.html'
+    })
+    //返回
+    $('.back').on('click', function () {
+        window.history.back()
+    })
+    //获取地址栏参数
+    // function GetQueryString(name) {
+    //     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    //     var r = window.location.search.substr(1).match(reg);
+    //     if (r != null) return unescape(r[2]);
+    //     return null;
+    // }
+
+    //跳转
+    $('[myAttr]').on('click', function () {
+        // window.open("firstclass/dianpuindex.html?name=xiaobao")
+        location.href = 'smallClass.html?class='+$(this).attr('myAttr')
+    })
+    $('[store]').on('click', function () {
+        // window.open("firstclass/dianpuindex.html?name=xiaobao")
+        location.href = 'm_dianpu.html?name='+$(this).attr('store')
+        // console.log($(this).attr('myAttr'))
+    })
+</script>
+
+</html>

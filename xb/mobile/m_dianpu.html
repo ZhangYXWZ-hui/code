@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/rem.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="../css/icon-mobile/iconfont.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header flexed top">
+        <i class="iconfont icon-left back"></i>
+        <p>UCC干洗</p>
+        <i></i>
+    </div>
+    <div class="blank"></div>
+    <div class="intro hot flexed">
+        <img src="../firstclass/fastmoving/images/ucc.jpg" alt="">
+        <div class="mess">
+            <span class="title">ucc干洗</span>
+            <p>经营产品：<span class='instudry'>干洗店加盟</span></p>
+            <p>店数数量：<span class='count'>10000家</span></p>
+            <p>投资金额：<span class="money">￥5~10万</span></p>
+        </div>
+    </div>
+    <div class="p_intro">
+        <ul class="flexed">
+            <li id="one" class="p_active">项目详情</li>
+            <li id="two">加盟优势</li>
+            <li id="three">加盟流程</li>
+        </ul>
+        <div class="one a_show">
+            
+        </div>
+        <div class="two a_show" style="display:none">
+            
+        </div>
+        <div class="three a_show" style="display:none">
+            
+        </div>
+    </div>
+    
+    <div class="blank"></div>
+    <div class="footer">
+        <ul class="flexed">
+            <li class="left">
+                <span class="iconfont icon-home"></span>
+                <p>首页</p>
+            </li>
+            <li class="right">
+                <span class="iconfont icon-search"></span>
+                <p>菜单</p>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    //header
+    $('.top').css('background', $('.hot').css('background'))
+    //具体分类
+    for(let i=0;i<11;i++){
+        let link = $('<span myAttr='+'canyin'+'>'+'餐饮'+'</span>');
+        $('.smallClass').append(link);
+    }
+    //footer
+    $('.footer').css('background', $('.hot').css('background'))
+    $('.footer .left').on('click', function () {
+        location.href = '../mobileindex.html'
+    })
+    $('.footer .right').on('click', function () {
+        location.href = 'menu.html'
+    })
+    //返回
+    $('.back').on('click', function () {
+        window.history.back()
+    })
+    //项目介绍
+    $('.p_intro li').on('click', function () {
+        $('.p_intro li').removeClass('p_active');
+        $(this).addClass('p_active');
+        $('.a_show').css('display', 'none');
+        $('.' + $(this).attr('id')).css('display', 'block');
+    })
+    
+    
+</script>
+
+</html>

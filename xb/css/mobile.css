@@ -172,7 +172,7 @@ html {
 }
 .menu_box span{
     padding-left: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: absolute;
     top: .7rem;    
 }
@@ -184,6 +184,7 @@ html {
 
 /* 热门推荐 */
 .hot{
+    background: #fff;
     margin-top: .5rem;
     border-top: .05rem solid #ccc;
     border-bottom: .05rem solid #ccc;
@@ -199,11 +200,11 @@ html {
     border-bottom: .05rem solid #ccc;
 }
 .hot img{
-    width: 5rem;
+    width: 6rem;
     height: 5rem;
 }
 .mess{
-    width: calc(100% - 5rem);
+    width: calc(100% - 6rem);
     height: 5rem;
     font-size: .8rem;
     padding-left: .5rem;
@@ -248,6 +249,37 @@ html {
     font-size: .8rem;
     padding-bottom: .25rem;
     list-style-type: square;
+}
+
+/* 大分类 */
+.smallClass{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    background: #fff;
+}
+.smallClass span{
+    display: block;
+    width: 25%;
+    text-align: center;
+    margin-top: .9rem;
+}
+/* 店铺详情 */
+.intro{
+    padding: .5rem;
+}
+.intro img{
+    border: .05rem solid orange;
+}
+.p_intro ul{
+    padding: .5rem 0;
+    background: #f8f8f8;
+}
+.p_intro li{
+    font-size: .8rem;
+}
+.p_active{
+    color: orange;
 }
 /*footer部分*/
 .blank{

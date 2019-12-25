@@ -28,8 +28,7 @@ let msg =
             }
         },
         dianpuindex:[]
-    }}
-;
+    }};
 let mess = JSON.stringify(msg);
 function getData(){
     return mess;

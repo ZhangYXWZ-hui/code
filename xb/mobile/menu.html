@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
@@ -20,57 +21,57 @@
     <div class="blank"></div>
     <div class="menu_box">
         <ul>
-            <li>
+            <li myAttr='canyin'> 
                 <i class="iconfont icon-canyin"></i>
                 <span>餐饮</span>
                 <i class="iconfont icon-right right"></i>
             </li>
-            <li>
+            <li  myAttr='edu'>
                 <i class="iconfont icon-education-1-copy"></i>
                 <span>教育培训</span>
                 <i class="iconfont icon-right right"></i>
             </li>
-            <li>
+            <li myAttr='fastmoving'>
                 <i class="iconfont icon-xiaofeipin"></i>
                 <span>快消</span>
                 <i class="iconfont icon-right right"></i>
             </li>
-            <li>
+            <li myAttr='health'>
                 <i class="iconfont icon-baojian"></i>
                 <span>保健</span>
                 <i class="iconfont icon-right right"></i>
             </li>
-            <li>
+            <li myAttr='mother'>
                 <i class="iconfont icon-muyingchanpin"></i>
                 <span>母婴</span>
                 <i class="iconfont icon-right right"></i>
             </li>
-            <li>
+            <li myAttr='building'>
                 <i class="iconfont icon-jiancai"></i>
                 <span>建材</span>
                 <i class="iconfont icon-right right"></i>
             </li>
-            <li>
+            <li myAttr='clothing'>
                 <i class="iconfont icon-fuzhuang"></i>
                 <span>服装</span>
                 <i class="iconfont icon-right right"></i>
             </li>
-            <li>
+            <li myAttr='retail'>
                 <i class="iconfont icon-lingshou"></i>
                 <span>零售</span>
                 <i class="iconfont icon-right right"></i>
             </li>
-            <li>
+            <li myAttr='hotel'>
                 <i class="iconfont icon-hebingxingzhuang"></i>
                 <span>酒店</span>
                 <i class="iconfont icon-right right"></i>
             </li>
-            <li>
+            <li myAttr='textiles'>
                 <i class="iconfont icon-jiafang"></i>
                 <span>家纺</span>
                 <i class="iconfont icon-right right"></i>
             </li>
-            <li>
+            <li myAttr='furniture'>
                 <i class="iconfont icon-jiaju"></i>
                 <span>家具</span>
                 <i class="iconfont icon-right right"></i>
@@ -93,18 +94,24 @@
 </body>
 <script>
     //header
-    $('.top').css('background',$('.menu_box li').css('background'))
+    $('.top').css('background', $('.menu_box li').css('background'))
     //footer
-    $('.footer').css('background',$('.menu_box li').css('background'))
-    $('.footer .left').on('click',function(){
+    $('.footer').css('background', $('.menu_box li').css('background'))
+    $('.footer .left').on('click', function () {
         location.href = '../mobileindex.html'
     })
-    $('.footer .right').on('click',function(){
+    $('.footer .right').on('click', function () {
         location.href = 'menu.html'
     })
     // console.log(self.history)
-    $('.back').on('click',function(){
+    $('.back').on('click', function () {
         window.history.back()
     })
+    //跳转
+    $('[myAttr]').on('click', function () {
+        // window.open("firstclass/dianpuindex.html?name=xiaobao")
+        location.href = 'bigClass.html?class='+$(this).attr('myAttr')
+    })
 </script>
+
 </html>
