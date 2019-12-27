@@ -34,7 +34,7 @@
             color: #000;
         }
         .dao{
-            width:60px;
+            width:90px;
             padding: 0;
             text-align: center;
             right: 50px;
@@ -85,7 +85,7 @@
                         <div class="indexmenu">
                             <ul>
                                 <li><a id="first" href="../../index.html">首页</a></li>
-                                <li><a href="./m-clothing.html">母婴服装</a></li>
+                                <li><a href="./m_clothing.html">母婴服装</a></li>
                                 <li><a href="./milk.html">奶粉</a></li>
                                 <li><a href="./diapers.html">尿不湿</a></li>
                                 <li><a href="./baby.html">婴幼儿用品</a></li>
@@ -128,8 +128,8 @@
                 <li class="baby">婴幼儿用品</li>
             </ul>
         </div>
-        <div id="m-clothing" class="ad flexed">
-            <h3>母婴服装<a href="./m-clothing.html">查看更多></a></h3>
+        <div id="m_clothing" class="ad flexed">
+            <h3>母婴服装<a href="./m_clothing.html">查看更多></a></h3>
             <div class="big box">
                 <img src="../../images/ad1.jpg" alt="">
             </div>
@@ -433,7 +433,7 @@
             $(this).addClass('on').siblings().removeClass("on");
             $("body,html").animate({scrollTop:b-subliH*index-200},400);
         })
-        $('.dao li').eq(0).attr('class','on');
+        $('.dao li').eq(0).addClass('on');
     </script>
 </body>
 </html>

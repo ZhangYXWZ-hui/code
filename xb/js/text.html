@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="data.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let url = 'canyin';
+        let data = JSON.parse(mess);
+        // console.log(data)
+        for(let item of data.classes){
+            if(Object.keys(item[0])==url){
+                // console.log(Object.keys(item[0]))
+            }
+            // console.log(item[0]);
+            // console.log(item[1]);
+            // console.log(Object.keys(item[0]))
+        }
+        for(let item of data.classes){
+            // console.log(item[1])
+            if(Object.keys(item[0])==url){
+                console.log(Object.values(item[1]).length)
+                console.log(Object.keys(item[1]))
+                console.log(Object.values(item[1]))
+            }
+            
+        }
+    </script>
+</body>
+</html>

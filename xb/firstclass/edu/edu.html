@@ -34,7 +34,7 @@
             color: #000;
         }
         .dao{
-            width:60px;
+            width:90px;
             padding: 0;
             text-align: center;
             right: 50px;
@@ -88,11 +88,11 @@
                                 <li><a href="./k12.html">K12</a></li>
                                 <li><a href="./one.html">一对一</a></li>
                                 <li><a href="./english.html">英语</a></li>
-                                <li><a href="./early-edu.html">早教</a></li>
+                                <li><a href="./early_edu.html">早教</a></li>
                                 <li><a href="./intell.html">智力开发</a></li>
                                 <li><a href="./robot.html">教育机器人</a></li>
                                 <li><a href="./pro.html">编程</a></li>
-                                <li><a href="./adult-edu.html">成教</a></li>  
+                                <li><a href="./adult_edu.html">成教</a></li>  
                             </ul>
                         </div>
                     </div>
@@ -129,11 +129,11 @@
                 <li class="K12">K12</li>
                 <li class="one">一对一</li>
                 <li class="english">英语</li>
-                <li class="early-edu">早教</li>
+                <li class="early_edu">早教</li>
                 <li class="intell">智力开发</li>
                 <li class="robot">教育机器人</li>
                 <li class="pro">编程</li>
-                <li class="adult-edu">成教</li>
+                <li class="adult_edu">成教</li>
             </ul>
         </div>
         <div id="K12" class="ad flexed">
@@ -307,8 +307,8 @@
                 <img src="../../images/ad3.gif" alt="">
             </div>
         </div>
-        <div id="early-edu" class="ad flexed">
-            <h3>早教<a href="./early-edu.html">查看更多></a></h3>
+        <div id="early_edu" class="ad flexed">
+            <h3>早教<a href="./early_edu.html">查看更多></a></h3>
             <div class="big box">
                 <img src="../../images/ad1.jpg" alt="">
             </div>
@@ -535,8 +535,8 @@
                 <img src="../../images/ad3.gif" alt="">
             </div>
         </div>
-        <div id="adult-edu" class="ad flexed">
-            <h3>成教<a href="./adult-edu.html">查看更多></a></h3>
+        <div id="adult_edu" class="ad flexed">
+            <h3>成教<a href="./adult_edu.html">查看更多></a></h3>
             <div class="big box">
                 <img src="../../images/ad1.jpg" alt="">
             </div>
@@ -669,7 +669,8 @@
             $(this).addClass('on').siblings().removeClass("on");
             $("body,html").animate({scrollTop:b-subliH*index-200},400);
         })
-        $('.dao li').eq(0).attr('class','on');
+        // $('.dao li').eq(0).attr('class','on');
+        $('.dao li').eq(0).addClass('on')
     </script>
 </body>
 </html>

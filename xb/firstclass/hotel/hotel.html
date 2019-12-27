@@ -34,7 +34,7 @@
             color: #000;
         }
         .dao{
-            width:60px;
+            width:90px;
             padding: 0;
             text-align: center;
             right: 50px;
@@ -85,8 +85,8 @@
                         <div class="indexmenu">
                             <ul>
                                 <li><a id="first" href="../../index.html">首页</a></li>
-                                <li><a href="./bus-hotel.html">商务酒店</a></li>
-                                <li><a href="./bou-hotel.html">精品酒店</a></li>
+                                <li><a href="./bus_hotel.html">商务酒店</a></li>
+                                <li><a href="./bou_hotel.html">精品酒店</a></li>
                                 <li><a href="./supply.html">酒店用品</a></li> 
                             </ul>
                         </div>
@@ -126,8 +126,8 @@
                 <li class="supply">酒店用品</li>
             </ul>
         </div>
-        <div id="bus-hotel" class="ad flexed">
-            <h3>商务酒店<a href="./bus-hotel.html">查看更多></a></h3>
+        <div id="bus_hotel" class="ad flexed">
+            <h3>商务酒店<a href="./bus_hotel.html">查看更多></a></h3>
             <div class="big box">
                 <img src="../../images/ad1.jpg" alt="">
             </div>
@@ -183,8 +183,8 @@
                 <img src="../../images/ad3.gif" alt="">
             </div>
         </div>
-        <div id="bou-hotel" class="ad flexed">
-            <h3>精品酒店<a href="./bou-hotel.html">查看更多></a></h3>
+        <div id="bou_hotel" class="ad flexed">
+            <h3>精品酒店<a href="./bou_hotel.html">查看更多></a></h3>
             <div class="big box">
                 <img src="../../images/ad1.jpg" alt="">
             </div>
@@ -374,7 +374,7 @@
             $(this).addClass('on').siblings().removeClass("on");
             $("body,html").animate({scrollTop:b-subliH*index-200},400);
         })
-        $('.dao li').eq(0).attr('class','on');
+        $('.dao li').eq(0).addClass('on');
     </script>
 </body>
 </html>

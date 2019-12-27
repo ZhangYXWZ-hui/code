@@ -42,6 +42,7 @@
             background: #f9f9f9;
         }
         .dao li{
+            padding: 0 10px;
             height: 30px;
             line-height: 30px;
             cursor: pointer;
@@ -86,7 +87,7 @@
                             <ul>
                                 <li><a id="first" href="../../index.html">首页</a></li>
                                 <li><a href="./hotpot.html">火锅</a></li>
-                                <li><a href="./tea-drinking.html">茶饮</a></li>
+                                <li><a href="./tea_drinking.html">茶饮</a></li>
                                 <li><a href="./baking.html">烘焙</a></li>
                                 <li><a href="./snack.html">小吃</a></li>
                                 <li><a href="./fastfood.html">快餐</a></li>
@@ -203,8 +204,8 @@
                 <img src="../../images/ad3.gif" alt="">
             </div>
         </div>
-        <div id="tea-drinking" class="ad flexed">
-            <h3>茶饮<a href="./tea-drinking.html">查看更多></a></h3>
+        <div id="tea_drinking" class="ad flexed">
+            <h3>茶饮<a href="./tea_drinking.html">查看更多></a></h3>
             <div class="big box">
                 <img src="../../images/ad1.jpg" alt="">
             </div>
@@ -964,7 +965,7 @@
             $(this).addClass('on').siblings().removeClass("on");
             $("body,html").animate({scrollTop:b-subliH*index-200},400);
         })
-        $('.dao li').eq(0).attr('class','on');
+        $('.dao li').eq(0).addClass('on');
     </script>
 </body>
 </html>

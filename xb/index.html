@@ -109,7 +109,7 @@
         </div>
         <div class="ad flexed">
             <div class="big box">
-                <img src="./images/ad1.jpg" alt="">
+                <img store='' src="./images/ad1.jpg" alt="">
             </div>
             <div class="big box">
                 <img src="./images/ad1.jpg" alt="">
@@ -720,6 +720,25 @@
         </div>
     </div>
     <script>
+        //判断终端类型
+        function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"
+            ];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+        if(!IsPC()){
+            location.href='mobileindex.html';
+        }
         //轮播图模块
         // 图片变化
         $(function () {
@@ -731,7 +750,6 @@
             $(".prev").click(function () { //上一张
                 prev();
             })
-
             function next() {
                 index++;
                 if (index > 2) {
@@ -751,7 +769,6 @@
                 }, 500);
                 iconHover(index);
             }
-
             function prev() {
                 index--;
                 if (index < 0) {
@@ -765,7 +782,6 @@
                 }, 500);
                 iconHover(index);
             }
-
             function auto() {
                 timer = setInterval(function () { //设置自动播放的定时器
                     next();
@@ -799,7 +815,6 @@
         $('.fixed button').on('click', function () {
             $(this).parent().css('display', 'none')
         })
-
         //行业资讯
         $('.tab li').on('click', function () {
             // console.log($(this).attr('class'))
@@ -808,8 +823,6 @@
             $('.tab li').removeClass('active');
             $(this).addClass('active');
         })
-
-
         //文章无缝滚动
         // var oul = $('.oul');
         // var oulHtml = oul.html();
@@ -833,32 +846,10 @@
         // timeId = setInterval(slider, 50);
 
         //图片跳转
-        $('img[myAttr]').on('click', function () {
+        $('img[store]').on('click', function () {
             window.open("firstclass/dianpuindex.html?name=xiaobao")
             // location.href = 'firstclass/dianpuindex.html?name=xiaobao'
         })
-        //判断终端类型
-        function IsPC() {
-            var userAgentInfo = navigator.userAgent;
-            var Agents = ["Android", "iPhone",
-                "SymbianOS", "Windows Phone",
-                "iPad", "iPod"
-            ];
-            var flag = true;
-            for (var v = 0; v < Agents.length; v++) {
-                if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                    flag = false;
-                    break;
-                }
-            }
-            return flag;
-        }
-        if(IsPC()){
-            location.href('index.html')
-        }
-        else{
-            location.href('mobileindex.html')
-        }
     </script>
 </body>
 

@@ -143,9 +143,36 @@
                         <p>投资金额：<span class="money">￥5~10万</span></p>
                     </div>
                 </li>
+                <li class="flexed" store=''>
+                    <img src="./firstclass/fastmoving/images/ucc.jpg" alt="">
+                    <div class="mess">
+                        <span class="title">ucc干洗</span>
+                        <p>经营产品：<span class='instudry'>干洗店加盟</span></p>
+                        <p>店数数量：<span class='count'>10000家</span></p>
+                        <p>投资金额：<span class="money">￥5~10万</span></p>
+                    </div>
+                </li>
+                <li class="flexed" store=''>
+                    <img src="./firstclass/fastmoving/images/ucc.jpg" alt="">
+                    <div class="mess">
+                        <span class="title">ucc干洗</span>
+                        <p>经营产品：<span class='instudry'>干洗店加盟</span></p>
+                        <p>店数数量：<span class='count'>10000家</span></p>
+                        <p>投资金额：<span class="money">￥5~10万</span></p>
+                    </div>
+                </li>
+                <li class="flexed" store=''>
+                    <img src="./firstclass/fastmoving/images/ucc.jpg" alt="">
+                    <div class="mess">
+                        <span class="title">ucc干洗</span>
+                        <p>经营产品：<span class='instudry'>干洗店加盟</span></p>
+                        <p>店数数量：<span class='count'>10000家</span></p>
+                        <p>投资金额：<span class="money">￥5~10万</span></p>
+                    </div>
+                </li>
             </ul>
             <div class="more_pro">
-                更多热门项目
+                <!-- 更多热门项目 -->
             </div>
         </div>
         <div class="article">
@@ -215,6 +242,25 @@
 
 </body>
 <script>
+    //判断终端类型
+    function IsPC() {
+            var userAgentInfo = navigator.userAgent;
+            var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"
+            ];
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            return flag;
+        }
+        if(IsPC()){
+            location.href='index.html';
+        }
     //首页菜单
     $('.menu p').on('click', function () {
         $(this).css('display', 'none')
@@ -277,12 +323,10 @@
     $('[myAttr]').on('click', function () {
         // window.open("firstclass/dianpuindex.html?name=xiaobao")
         location.href = 'mobile/bigClass.html?class='+$(this).attr('myAttr')
-        // console.log($(this).attr('myAttr'))
     })
     $('[store]').on('click', function () {
         // window.open("firstclass/dianpuindex.html?name=xiaobao")
         location.href = 'mobile/m_dianpu.html?name='+$(this).attr('store')
-        // console.log($(this).attr('myAttr'))
     })
 </script>
 
