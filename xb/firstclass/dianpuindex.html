@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="css/dianpuindex.css">
     <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://robot.51lick.com/media/FormBundle/css/style.css?v1.0.00000009">
     <script src="../js/jquery-2.2.4.js"></script>
     <script src="../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
     <script src="../js/data.js"></script>
@@ -30,6 +31,30 @@
         }
         .p_index img{
             width: 100%;
+        }
+        #coming {
+            display: none;
+        }
+        .getNode{
+            padding: 5px;
+            width: 1150px;
+            margin: 0 auto;
+            box-shadow: 1px 1px 5px #aaa;
+        }
+        .getNode .xbform-label{
+            display: inline-block;
+            min-width: 24%;
+            font-size: 18px;
+        }
+        .getNode .xbform-input{
+            width: 70%;
+            min-width: 70%;
+        }
+        .getNode button{
+            width: 20%;
+            margin-left: 25%;
+            color: white!important;
+            background: orange!important;
         }
     </style>
 </head>
@@ -85,17 +110,17 @@
         <div class="dtop">
             <div class="dianputitle">
                 <div class="col-lg-2">
-                    <img src="./fastmoving/images/ucc.jpg" alt="">
+                    <img src="" alt="">
                 </div>
-                <div class="col-lg-3 title">
-                    <h2>ucc干洗<span class="dvip">V1</span></h2>
+                <div class="col-lg-4 title">
+                    <h2><span class="stitle"></span><span class="dvip">V</span></h2>
                     <span class="glyphicon glyphicon-star star"></span>
                     <span class="glyphicon glyphicon-star star"></span>
                     <span class="glyphicon glyphicon-star star"></span>
                     <span class="glyphicon glyphicon-star star"></span>
                     <span class="glyphicon glyphicon-star star"></span>
                 </div>
-                <div class="col-lg-2 col-lg-offset-5">
+                <div class="col-lg-2 col-lg-offset-4">
                     <a href="">
                         <span class="glyphicon glyphicon-book"></span>
                         <p>项目详情</p>
@@ -104,7 +129,43 @@
             </div>
         </div>
         <div class="p_index">
-            <img src="./fastmoving/images/index_xiaoer.jpg" alt="">
+            
+        </div>
+    </div>
+    <div class="getNode">
+        <div class="xbform_wrapper">
+            <h2>我有意向，我要咨询</h2>
+            <form action="http://robot.51lick.com/form/submit/952?ct= " name="xbform_1">
+                <div class="xbform-innerform">
+                    <div class="xbform-page-wrapper xbform-page-1" data-mautic-form-page="1">
+                        <div class="xbform-row xbform-text xbform-field-1 xbform-required" field_type="text">
+                            <label class="xbform-label">您的姓名</label>
+                            <input name="xbform_hnrzp[tghsq]" value="" class="xbform-input show_placeholder" type="text"
+                                placeholder="您的姓名">
+                        </div>
+                        <div class="xbform-row xbform-text xbform-field-1 xbform-required" field_type="number">
+                            <label class="xbform-label">您的电话号码</label>
+                            <input name="xbform_hnrzp[oicwl]" value="" class="xbform-input show_placeholder" type="number"
+                                placeholder="电话号码">
+                        </div>
+                        <div id="coming" class="xbform-row xbform-text xbform-field-1 " field_type="text">
+                            <label class="xbform-label">数据来源</label>
+                            <input id="datas" name="xbform_hnrzp[askqn]" value="" class="xbform-input show_placeholder" type="text"
+                                placeholder="数据来源">
+                        </div>
+                        <div class="xbform-row xbform-text xbform-field-1 xbform-required" field_type="text">
+                            <label class="xbform-label">您的所在地点</label>
+                            <input name="xbform_hnrzp[dqrac]" value="" class="xbform-input show_placeholder" type="text"
+                                placeholder="所在地点">
+                        </div>
+                        <div class="xbform-row xbform-button-wrapper xbform-field-2">
+                            <button type="button" name="xbform[submit]" class="xbform-button btn btn-default" value="提交">
+                                提交</button>
+                        </div>
+                    </div>
+                </div>
+                <input id="res" name="res" type="reset" style="display:none;" />
+            </form>
         </div>
     </div>
     <div class="footer">
@@ -124,7 +185,7 @@
                 </ul>
             </div>
             <div class="gywm floated">
-                <h4>产家服务</h4>
+                <h4>厂家服务</h4>
                 <ul>
                     <li><a href="">招商加盟</a></li>
                     <li><a href="">包销策划</a></li>
@@ -168,13 +229,71 @@
             if (r != null) return unescape(r[2]);
             return null;
         }
-        let url = GetQueryString('name');
-        // console.log(url);
+        let store = GetQueryString('name');
+        console.log(store);
         //数据录入
         let data = JSON.parse(mess);
-        $('title').html('小宝加盟网 '+data[url].dianpu.program['title']);
+        // $('title').html('小宝加盟网 '+data[store].dianpu.program['title']);
+        $('.dianputitle img').attr('src',data[store].index);
+        for(let i=0;i<data[store].dianpuindex.length;i++){
+            let img = $('<img src='+data[store].dianpuindex[i]+'>')
+            $('.p_index').append(img)
+        };
+        $('.stitle').html(data[store].dianpu.program.title);
+        $('title').html(data[store].dianpu.program.title);
+
         //跳转页面
-        $('.dtop a').attr('href','dianpu.html?name='+url);
+        $('.dtop a').attr('href','dianpu.html?name='+store);
+
+        //留资
+        $('#datas').val($('title').text())
+        var scriptArr = new Array();
+        var scriptArr1 = "http://robot.51lick.com/media/js/libraries/2.jquery.js";
+        var scriptArr2 = "http://robot.51lick.com/media/js/layer/layer.js?v3.1.1";
+        var scriptArr3 = "http://robot.51lick.com/media/FormBundle/js/submit.js?v1.0.00000009";
+        scriptArr[0] = scriptArr1;
+        scriptArr[1] = scriptArr2;
+        scriptArr[2] = scriptArr3;
+        getScript(scriptArr, "scriptArr", 0);
+        function loadScript(url, id, callback) {
+            var head = document.head || document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            if (typeof (callback) != "undefined") {
+                if (script.readyState) {
+                    script.onreadystatechange = function () {
+                        if (script.readyState == "loaded" || script.readyState == "complete") {
+                            script.onreadystatechange = null;
+                            callback(url);
+                        }
+                    };
+                } else {
+                    script.onload = function () {
+                        callback(url);
+                    };
+                }
+            }
+            script.src = url;
+            script.id = id;
+            script.state = false;
+            head.appendChild(script);
+        }
+        function getScript(scriptArr, text = "scriptArr", number = 0) {
+            var id = text + number;
+            if (number < scriptArr.length) {
+                if (document.getElementById(id) == null) {
+                    loadScript(scriptArr[number], id, function (url) {
+                        document.getElementById(id).setAttribute("state", true);
+                        getScript(scriptArr, text, number + 1);
+                    });
+                } else {
+                    if (document.getElementById(id).src != scriptArr[number]) {
+                        document.getElementById(id).src = scriptArr[number];
+                        getScript(scriptArr, text, number + 1);
+                    }
+                }
+            }
+        }
     </script>
 </body>
 

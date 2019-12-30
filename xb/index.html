@@ -91,15 +91,17 @@
                 <div class="col-lg-12">
                     <div class="slide">
                         <ul class="pic-list">
-                            <li><img src="./images/banner1.jpg"></li>
+                            <li><img store='chuzongfang' src="./images/banner1.jpg"></li>
                             <li><img src="./images/banner2.jpg"></li>
                             <li><img src="./images/banner3.jpg"></li>
+                            <li><img src="./images/banner4.jpg"></li>
                             <li><img src="./images/banner1.jpg"></li>
                         </ul>
                         <div class="btnc next">&gt;</div>
                         <div class="btnc prev">&lt;</div>
                         <ul class="icon-list">
                             <li class="active"></li>
+                            <li></li>
                             <li></li>
                             <li></li>
                         </ul>
@@ -109,7 +111,7 @@
         </div>
         <div class="ad flexed">
             <div class="big box">
-                <img store='' src="./images/ad1.jpg" alt="">
+                <img store='chuzongfang' src="./images/chuzongfang.jpg" alt="褚宗坊" title="褚宗坊">
             </div>
             <div class="big box">
                 <img src="./images/ad1.jpg" alt="">
@@ -683,7 +685,7 @@
                 </ul>
             </div>
             <div class="gywm floated">
-                <h4>产家服务</h4>
+                <h4>厂家服务</h4>
                 <ul>
                     <li><a href="">招商加盟</a></li>
                     <li><a href="">包销策划</a></li>
@@ -752,7 +754,7 @@
             })
             function next() {
                 index++;
-                if (index > 2) {
+                if (index > 3) {
                     /*
                     当图片到最后一张时跳回第一张，本例中在最后一张中放入了第一张的图片，为实现无缝切换图片的效果。
                     */
@@ -772,7 +774,7 @@
             function prev() {
                 index--;
                 if (index < 0) {
-                    index = 2;
+                    index = 3;
                     $(".pic-list").animate({
                         left: -(index + 1) * 1200
                     }, 0);
@@ -847,8 +849,7 @@
 
         //图片跳转
         $('img[store]').on('click', function () {
-            window.open("firstclass/dianpuindex.html?name=xiaobao")
-            // location.href = 'firstclass/dianpuindex.html?name=xiaobao'
+            window.open("firstclass/dianpuindex.html?name="+$(this).attr('store'))
         })
     </script>
 </body>

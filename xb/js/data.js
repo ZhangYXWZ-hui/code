@@ -1,5 +1,5 @@
 let msg = 
-    {   classes:[
+    {classes:[
         [{canyin:'餐饮'},
             {
                 hotpot:'火锅',
@@ -98,7 +98,43 @@ let msg =
                 supply:'酒店用品'
             }
         ],
-    ],    
+    ],
+    chuzongfang:{
+        index:['canyin/images/chuzongfang/roujiamologo.jpg'],
+        dianpu:{
+            ins:'canyin',
+            program:{
+                title:'褚宗坊 疯狂肉夹馍',
+                money:'5万',
+                time:'1997年',
+                instudry:'餐饮',
+                count:'50多家',
+                area:'全国',
+                people:'所有人',
+                scope:'肉夹馍，面食，米饭',
+                auth:'附近两公里之内不会有第二家',
+                birthplace:'山东',
+                contract:'',
+                train:'7-15天',
+                royalties:'',
+                condition:'',
+                margin:'',
+                initial:'4万'
+            },
+            company:{
+                name:'山东褚宗坊餐饮管理有限公司',
+                nature:'有限公司',
+                funds:'300万元',
+                location:'山东'
+            },
+            big:['canyin/images/chuzongfang/big1.jpg','canyin/images/chuzongfang/big2.jpg','canyin/images/chuzongfang/big3.jpg','canyin/images/chuzongfang/big4.jpg'],
+            good:['canyin/images/chuzongfang/good1.jpg','canyin/images/chuzongfang/good2.jpg','canyin/images/chuzongfang/good3.jpg','canyin/images/chuzongfang/good4.jpg'],
+            xiangmu:['canyin/images/chuzongfang/xiangmu1.jpg','canyin/images/chuzongfang/xiangmu2.jpg'],
+            youshi:['canyin/images/chuzongfang/youshi1.jpg','canyin/images/chuzongfang/youshi2.jpg','canyin/images/chuzongfang/youshi3.jpg'],
+            liucheng:['canyin/images/chuzongfang/liucheng1.jpg','canyin/images/chuzongfang/liucheng2.jpg','canyin/images/chuzongfang/liucheng3.jpg']
+        },
+        dianpuindex:['canyin/images/chuzongfang/roujiamo1.jpg','canyin/images/chuzongfang/roujiamo2.jpg','canyin/images/chuzongfang/roujiamo3.jpg','canyin/images/chuzongfang/roujiamo4.jpg','canyin/images/chuzongfang/roujiamo5.jpg','canyin/images/chuzongfang/roujiamo6.jpg',]
+    },    
     xiaobao:{
         index:[],
         dianpu:{

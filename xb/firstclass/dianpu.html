@@ -147,12 +147,12 @@
         <div class="detail">
             <div class="col-lg-3 box-border border-right">
                 <div class="show">
-                    <img src="../images/banner1.jpg" alt="">
+                    <img src="" alt="">
                 </div>
                 <div class="p-list">
-                    <img src="../images/banner1.jpg" alt="">
+                    <!-- <img src="../images/banner1.jpg" alt="">
                     <img src="../images/banner2.jpg" alt="">
-                    <img src="../images/banner3.jpg" alt="">
+                    <img src="../images/banner3.jpg" alt=""> -->
                 </div>
             </div>
             <div class="col-lg-5 box-border border-right">
@@ -178,7 +178,7 @@
             </div>
             <div class="col-lg-3 box-border">
                 <h3 style="padding-left: 15px;">公司信息</h3>
-                <img id="logo" src="./fastmoving/images/ucc.jpg" alt="">
+                <img id="logo" src="" alt="">
                 <div class="mess company">
                     <p><span class="pleft">公司名称<span id="name" myAttr="name" class="messcont"></span></p>
                     <p><span class="pleft">企业性质<span myAttr="nature" class="messcont"></span></p>
@@ -248,11 +248,13 @@
                 <div class="col-lg-9">
                     <h3>加盟优势</h3>
                 </div>
+                <div class="adv-img"></div>
             </div>
             <div class="pro-part join-process">
                 <div class="col-lg-9">
                     <h3>加盟流程</h3>
                 </div>
+                <div class="process-img"></div>
             </div>
         </div>
     </div>
@@ -273,7 +275,7 @@
                 </ul>
             </div>
             <div class="gywm floated">
-                <h4>产家服务</h4>
+                <h4>厂家服务</h4>
                 <ul>
                     <li><a href="">招商加盟</a></li>
                     <li><a href="">包销策划</a></li>
@@ -333,24 +335,41 @@
         }
 
         //数据导入
-        // let data = JSON.parse(mess);
-        $(function () {
-            let title = data[url].dianpu.program['title'];
+        let dianpu = data[url].dianpu;
+        $(function () {     
+            let title = dianpu.program['title'];
             $('title').html('小宝加盟网 '+title);
-            $('.bread li').eq(1).html(data[url].dianpu.program['instudry']);
+            $('.bread li').eq(1).html(dianpu.program['instudry']);
             $('.bread li').eq(2).html(title);
-            $('.box-border h4').html('【'+title+'】'+title+'诚邀加盟')
-            for (let item in data[url].dianpu.program) {
-                $('.program span[myAttr=' + item + ']').html(data[url].dianpu.program[item])
+            $('.box-border h4').html('【'+title+'】'+title+'诚邀加盟');
+
+            $('.show img').attr('src',dianpu.big[0])
+
+            $('#logo').attr('src',data[url].index);
+            for (let item in dianpu.program) {
+                $('.program span[myAttr=' + item + ']').html(dianpu.program[item])
             };
 
-            for (let item in data[url].dianpu.company) {
-                $('.company span[myAttr=' + item + ']').html(data[url].dianpu.company[item])
+            for (let item in dianpu.company) {
+                $('.company span[myAttr=' + item + ']').html(dianpu.company[item])
             };
 
-            for (let item in data[url].dianpu.program) {
-                $('.details div[myAttr=' + item + ']').html(data[url].dianpu.program[item])
+            for (let item in dianpu.program) {
+                $('.details div[myAttr=' + item + ']').html(dianpu.program[item])
             };
+            
+            for(let i=0;i<dianpu.xiangmu.length;i++){
+                let img = $('<img src='+dianpu.xiangmu[i]+'>')
+                $('.detail-img').append(img)
+            }
+            for(let i=0;i<dianpu.youshi.length;i++){
+                let img = $('<img src='+dianpu.youshi[i]+'>')
+                $('.adv-img').append(img)
+            }
+            for(let i=0;i<dianpu.liucheng.length;i++){
+                let img = $('<img src='+dianpu.liucheng[i]+'>')
+                $('.process-img').append(img)
+            }
         })
 
         //页面分享
@@ -395,11 +414,10 @@
         let index = 1;
         setInterval(function(){
             index++;
-            $('.show img').attr('src','../images/banner'+index+'.jpg');
-            if(index == 3){
+            $('.show img').attr('src',dianpu.ins+'/images/'+url+'/big'+index+'.jpg');
+            if(index == dianpu.good.length){
                 index = 0;
             };
-            console.log(index)
         },2000);
 
         $('.p-list img').on('click',function(){

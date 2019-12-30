@@ -1,34 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="data.js"></script>
-    <title>Document</title>
+    <!-- <script src="../js/jquery-2.2.4.js"></script> -->
+    <title>小宝招商</title>
+    <style>
+        #coming {
+            display: none;
+        }
+        .getNode{
+            width: 1150px;
+            margin: 0 auto;
+        }
+        .getNode .xbform-label{
+            display: inline-block;
+            min-width: 24%;
+            font-size: 18px;
+        }
+        .getNode .xbform-input{
+            width: 70%;
+            min-width: 70%;
+        }
+        .getNode button{
+            width: 20%;
+            margin-left: 25%;
+            color: white!important;
+            background: orange!important;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        let url = 'canyin';
-        let data = JSON.parse(mess);
-        // console.log(data)
-        for(let item of data.classes){
-            if(Object.keys(item[0])==url){
-                // console.log(Object.keys(item[0]))
+    <div class="getNode">
+        <div class="xbform_wrapper">
+            <h2>我有意向，我要咨询</h2>
+            <form action="http://robot.51lick.com/form/submit/952?ct= " name="xbform_1">
+                <div class="xbform-innerform">
+                    <div class="xbform-page-wrapper xbform-page-1" data-mautic-form-page="1">
+                        <div class="xbform-row xbform-text xbform-field-1 xbform-required" field_type="text">
+                            <label class="xbform-label">您的姓名</label>
+                            <input name="xbform_hnrzp[tghsq]" value="" class="xbform-input show_placeholder" type="text"
+                                placeholder="您的姓名">
+                        </div>
+                        <div class="xbform-row xbform-text xbform-field-1 xbform-required" field_type="number">
+                            <label class="xbform-label">您的电话号码</label>
+                            <input name="xbform_hnrzp[oicwl]" value="" class="xbform-input show_placeholder" type="number"
+                                placeholder="电话号码">
+                        </div>
+                        <div id="coming" class="xbform-row xbform-text xbform-field-1 " field_type="text">
+                            <label class="xbform-label">数据来源</label>
+                            <input id="ss" name="xbform_hnrzp[askqn]" value="" class="xbform-input show_placeholder" type="text"
+                                placeholder="数据来源">
+                        </div>
+                        <div class="xbform-row xbform-text xbform-field-1 xbform-required" field_type="text">
+                            <label class="xbform-label">您的所在地点</label>
+                            <input name="xbform_hnrzp[dqrac]" value="" class="xbform-input show_placeholder" type="text"
+                                placeholder="所在地点">
+                        </div>
+                        <div class="xbform-row xbform-button-wrapper xbform-field-2">
+                            <button type="button" name="xbform[submit]" class="xbform-button btn btn-default" value="提交">
+                                提交</button>
+                        </div>
+                    </div>
+                </div>
+                <input id="res" name="res" type="reset" style="display:none;" />
+            </form>
+        </div>
+    </div>
+    <link rel="stylesheet" href="http://robot.51lick.com/media/FormBundle/css/style.css?v1.0.00000009">
+    <script type="text/javascript">
+        // $('#ss').val($('title').text())
+        var xhr = new XMLHttpRequest();
+        xhr.open('post', 'http://127.0.0.1:5500/xb/js/text.html', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        var scriptArr = new Array();
+        var scriptArr1 = "http://robot.51lick.com/media/js/libraries/2.jquery.js";
+        var scriptArr2 = "http://robot.51lick.com/media/js/layer/layer.js?v3.1.1";
+        var scriptArr3 = "http://robot.51lick.com/media/FormBundle/js/submit.js?v1.0.00000009";
+        scriptArr[0] = scriptArr1;
+        scriptArr[1] = scriptArr2;
+        scriptArr[2] = scriptArr3;
+        getScript(scriptArr, "scriptArr", 0);
+        function loadScript(url, id, callback) {
+            var head = document.head || document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            if (typeof (callback) != "undefined") {
+                if (script.readyState) {
+                    script.onreadystatechange = function () {
+                        if (script.readyState == "loaded" || script.readyState == "complete") {
+                            script.onreadystatechange = null;
+                            callback(url);
+                        }
+                    };
+                } else {
+                    script.onload = function () {
+                        callback(url);
+                    };
+                }
             }
-            // console.log(item[0]);
-            // console.log(item[1]);
-            // console.log(Object.keys(item[0]))
+            script.src = url;
+            script.id = id;
+            script.state = false;
+            head.appendChild(script);
         }
-        for(let item of data.classes){
-            // console.log(item[1])
-            if(Object.keys(item[0])==url){
-                console.log(Object.values(item[1]).length)
-                console.log(Object.keys(item[1]))
-                console.log(Object.values(item[1]))
+        function getScript(scriptArr, text = "scriptArr", number = 0) {
+            var id = text + number;
+            if (number < scriptArr.length) {
+                if (document.getElementById(id) == null) {
+                    loadScript(scriptArr[number], id, function (url) {
+                        document.getElementById(id).setAttribute("state", true);
+                        getScript(scriptArr, text, number + 1);
+                    });
+                } else {
+                    if (document.getElementById(id).src != scriptArr[number]) {
+                        document.getElementById(id).src = scriptArr[number];
+                        getScript(scriptArr, text, number + 1);
+                    }
+                }
             }
-            
         }
     </script>
+   
 </body>
+
 </html>
