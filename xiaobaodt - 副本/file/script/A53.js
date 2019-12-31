@@ -1,1 +1,0 @@
-document.write('<a href="tel:4008813609" target="_blank" ><img src="/file/upload/201705/17/114602791.jpg" width="206" height="206" alt=""/></a>');

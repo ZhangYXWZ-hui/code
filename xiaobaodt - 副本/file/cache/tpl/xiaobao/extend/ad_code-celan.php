@@ -1,1 +1,0 @@
-<?php defined('IN_DESTOON') or exit('Access Denied');?><li><a href="<?php echo $url;?>"><img src="<?php echo $image_src;?>" alt="<?php echo $image_alt;?>" /></a></li>

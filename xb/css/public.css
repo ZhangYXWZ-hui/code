@@ -245,15 +245,15 @@ a {
     height: 420px;
 }
 .ad-title {
-    width: 275px;
+    width: 280px;
     height: 100%;
 }
 .ad-img-cont ul {
-    width: 175px;
+    width: 230px;
     height: 100%;
 }
 .ad-img-cont li {
-    height: 140px;
+    height: 210px;
     border: 1px solid #eee;
     border-top: 0;
 }
@@ -263,7 +263,7 @@ a {
 }
 .small-ad img {
     width: 100%;
-    height: 110px;
+    height: 180px;
 }
 .small-ad p {
     text-align: center;

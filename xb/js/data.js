@@ -133,37 +133,43 @@ let msg =
             youshi:['canyin/images/chuzongfang/youshi1.jpg','canyin/images/chuzongfang/youshi2.jpg','canyin/images/chuzongfang/youshi3.jpg'],
             liucheng:['canyin/images/chuzongfang/liucheng1.jpg','canyin/images/chuzongfang/liucheng2.jpg','canyin/images/chuzongfang/liucheng3.jpg']
         },
-        dianpuindex:['canyin/images/chuzongfang/roujiamo1.jpg','canyin/images/chuzongfang/roujiamo2.jpg','canyin/images/chuzongfang/roujiamo3.jpg','canyin/images/chuzongfang/roujiamo4.jpg','canyin/images/chuzongfang/roujiamo5.jpg','canyin/images/chuzongfang/roujiamo6.jpg',]
-    },    
-    xiaobao:{
-        index:[],
+        dianpuindex:['canyin/images/chuzongfang/roujiamo1.jpg','canyin/images/chuzongfang/roujiamo2.jpg','canyin/images/chuzongfang/roujiamo3.jpg','canyin/images/chuzongfang/roujiamo4.jpg','canyin/images/chuzongfang/roujiamo5.jpg','canyin/images/chuzongfang/roujiamo6.jpg']
+    },  
+    shijishaokao:{
+        index:['canyin/images/shijishaokao/shijishaokaologo.jpg'],
         dianpu:{
+            ins:'canyin',
             program:{
-                title:'UCC干洗',
-                money:'5~10万',
-                time:'2013-06-07',
-                instudry:'干洗',
-                count:'10000家',
-                area:'全国',
-                people:'自由创业',
-                scope:'干洗店加盟',
-                auth:'是',
-                birthplace:'上海',
-                contract:'',
+                title:'世纪王烧烤',
+                money:'10-20万',
+                time:'2007年10月10日',
+                instudry:'餐饮',
+                count:'200家',
+                area:'',
+                people:'夫妻',
+                scope:'烧烤以及助餐饮料、酒、面食',
+                auth:'有',
+                birthplace:'江苏',
+                contract:'1年',
                 train:'',
                 royalties:'',
                 condition:'',
-                margin:'',
-                initial:''
+                margin:'1万',
+                initial:'5万'
             },
             company:{
-                name:'上海云端洗烫设备集团有限公司',
-                nature:'有限责任公司',
-                funds:'1000万元',
-                location:'上海市宝山区沪太'
-            }
+                name:'连云港市蛮牛餐饮有限公司',
+                nature:'有限公司',
+                funds:'3000万元',
+                location:'江苏'
+            },
+            big:['canyin/images/shijishaokao/big1.jpg','canyin/images/shijishaokao/big2.jpg','canyin/images/shijishaokao/big3.jpg','canyin/images/shijishaokao/big4.jpg'],
+            good:['canyin/images/shijishaokao/good1.jpg','canyin/images/shijishaokao/good2.jpg','canyin/images/shijishaokao/good3.jpg','canyin/images/shijishaokao/good3.jpg'],
+            xiangmu:['canyin/images/shijishaokao/xiangmu1.jpg','canyin/images/shijishaokao/xiangmu2.jpg',],
+            youshi:['canyin/images/shijishaokao/youshi1.jpg','canyin/images/shijishaokao/youshi2.jpg','canyin/images/shijishaokao/youshi3.jpg',],
+            liucheng:['canyin/images/shijishaokao/liucheng1.jpg']
         },
-        dianpuindex:[]
+        dianpuindex:['canyin/images/shijishaokao/shijishaokao1.jpg','canyin/images/shijishaokao/shijishaokao2.jpg','canyin/images/shijishaokao/shijishaokao3.jpg','canyin/images/shijishaokao/shijishaokao4.jpg','canyin/images/shijishaokao/shijishaokao5.jpg','canyin/images/shijishaokao/shijishaokao6.jpg',]
     }};
 let mess = JSON.stringify(msg);
 function getData(){

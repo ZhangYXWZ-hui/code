@@ -1,1 +1,0 @@
-document.write('<a href="" target="_blank" ><img src="/skin/xiaobao/images/pic_left_09.png" width="206" height="206" alt=""/></a>');

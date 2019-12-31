@@ -1,1 +1,0 @@
-document.write('<a href="http://www.xiaobaodt.com:80/api/redirect-htm-aid-18.html" target="_blank" ><img src="/file/upload/201705/18/180147221.jpg" width="228" height="161" alt=""/></a>');

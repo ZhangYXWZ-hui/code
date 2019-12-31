@@ -1,1 +1,0 @@
-<option value="470">个体创业</option><option value="274">酒</option><option value="275">粮油调味品</option><option value="276">饮料</option><option value="277">休闲食品</option><option value="278">冷冻生鲜</option><option value="279">保健食品</option><option value="467">高科技</option><option value="468">日化日用品</option><option value="469">家电</option></select>

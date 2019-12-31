@@ -1,1 +1,0 @@
-document.write('<li><a href=""><img src="/file/upload/201705/18/180752621.jpg" alt="" /></a></li>');

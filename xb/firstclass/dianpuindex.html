@@ -56,6 +56,33 @@
             color: white!important;
             background: orange!important;
         }
+        .icon{   
+            position: absolute;
+            animation: move 2s linear infinite;
+            transform-origin: 50% 70%;
+        }
+        @keyframes move{
+        10%,20%{
+            -webkit-transform: rotate(-8deg);
+            -webkit-transform:scale(1.2)
+        }
+        5%,15%,25%{
+            -webkit-transform: rotate(8deg);
+        }
+        0%,30%,100%{
+            -webkit-transform: rotate(0deg);
+        }
+        }
+        .nodebox{
+            top: 300px;
+            right: 70px;
+            text-align: center;
+        }
+        .nodebox p{
+            margin: 0;
+            padding: 10px 0;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -106,6 +133,10 @@
             </div>
         </div>
     </div>
+    <div class="nodebox fixed">
+        <p class="mess">我要留资</p>
+        <p class="backing">返回顶部</p>
+    </div>
     <div class="wrap">
         <div class="dtop">
             <div class="dianputitle">
@@ -121,7 +152,7 @@
                     <span class="glyphicon glyphicon-star star"></span>
                 </div>
                 <div class="col-lg-2 col-lg-offset-4">
-                    <a href="">
+                    <a class="icon" href="">
                         <span class="glyphicon glyphicon-book"></span>
                         <p>项目详情</p>
                     </a>
@@ -294,6 +325,18 @@
                 }
             }
         }
+        //页面滚动
+        let subliH = $('getNode').outerHeight(true);
+        $('.nodebox p').on('click',function(){        
+            a = $(".getNode");
+            b = a.offset().top;
+            let key = $(this).attr('class')
+            if(key === 'mess'){
+                $("body,html").animate({scrollTop:b-subliH-200},400);
+            }else{
+                $("body,html").animate({scrollTop:0},400);
+            } 
+        })
     </script>
 </body>
 

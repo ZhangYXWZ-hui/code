@@ -1,1 +1,0 @@
-<a href="" class="uk-display-block uk-margin-large-top w1180"><img src="/skin/xiaobao//images/pic_26.png" alt="" width="1180" height="200"></a>

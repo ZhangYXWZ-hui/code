@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="data.js"></script>
-    <!-- <script src="../js/jquery-2.2.4.js"></script> -->
+    <script src="../js/jquery-2.2.4.js"></script>
     <title>小宝招商</title>
     <style>
         #coming {
@@ -31,6 +31,51 @@
             color: white!important;
             background: orange!important;
         }
+        .box{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: #000;
+            margin: 200px auto;
+        }
+
+*{padding:0;margin:0;}
+.ad{
+    width:50px;
+	height:50px;
+	position:fixed;
+	right:10px;
+	bottom:40px;
+}
+.ad .icon{
+    /* display: block; */
+    /* content: ""; */
+    width: 50px;
+    height: 50px;
+    /* background: url() 0 0 no-repeat; */
+    /* background-size: 50px 50px; */
+    position: absolute;
+	animation: move 2s linear infinite;
+	transform-origin: 50% 70%;
+}
+.ad a img{
+	width:50px;
+	height:50px;
+	vertical-align:top;
+}
+@keyframes move{
+	10%,20%{
+		-webkit-transform: rotate(-8deg);
+	}
+	5%,15%,25%{
+		-webkit-transform: rotate(8deg);
+	}
+	0%,30%,100%{
+		-webkit-transform: rotate(0deg);
+	}
+}
+
+
     </style>
 </head>
 <body>
@@ -69,6 +114,15 @@
                 <input id="res" name="res" type="reset" style="display:none;" />
             </form>
         </div>
+    </div>
+
+    <div class="box"></div>
+    <button id="box">kaishi</button>
+
+    <div class="ad">
+        <a class="icon" href="##">
+            <img src="../images/11.png" />
+        </a>
     </div>
     <link rel="stylesheet" href="http://robot.51lick.com/media/FormBundle/css/style.css?v1.0.00000009">
     <script type="text/javascript">
@@ -123,6 +177,44 @@
                 }
             }
         }
+    </script>
+    <script>
+        $('#box').on('click',function(){
+            // $('.box').css('transform','scale(1.2')
+            $('.box').animate({
+                width:'300px',
+                height:'300px'    
+            },'200ms');
+            $('.box').animate({
+                rotate:'30deg'    
+            },'fast');
+            $('.box').animate({
+                rotate:'-30deg'
+            },'fast')
+            $('.box').animate({
+                left:'100px'    
+            },'fast');
+            $('.box').animate({
+                left:'0'
+            },'fast')
+            $('.box').animate({
+                left:'100px'    
+            },'fast');
+            $('.box').animate({
+                left:'0'
+            },'fast')
+            $('.box').animate({
+                left:'100px'    
+            },'fast');
+            $('.box').animate({
+                left:'0'
+            },'fast');
+            $('.box').animate({
+                width:'200px',
+                height:'200px'    
+            },'200ms');
+        })
+        
     </script>
    
 </body>
