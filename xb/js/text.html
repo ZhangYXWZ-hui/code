@@ -7,216 +7,54 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="data.js"></script>
     <script src="../js/jquery-2.2.4.js"></script>
-    <title>小宝招商</title>
+    <title>模糊查询</title>
     <style>
-        #coming {
-            display: none;
-        }
-        .getNode{
-            width: 1150px;
-            margin: 0 auto;
-        }
-        .getNode .xbform-label{
-            display: inline-block;
-            min-width: 24%;
-            font-size: 18px;
-        }
-        .getNode .xbform-input{
-            width: 70%;
-            min-width: 70%;
-        }
-        .getNode button{
-            width: 20%;
-            margin-left: 25%;
-            color: white!important;
-            background: orange!important;
-        }
-        .box{
-            position: relative;
-            width: 200px;
-            height: 200px;
-            background: #000;
-            margin: 200px auto;
-        }
-
-*{padding:0;margin:0;}
-.ad{
-    width:50px;
-	height:50px;
-	position:fixed;
-	right:10px;
-	bottom:40px;
-}
-.ad .icon{
-    /* display: block; */
-    /* content: ""; */
-    width: 50px;
-    height: 50px;
-    /* background: url() 0 0 no-repeat; */
-    /* background-size: 50px 50px; */
-    position: absolute;
-	animation: move 2s linear infinite;
-	transform-origin: 50% 70%;
-}
-.ad a img{
-	width:50px;
-	height:50px;
-	vertical-align:top;
-}
-@keyframes move{
-	10%,20%{
-		-webkit-transform: rotate(-8deg);
-	}
-	5%,15%,25%{
-		-webkit-transform: rotate(8deg);
-	}
-	0%,30%,100%{
-		-webkit-transform: rotate(0deg);
-	}
-}
-
-
+        
     </style>
 </head>
 <body>
-    <div class="getNode">
-        <div class="xbform_wrapper">
-            <h2>我有意向，我要咨询</h2>
-            <form action="http://robot.51lick.com/form/submit/952?ct= " name="xbform_1">
-                <div class="xbform-innerform">
-                    <div class="xbform-page-wrapper xbform-page-1" data-mautic-form-page="1">
-                        <div class="xbform-row xbform-text xbform-field-1 xbform-required" field_type="text">
-                            <label class="xbform-label">您的姓名</label>
-                            <input name="xbform_hnrzp[tghsq]" value="" class="xbform-input show_placeholder" type="text"
-                                placeholder="您的姓名">
-                        </div>
-                        <div class="xbform-row xbform-text xbform-field-1 xbform-required" field_type="number">
-                            <label class="xbform-label">您的电话号码</label>
-                            <input name="xbform_hnrzp[oicwl]" value="" class="xbform-input show_placeholder" type="number"
-                                placeholder="电话号码">
-                        </div>
-                        <div id="coming" class="xbform-row xbform-text xbform-field-1 " field_type="text">
-                            <label class="xbform-label">数据来源</label>
-                            <input id="ss" name="xbform_hnrzp[askqn]" value="" class="xbform-input show_placeholder" type="text"
-                                placeholder="数据来源">
-                        </div>
-                        <div class="xbform-row xbform-text xbform-field-1 xbform-required" field_type="text">
-                            <label class="xbform-label">您的所在地点</label>
-                            <input name="xbform_hnrzp[dqrac]" value="" class="xbform-input show_placeholder" type="text"
-                                placeholder="所在地点">
-                        </div>
-                        <div class="xbform-row xbform-button-wrapper xbform-field-2">
-                            <button type="button" name="xbform[submit]" class="xbform-button btn btn-default" value="提交">
-                                提交</button>
-                        </div>
-                    </div>
-                </div>
-                <input id="res" name="res" type="reset" style="display:none;" />
-            </form>
-        </div>
+    
+    <div class="search">
+        <input id="search" type="text">
+        <button>查询</button>
     </div>
-
-    <div class="box"></div>
-    <button id="box">kaishi</button>
-
-    <div class="ad">
-        <a class="icon" href="##">
-            <img src="../images/11.png" />
-        </a>
-    </div>
-    <link rel="stylesheet" href="http://robot.51lick.com/media/FormBundle/css/style.css?v1.0.00000009">
-    <script type="text/javascript">
-        // $('#ss').val($('title').text())
-        var xhr = new XMLHttpRequest();
-        xhr.open('post', 'http://127.0.0.1:5500/xb/js/text.html', true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        var scriptArr = new Array();
-        var scriptArr1 = "http://robot.51lick.com/media/js/libraries/2.jquery.js";
-        var scriptArr2 = "http://robot.51lick.com/media/js/layer/layer.js?v3.1.1";
-        var scriptArr3 = "http://robot.51lick.com/media/FormBundle/js/submit.js?v1.0.00000009";
-        scriptArr[0] = scriptArr1;
-        scriptArr[1] = scriptArr2;
-        scriptArr[2] = scriptArr3;
-        getScript(scriptArr, "scriptArr", 0);
-        function loadScript(url, id, callback) {
-            var head = document.head || document.getElementsByTagName("head")[0];
-            var script = document.createElement("script");
-            script.type = "text/javascript";
-            if (typeof (callback) != "undefined") {
-                if (script.readyState) {
-                    script.onreadystatechange = function () {
-                        if (script.readyState == "loaded" || script.readyState == "complete") {
-                            script.onreadystatechange = null;
-                            callback(url);
-                        }
-                    };
-                } else {
-                    script.onload = function () {
-                        callback(url);
-                    };
-                }
-            }
-            script.src = url;
-            script.id = id;
-            script.state = false;
-            head.appendChild(script);
-        }
-        function getScript(scriptArr, text = "scriptArr", number = 0) {
-            var id = text + number;
-            if (number < scriptArr.length) {
-                if (document.getElementById(id) == null) {
-                    loadScript(scriptArr[number], id, function (url) {
-                        document.getElementById(id).setAttribute("state", true);
-                        getScript(scriptArr, text, number + 1);
-                    });
-                } else {
-                    if (document.getElementById(id).src != scriptArr[number]) {
-                        document.getElementById(id).src = scriptArr[number];
-                        getScript(scriptArr, text, number + 1);
-                    }
-                }
-            }
-        }
-    </script>
-    <script>
-        $('#box').on('click',function(){
-            // $('.box').css('transform','scale(1.2')
-            $('.box').animate({
-                width:'300px',
-                height:'300px'    
-            },'200ms');
-            $('.box').animate({
-                rotate:'30deg'    
-            },'fast');
-            $('.box').animate({
-                rotate:'-30deg'
-            },'fast')
-            $('.box').animate({
-                left:'100px'    
-            },'fast');
-            $('.box').animate({
-                left:'0'
-            },'fast')
-            $('.box').animate({
-                left:'100px'    
-            },'fast');
-            $('.box').animate({
-                left:'0'
-            },'fast')
-            $('.box').animate({
-                left:'100px'    
-            },'fast');
-            $('.box').animate({
-                left:'0'
-            },'fast');
-            $('.box').animate({
-                width:'200px',
-                height:'200px'    
-            },'200ms');
-        })
-        
-    </script>
+    <div class="show"></div>
    
+    
+    <script>
+        // let keyword= '餐饮';
+        let data = JSON.parse(mess)
+        function search(){
+            let arr ={};
+            let result = $('#search').val();
+            let seaValue = result.split('');
+            for(let item in data.brand){
+                if(data.brand[item].belong.match(result)){
+                    arr[item]=1
+                }       
+            }
+            for(let item in data.brand){
+                for(let i=0;i<seaValue.length;i++){
+                    if(data.brand[item].belong.match(seaValue[i])){
+                        if(!arr[item]){
+                            arr[item]=1
+                        }
+                    }  
+                }
+            }
+            console.log(arr);
+            return arr
+        }
+        $('button').on('click', function () {
+            search()
+        })
+        $('input').keydown(function(e){
+            if(e.which == 13){
+                search()
+            }
+        })
+
+    </script>  
 </body>
 
 </html>

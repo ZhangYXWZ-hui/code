@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        td {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    姓名：<input type="text" id="name">
+    年龄：<input type="text" id="age">
+    <input type="button" id="button" value="添加">
+    <button id="btn1">搜索</button>
+    <button id="btn2">排序</button>
+    <table id="table" border='1' width="500">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>操作</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>15</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>李四</td>
+                <td>12</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>王五</td>
+                <td>54</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>赵六</td>
+                <td>19</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>孙七</td>
+                <td>26</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>周八</td>
+                <td>29</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>吴九</td>
+                <td>25</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        window.onload = function () {
+            var oTable = document.getElementById('table');
+            var oButton = document.getElementById('button');
+            var oName = document.getElementById('name');
+            var oAge = document.getElementById('age');
+            var oTd = document.getElementsByTagName('td');
+            oButton.onclick = function () {
+                var a = oTable.tBodies[0].rows.length + 1;
+                var aTr = document.createElement('tr');
+
+                var aTd = document.createElement('td');
+                aTd.innerHTML = a++;
+                aTr.appendChild(aTd);
+
+                var aTd = document.createElement('td');
+                aTd.innerHTML = oName.value;
+                aTr.appendChild(aTd);
+
+                var aTd = document.createElement('td');
+                aTd.innerHTML = oAge.value;
+                aTr.appendChild(aTd);
+
+                var aTd = document.createElement('td');
+                aTd.innerHTML = '<a href="javascript:;">删除</a>';
+                aTr.appendChild(aTd);
+
+                oTable.tBodies[0].appendChild(aTr);
+                oName.value = '';
+                oAge.value = '';
+            }
+            oTable.tBodies[0].addEventListener('click', function (e) {
+                var target = e.target;
+                if (target.nodeName == 'A') {
+                    oTable.tBodies[0].removeChild(target.parentNode.parentNode);
+                    var Length = oTable.tBodies[0].rows.length;
+                    for (var i = 0; i < Length; i++) {
+                        var Cells = oTable.tBodies[0].rows[i];
+                        Cells.cells[0].innerHTML = (i + 1)
+                    }
+                }
+            })
+            btn1.onclick = function () {
+                if (oName.value == '' && oAge.value == '') {
+                    alert('内容不能为空！')
+                } else {
+                    var arrNameValue = oName.value.split(' ');
+                    var arrAgeValue = oAge.value.split('');
+                    for (var i = 0; i < oTable.tBodies[0].rows.length; i++) {
+                        var aTablerows = oTable.tBodies[0].rows[i];
+                        aTablerows.style.background = '';
+                        for (var j = 0; j < arrAgeValue.length; j++) {
+                            console.log(arrAgeValue[j])
+                            if (arrNameValue == '' && aTablerows.cells[2].innerHTML.search(arrAgeValue[j]) != -
+                                1) {
+                                aTablerows.style.background = 'orange';
+                            } else if (arrAgeValue == '' && aTablerows.cells[1].innerHTML.search(arrNameValue[
+                                    j]) != -1) {
+                                aTablerows.style.background = 'orange';
+                            } else if (aTablerows.cells[1].innerHTML.search(arrNameValue[j]) != -1 && aTablerows
+                                .cells[2].innerHTML.search(arrAgeValue[j]) != -1) {
+                                aTablerows.style.background = 'orange';
+                                //bug 如果没有查询到不会有提示
+                            }
+                        }
+                    }
+                }
+            }
+            btn2.onclick = function () {
+                var arr = []
+                for (var i = 0; i < oTable.tBodies[0].rows.length; i++) {
+                    var arry = oTable.tBodies[0].rows[i];
+                    console.log(typeof arry)
+                    arr[i] = arry;
+                }
+                arr.sort(function (age1, age2) {
+                    var x1 = parseInt(age1.cells[2].innerHTML);
+                    var x2 = parseInt(age2.cells[2].innerHTML);
+                    return x1 - x2;
+                })
+
+                for (var j = 0; j < arr.length; j++) {
+                    oTable.tBodies[0].appendChild(arr[j]);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

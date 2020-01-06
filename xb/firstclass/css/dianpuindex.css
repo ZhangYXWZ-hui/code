@@ -31,11 +31,11 @@
     display: block;
     width: 100px;
     height: 100px;
-    color: orange;
+    color: red;
 }
 .dianputitle a:hover{
     /* color: #aaa; */
-    color: orangered;
+    /* color: orangered; */
     text-decoration: none;
 }
 .dianputitle a span{

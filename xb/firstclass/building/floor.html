@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="../../images/favicon.ico"/>
     <link rel="stylesheet" href="../../css/public.css">
-    <link rel="stylesheet" href="../../css/index.css">
+   
     <link rel="stylesheet" href="../../bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <script src="../../js/jquery-2.2.4.js"></script>
     <script src="../../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
@@ -49,13 +49,17 @@
                         <img src="../../images/logo.png" alt="小宝招商加盟网">
                     </a>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-2">
                     <h2>地板加盟</h2>
                 </div>
+                <div class="col-lg-6">
+                    <div class="search">
+                        <input id="search" type="text" placeholder="热门搜索：餐饮加盟 服装加盟">
+                        <button>查询</button>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-            <div class="head-menu" style="background-color: orange;">
+            <div class="head-menu" style="background-color: orange;margin-top: 0;">
                 <div class="indexmenu"  style="width: 1200px; margin: 0 auto;">
                     <ul>
                         <li><a id="first" href="../../index.html">首页</a></li>
@@ -73,6 +77,7 @@
                     </ul>
                 </div>
             </div>
+        </div>
         
     </div>
     <div class="wrap">
@@ -298,6 +303,21 @@
     <script>
         $('.fixed button').on('click',function(){
             $(this).parent().css('display','none')
+        })
+         //搜索
+         $('.search button').on('click',function(){
+            let content = encodeURI(encodeURI($('.search input').val()));
+            if($('.search input').val()!=''){
+                window.open('../search.html?content='+content)
+            }   
+        })
+        $('.search input').keydown(function(e){    
+            if(e.which == 13){
+                let content = encodeURI(encodeURI($('.search input').val()));
+                if($('.search input').val()!=''){
+                    window.open('../search.html?content='+content)
+                } 
+            }
         })
     </script>
 </body>

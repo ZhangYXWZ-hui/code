@@ -16,6 +16,7 @@
     <title></title>
     <style>
         .head-menu{
+            margin-top: 0;
             background: orange;
         }
         .indexmenu{
@@ -75,7 +76,7 @@
         }
         .nodebox{
             top: 300px;
-            right: 70px;
+            right: 5%;
             text-align: center;
         }
         .nodebox p{
@@ -109,32 +110,36 @@
                         <img src="../images/logo.png" alt="小宝招商加盟网">
                     </a>
                 </div>
-                <div class="col-lg-5">
-                    
+                <div class="col-lg-6 col-lg-offset-1">
+                    <div class="search">
+                        <input id="search" type="text" placeholder="热门搜索：餐饮加盟 服装加盟">
+                        <button>查询</button>
+                    </div>
+                </div>
+            </div>
+            <div class="head-menu">
+                <div class="indexmenu">
+                    <ul>
+                        <li><a id="first" href="../index.html">首页</a></li>
+                        <li><a href="canyin/canyin.html">餐饮</a></li>
+                        <li><a href="edu/edu.html">教育培训</a></li>
+                        <li><a href="fastmoving/fastmoving.html">快消</a></li>
+                        <li><a href="health/health.html">保健</a></li>
+                        <li><a href="mother/mother.html">母婴</a></li>
+                        <li><a href="building/building.html">建材</a></li>
+                        <li><a href="retail/retail.html">零售</a></li>
+                        <li><a href="clothing/clothing.html">服装</a></li>
+                        <li><a href="furniture/furniture.html">家具</a></li>
+                        <li><a href="textiles/textiles.html">家纺</a></li>
+                        <li><a href="hotel/hotel.html">酒店</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="head-menu">
-            <div class="indexmenu">
-                <ul>
-                    <li><a id="first" href="../index.html">首页</a></li>
-                    <li><a href="canyin/canyin.html">餐饮</a></li>
-                    <li><a href="edu/edu.html">教育培训</a></li>
-                    <li><a href="fastmoving/fastmoving.html">快消</a></li>
-                    <li><a href="health/health.html">保健</a></li>
-                    <li><a href="mother/mother.html">母婴</a></li>
-                    <li><a href="building/building.html">建材</a></li>
-                    <li><a href="retail/retail.html">零售</a></li>
-                    <li><a href="clothing/clothing.html">服装</a></li>
-                    <li><a href="furniture/furniture.html">家具</a></li>
-                    <li><a href="textiles/textiles.html">家纺</a></li>
-                    <li><a href="hotel/hotel.html">酒店</a></li>
-                </ul>
-            </div>
-        </div>
+        
     </div>
     <div class="nodebox fixed">
-        <p class="mess">我要留资</p>
+        <p class="mess">我要咨询</p>
         <p class="backing">返回顶部</p>
     </div>
     <div class="wrap">
@@ -153,7 +158,7 @@
                 </div>
                 <div class="col-lg-2 col-lg-offset-4">
                     <a class="icon" href="">
-                        <span class="glyphicon glyphicon-book"></span>
+                        <span class="glyphicon glyphicon-home"></span>
                         <p>项目详情</p>
                     </a>
                 </div>
@@ -264,14 +269,14 @@
         console.log(store);
         //数据录入
         let data = JSON.parse(mess);
-        // $('title').html('小宝加盟网 '+data[store].dianpu.program['title']);
-        $('.dianputitle img').attr('src',data[store].index);
-        for(let i=0;i<data[store].dianpuindex.length;i++){
-            let img = $('<img src='+data[store].dianpuindex[i]+'>')
+        // $('title').html('小宝加盟网 '+data.brand[store].dianpu.program['title']);
+        $('.dianputitle img').attr('src',data.brand[store].index);
+        for(let i=0;i<data.brand[store].dianpuindex.length;i++){
+            let img = $('<img src='+data.brand[store].dianpuindex[i]+'>')
             $('.p_index').append(img)
         };
-        $('.stitle').html(data[store].dianpu.program.title);
-        $('title').html(data[store].dianpu.program.title);
+        $('.stitle').html(data.brand[store].dianpu.program.title);
+        $('title').html(data.brand[store].dianpu.program.title);
 
         //跳转页面
         $('.dtop a').attr('href','dianpu.html?name='+store);
@@ -336,6 +341,22 @@
             }else{
                 $("body,html").animate({scrollTop:0},400);
             } 
+        })
+        //搜索
+        $('.search button').on('click',function(){
+            let content = encodeURI(encodeURI($('.search input').val()));
+            if($('.search input').val()!=''){
+                location.href = 'search.html?content='+content;
+            }   
+        })
+        $('.search input').keydown(function(e){
+            
+            if(e.which == 13){
+                let content = encodeURI(encodeURI($('.search input').val()));
+                if($('.search input').val()!=''){
+                location.href = 'search.html?content='+content;
+            } 
+            }
         })
     </script>
 </body>

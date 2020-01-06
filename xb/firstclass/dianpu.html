@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="css/dianpu.css">
     <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/icon-mobile/iconfont.css">
     <script src="../js/jquery-2.2.4.js"></script>
     <script src="../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../dist/css/share.min.css">
@@ -74,13 +75,39 @@
         }
         .p-list{
             width: 100%;
+            height: 90px;
+            margin-top: 3px;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
+        }
+        .p-list i{
+            line-height: 90px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .left, .right{
+            width: 15px;
+            height: 100%;
+            background: #ccc;
+            cursor: pointer;
+            border: 1px solid #aaa;
+        }
+        .imgbox{
+            width: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        .imglist{
+            width: 390px;
+            height: 90px;
+            position: absolute;
+            transition: all 0.8s;
         }
         .p-list img{
             width: 90px;
             height: 90px;
-            margin: 5px auto 0;
+            margin: 0 5px 0 0;
+            display: inline-block;
         }
     </style>
 </head>
@@ -107,6 +134,12 @@
                     <a href="">
                         <img src="../images/logo.png" alt="小宝招商加盟网">
                     </a>
+                </div>
+                <div class="col-lg-6 col-lg-offset-1">
+                    <div class="search">
+                        <input id="search" type="text" placeholder="热门搜索：餐饮加盟 服装加盟">
+                        <button>查询</button>
+                    </div>
                 </div>
             </div>
             <div class="head-menu">
@@ -150,9 +183,16 @@
                     <img src="" alt="">
                 </div>
                 <div class="p-list">
-                    <!-- <img src="../images/banner1.jpg" alt="">
-                    <img src="../images/banner2.jpg" alt="">
-                    <img src="../images/banner3.jpg" alt=""> -->
+                    <div class="left">
+                        <i class="iconfont icon-left"></i>
+                    </div>
+                    <div class="imgbox">
+                        <div class="imglist">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <i class="iconfont icon-right"></i>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-5 box-border border-right">
@@ -325,7 +365,7 @@
         // 404页面判断
         let flag = false;
         let data = JSON.parse(mess);
-        for(let item in data){
+        for(let item in data.brand){
             if(url === item){
                 flag = true;
             }
@@ -335,7 +375,7 @@
         }
 
         //数据导入
-        let dianpu = data[url].dianpu;
+        let dianpu = data.brand[url].dianpu;
         $(function () {     
             let title = dianpu.program['title'];
             $('title').html('小宝加盟网 '+title);
@@ -345,7 +385,12 @@
 
             $('.show img').attr('src',dianpu.big[0])
 
-            $('#logo').attr('src',data[url].index);
+            $('#logo').attr('src',data.brand[url].index);
+            // console.log(dianpu.good)
+            for(let i=0;i<dianpu.good.length;i++){
+                let img = $('<img src='+dianpu.good[i]+'>');
+                $('.imglist').append(img)
+            }
             for (let item in dianpu.program) {
                 $('.program span[myAttr=' + item + ']').html(dianpu.program[item])
             };
@@ -415,14 +460,36 @@
         setInterval(function(){
             index++;
             $('.show img').attr('src',dianpu.ins+'/images/'+url+'/big'+index+'.jpg');
+            $('.imglist').on('click','img',function(){
+                $('.show img').attr('src',dianpu.ins+'/images/'+url+'/big'+($(this).index()+1)+'.jpg')
+                index = $(this).index();
+            })
             if(index == dianpu.good.length){
                 index = 0;
             };
         },2000);
 
-        $('.p-list img').on('click',function(){
-            // console.log($(this).attr('src'))
-            $('.show img').attr('src',$(this).attr('src'))
+        $('.left').on('click',function(){
+             $('.imglist').css('left','-125px')
+         })
+         $('.right').on('click',function(){
+             $('.imglist').css('left','0px')
+         })
+         //搜索
+        $('.search button').on('click',function(){
+            let content = encodeURI(encodeURI($('.search input').val()));
+            if($('.search input').val()!=''){
+                location.href = 'search.html?content='+content;
+            }   
+        })
+        $('.search input').keydown(function(e){
+            
+            if(e.which == 13){
+                let content = encodeURI(encodeURI($('.search input').val()));
+                if($('.search input').val()!=''){
+                location.href = 'search.html?content='+content;
+                } 
+            }
         })
     </script>
 </body>
