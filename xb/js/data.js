@@ -127,6 +127,7 @@ let msg = {
             index: ['canyin/images/chuzongfang/roujiamologo.jpg'],
             dianpu: {
                 ins: 'canyin',
+                smallclass:'fastfood',
                 program: {
                     title: '褚宗坊 疯狂肉夹馍',
                     money: '5万',
@@ -164,6 +165,7 @@ let msg = {
             index: ['canyin/images/shijishaokao/shijishaokaologo.jpg'],
             dianpu: {
                 ins: 'canyin',
+                smallclass:'snack',
                 program: {
                     title: '江苏世纪王烧烤',
                     money: '10-20万',
@@ -201,6 +203,7 @@ let msg = {
             index: ['fastmoving/images/meizhiyan/meizhiyanlogo.jpg'],
             dianpu: {
                 ins: 'fastmoving',
+                smallclass:'cosmetic',
                 program: {
                     title: '美挚颜O-Michly',
                     money: '10-20万元',
@@ -238,6 +241,7 @@ let msg = {
             index: ['fastmoving/images/xueyuzhenqing/xueyuzhenqinglogo.jpg'],
             dianpu: {
                 ins: 'fastmoving',
+                smallclass:'dairy',
                 program: {
                     title: '雪域真情',
                     money: '货款2万元',
@@ -275,6 +279,7 @@ let msg = {
             index: ['building/images/shenyang/shenyanglogo.jpg'],
             dianpu: {
                 ins: 'building',
+                smallclass:'env_pro',
                 program: {
                     title: '深氧',
                     money: '5万元',
@@ -312,6 +317,7 @@ let msg = {
             index: ['clothing/images/wanshili/wanshililogo.jpg'],
             dianpu: {
                 ins: 'clothing',
+                smallclass:'w_clothing',
                 program: {
                     title: '万事利丝绸',
                     money: '启动资金50万元',
@@ -345,32 +351,33 @@ let msg = {
             dianpuindex: ['clothing/images/wanshili/wanshili1.jpg', 'clothing/images/wanshili/wanshili2.jpg', 'clothing/images/wanshili/wanshili3.jpg',, 'clothing/images/wanshili/wanshili4.jpg']
         },
         hadia:{
-            belong: '餐饮 全鸡 蛋挞 烤翅 薯条 西餐 哈嗲汉堡',
+            belong: '上海 餐饮 全鸡 蛋挞 烤翅 薯条 西餐 哈嗲汉堡',
             index: ['canyin/images/hadia/hadialogo.jpg'],
             dianpu: {
                 ins: 'canyin',
+                smallclass:'westernfood',
                 program: {
                     title: '哈嗲汉堡',
-                    money: '20-50万',
-                    time: '2009年',
+                    money: '10万',
+                    time: '2005年',
                     instudry: '餐饮',
-                    count: '300家',
-                    area: '',
+                    count: '460家',
+                    area: '全国',
                     people: '自由创业',
                     scope: '汉堡、全鸡、蛋挞、烤翅、薯条',
                     auth: '有',
                     birthplace: '上海',
                     contract: '1年',
-                    train: '',
+                    train: '7天',
                     royalties: '',
                     condition: '',
                     margin: '1万',
-                    initial: '5万'
+                    initial: '59800元'
                 },
                 company: {
                     name: '上海恒好餐饮管理有限公司',
                     nature: '有限公司',
-                    funds: '500万元',
+                    funds: '45万元',
                     location: '上海'
                 },
                 big: ['canyin/images/hadia/big1.jpg', 'canyin/images/hadia/big2.jpg', 'canyin/images/hadia/big3.jpg', ],
@@ -380,9 +387,122 @@ let msg = {
                 liucheng: ['canyin/images/hadia/liucheng1.jpg']
             },
             dianpuindex: ['canyin/images/hadia/hadia1.jpg', 'canyin/images/hadia/hadia2.jpg', 'canyin/images/hadia/hadia3.jpg', 'canyin/images/hadia/hadia4.jpg', 'canyin/images/hadia/hadia5.jpg', 'canyin/images/hadia/hadia6.jpg' ]
-        }
-    }
-    
+        },
+        handoukafei:{
+            belong: '上海 饮料 憨豆咖啡 饮品',
+            index: ['canyin/images/handoukafei/handoukafeilogo.jpg'],
+            dianpu: {
+                ins: 'canyin',
+                smallclass:'coffee',
+                program: {
+                    title: '憨豆咖啡',
+                    money: '20万',
+                    time: '2010年',
+                    instudry: '餐饮',
+                    count: '197家',
+                    area: '全国',
+                    people: '自由创业、在岗投资',
+                    scope: '咖啡',
+                    auth: '有',
+                    birthplace: '上海',
+                    contract: '',
+                    train: '',
+                    royalties: '',
+                    condition: '',
+                    margin: '2万',
+                    initial: '1.8万'
+                },
+                company: {
+                    name: '憨豆餐饮管理（上海）有限公司',
+                    nature: '有限公司',
+                    funds: '500万元',
+                    location: '上海'
+                },
+                big: ['canyin/images/handoukafei/big1.jpg', 'canyin/images/handoukafei/big2.jpg', 'canyin/images/handoukafei/big3.jpg', ],
+                good: ['canyin/images/handoukafei/good1.jpg', 'canyin/images/handoukafei/good2.jpg', 'canyin/images/handoukafei/good3.jpg',],
+                xiangmu: ['canyin/images/handoukafei/xiangmu1.jpg', 'canyin/images/handoukafei/xiangmu2.jpg'],
+                youshi: ['canyin/images/handoukafei/youshi1.jpg', 'canyin/images/handoukafei/youshi2.jpg',  'canyin/images/handoukafei/youshi3.jpg'],
+                liucheng: []
+            },
+            dianpuindex: ['canyin/images/handoukafei/handoukafei1.jpg', 'canyin/images/handoukafei/handoukafei2.jpg', 'canyin/images/handoukafei/handoukafei2.jpg', 'canyin/images/handoukafei/handoukafei4.jpg' ]
+        },
+        wangyu:{
+            belong: '上海 电脑 网鱼网咖 上网 网吧',
+            index: ['retail/images/wangyu/wangyulogo.jpg'],
+            dianpu: {
+                ins: 'retail',
+                smallclass:'computer',
+                program: {
+                    title: '网鱼网咖',
+                    money: '100-200万',
+                    time: '1998年',
+                    instudry: '餐饮',
+                    count: '250家',
+                    area: '全国',
+                    people: '自由创业、在岗投资',
+                    scope: '网咖',
+                    auth: '有',
+                    birthplace: '上海',
+                    contract: '',
+                    train: '',
+                    royalties: '',
+                    condition: '',
+                    margin: '',
+                    initial: ''
+                },
+                company: {
+                    name: '上海网鱼信息科技有限公司',
+                    nature: '股份有限公司',
+                    funds: '1000万元',
+                    location: '上海'
+                },
+                big: ['retail/images/wangyu/big1.jpg', 'retail/images/wangyu/big2.jpg', 'retail/images/wangyu/big3.jpg', 'retail/images/wangyu/big4.jpg'],
+                good: ['retail/images/wangyu/good1.jpg', 'retail/images/wangyu/good2.jpg', 'retail/images/wangyu/good3.jpg','retail/images/wangyu/good4.jpg'],
+                xiangmu: ['retail/images/wangyu/xiangmu1.jpg', 'retail/images/wangyu/xiangmu2.jpg',],
+                youshi: ['retail/images/wangyu/youshi1.jpg','retail/images/wangyu/youshi2.jpg', ],
+                liucheng: []
+            },
+            dianpuindex: ['retail/images/wangyu/wangyu1.jpg', 'retail/images/wangyu/wangyu2.jpg', 'retail/images/wangyu/wangyu3.jpg', 'retail/images/wangyu/wangyu4.jpg','retail/images/wangyu/wangyu5.jpg','retail/images/wangyu/wangyu6.jpg' ]
+        },
+        hejihuajia:{
+            belong: '江苏南通 何记花甲 米线 粉丝',
+            index: ['canyin/images/hejihuajia/hejihuajialogo.jpg'],
+            dianpu: {
+                ins: 'canyin',
+                smallclass:'snack',
+                program: {
+                    title: '何记花甲',
+                    money: '1-5万',
+                    time: '2015年',
+                    instudry: '餐饮',
+                    count: '200家',
+                    area: '全国',
+                    people: '自由创业',
+                    scope: '花甲及海鲜系列小吃',
+                    auth: '否',
+                    birthplace: '江苏南通',
+                    contract: '',
+                    train: '',
+                    royalties: '',
+                    condition: '',
+                    margin: '',
+                    initial: '1-5万'
+                },
+                company: {
+                    name: '南通市何炜记餐饮管理有限公司',
+                    nature: '有限公司',
+                    funds: '100万元',
+                    location: '江苏南通'
+                },
+                big: ['canyin/images/hejihuajia/big1.jpg', 'canyin/images/hejihuajia/big2.jpg', 'canyin/images/hejihuajia/big3.jpg', 'canyin/images/hejihuajia/big4.jpg'],
+                good: ['canyin/images/hejihuajia/good1.jpg', 'canyin/images/hejihuajia/good2.jpg', 'canyin/images/hejihuajia/good3.jpg','canyin/images/hejihuajia/good4.jpg'],
+                xiangmu: ['canyin/images/hejihuajia/xiangmu1.jpg', 'canyin/images/hejihuajia/xiangmu2.jpg', 'canyin/images/hejihuajia/xiangmu3.jpg','canyin/images/hejihuajia/xiangmu4.jpg','canyin/images/hejihuajia/xiangmu5.jpg'],
+                youshi: ['canyin/images/hejihuajia/youshi1.jpg', 'canyin/images/hejihuajia/youshi2.jpg', 'canyin/images/hejihuajia/youshi3.jpg','canyin/images/hejihuajia/youshi4.jpg'],
+                liucheng: ['canyin/images/hejihuajia/liucheng1.jpg','canyin/images/hejihuajia/liucheng2.jpg']
+            },
+            dianpuindex: ['canyin/images/hejihuajia/hejihuajia1.jpg', 'canyin/images/hejihuajia/hejihuajia2.jpg', 'canyin/images/hejihuajia/hejihuajia3.jpg', 'canyin/images/hejihuajia/hejihuajia4.jpg', 'canyin/images/hejihuajia/hejihuajia5.jpg', 'canyin/images/hejihuajia/hejihuajia6.jpg' ]
+        },
+    },
 };
 let mess = JSON.stringify(msg);
 

@@ -91,12 +91,18 @@
     </div>
 </body>
 <script>
+    let data = JSON.parse(mess);
     //header
     $('.top').css('background', $('.smallClass').css('background'))
     //具体分类
-    for(let i=0;i<11;i++){
-        let link = $('<span myAttr='+'canyin'+'>'+'餐饮'+'</span>');
-        $('.smallClass').append(link);
+    let cla = GetQueryString('class');
+    for(let item of data.classes){
+        if(Object.keys(item[0])[0] === cla){
+            for(let i=0;i<Object.values(item[1]).length;i++){
+                let link = $('<span myAttr='+Object.keys(item[1])[i]+'>'+Object.values(item[1])[i]+'</span>');
+                $('.smallClass').append(link);
+            }
+        }    
     }
     //footer
     $('.footer').css('background', $('.smallClass').css('background'))
@@ -110,13 +116,13 @@
     $('.back').on('click', function () {
         window.history.back()
     })
-    //获取地址栏参数
-    // function GetQueryString(name) {
-    //     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-    //     var r = window.location.search.substr(1).match(reg);
-    //     if (r != null) return unescape(r[2]);
-    //     return null;
-    // }
+    // 获取地址栏参数
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
 
     //跳转
     $('[myAttr]').on('click', function () {
@@ -128,6 +134,11 @@
         location.href = 'm_dianpu.html?name='+$(this).attr('store')
         // console.log($(this).attr('myAttr'))
     })
+    $('.more_pro').on('click',function(){
+        location.href = 'more.html?class='+GetQueryString('class')+'&kind=big'
+    })
+
+    
 </script>
 
 </html>

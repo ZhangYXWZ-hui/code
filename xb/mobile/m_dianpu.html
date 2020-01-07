@@ -21,12 +21,12 @@
     </div>
     <div class="blank"></div>
     <div class="intro hot flexed">
-        <img src="../firstclass/fastmoving/images/ucc.jpg" alt="">
+        <img src="" alt="">
         <div class="mess">
-            <span class="title">ucc干洗</span>
-            <p>经营产品：<span class='instudry'>干洗店加盟</span></p>
-            <p>店数数量：<span class='count'>10000家</span></p>
-            <p>投资金额：<span class="money">￥5~10万</span></p>
+            <span class="title"></span>
+            <p>经营产品：<span class='instudry'></span></p>
+            <p>店数数量：<span class='count'></span></p>
+            <p>投资金额：<span class="money"></span></p>
         </div>
     </div>
     <div class="p_intro">
@@ -61,13 +61,24 @@
     </div>
 </body>
 <script>
+    let data = JSON.parse(mess);
+    // 获取地址栏参数
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+    let store = GetQueryString(name);
+   
+    $('.hot img').attr('src',data.brand[store].index);
+    $('.mess .title').text(data.brand[store].dianpu.program.title);
+    $('.mess .instudry').text(data.brand[store].dianpu.program.instudry);
+    $('.mess .count').text(data.brand[store].dianpu.program.count);
+    $('.mess .money').text(data.brand[store].dianpu.program.money);
     //header
     $('.top').css('background', $('.hot').css('background'))
-    //具体分类
-    for(let i=0;i<11;i++){
-        let link = $('<span myAttr='+'canyin'+'>'+'餐饮'+'</span>');
-        $('.smallClass').append(link);
-    }
+    
     //footer
     $('.footer').css('background', $('.hot').css('background'))
     $('.footer .left').on('click', function () {

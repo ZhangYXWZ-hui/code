@@ -111,11 +111,7 @@
 <script>
     //header
     $('.top').css('background', $('.hot').css('background'))
-    //具体分类
-    for(let i=0;i<11;i++){
-        let link = $('<span myAttr='+'canyin'+'>'+'餐饮'+'</span>');
-        $('.smallClass').append(link);
-    }
+    
     //footer
     $('.footer').css('background', $('.hot').css('background'))
     $('.footer .left').on('click', function () {
@@ -130,11 +126,18 @@
     })
     //跳转
     $('[store]').on('click', function () {
-        // window.open("firstclass/dianpuindex.html?name=xiaobao")
-        location.href = 'm_dianpu.html?name='+$(this).attr('store')
-        
+        location.href = 'm_dianpu.html?name='+$(this).attr('store')    
     })
-    
+    $('.more_pro').on('click',function(){
+        location.href='more.html?class='+GetQueryString('class')+'&kind=small'
+    })
+    // 获取地址栏参数
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
 </script>
 
 </html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/rem.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="../css/icon-mobile/iconfont.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header flexed top">
+        <i class="iconfont icon-left back"></i>
+        <p>项目分类</p>
+        <i></i>
+    </div>
+    <div class="blank"></div>
+    
+    <div class="hot">
+        <ul></ul>
+    </div>
+    <div class="blank"></div>
+    <div class="footer">
+        <ul class="flexed">
+            <li class="left">
+                <span class="iconfont icon-home"></span>
+                <p>首页</p>
+            </li>
+            <li class="right">
+                <span class="iconfont icon-search"></span>
+                <p>菜单</p>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    let data = JSON.parse(mess);
+    // 获取地址栏参数
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+    //header
+    $('.top').css('background', $('.hot').css('background'))
+    
+    //footer
+    $('.footer').css('background', $('.hot').css('background'))
+    $('.footer .left').on('click', function () {
+        location.href = '../mobileindex.html'
+    })
+    $('.footer .right').on('click', function () {
+        location.href = 'menu.html'
+    })
+    //返回
+    $('.back').on('click', function () {
+        window.history.back()
+    })
+    //内容
+    for(let item in data.brand){
+        if(GetQueryString('kind')=='big'&&data.brand[item].dianpu.ins == GetQueryString('class')){
+            let box = $(`
+                <li class="flexed" store='`+item+`'>
+                    <img src="../firstclass/`+data.brand[item].index+`" alt="">
+                    <div class="mess">
+                        <span class="title">`+data.brand[item].dianpu.program.title+`</span>
+                        <p>经营产品：<span class='instudry'>`+data.brand[item].dianpu.program.instudry+`</span></p>
+                        <p>店数数量：<span class='count'>`+data.brand[item].dianpu.program.count+`</span></p>
+                        <p>投资金额：<span class="money">`+data.brand[item].dianpu.program.money+`</span></p>
+                    </div>
+                </li>
+            `)
+            $('.hot ul').append(box)
+            console.log(item)
+        }else if(GetQueryString('kind')=='small'&&data.brand[item].dianpu.smallclass == GetQueryString('class')){
+            console.log(item)
+            let box = $(`
+                <li class="flexed" store='`+item+`'>
+                    <img src="../firstclass/`+data.brand[item].index+`" alt="">
+                    <div class="mess">
+                        <span class="title">`+data.brand[item].dianpu.program.title+`</span>
+                        <p>经营产品：<span class='instudry'>`+data.brand[item].dianpu.program.instudry+`</span></p>
+                        <p>店数数量：<span class='count'>`+data.brand[item].dianpu.program.count+`</span></p>
+                        <p>投资金额：<span class="money">`+data.brand[item].dianpu.program.money+`</span></p>
+                    </div>
+                </li>
+            `)
+            $('.hot ul').append(box)
+        }    
+    }
+    //跳转
+    $('[store]').on('click', function () {
+        location.href = 'm_dianpu.html?name='+$(this).attr('store')    
+    })
+    
+</script>
+
+</html>

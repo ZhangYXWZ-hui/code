@@ -200,14 +200,15 @@ html {
     border-bottom: .05rem solid #ccc;
 }
 .hot img{
-    width: 6rem;
+    width: 7rem;
     height: 5rem;
+    border-radius: .5rem;
 }
 .mess{
-    width: calc(100% - 6rem);
+    width: calc(100% - 8rem);
     height: 5rem;
     font-size: .8rem;
-    padding-left: .5rem;
+    padding-left: 1.5rem;
 }
 .title{
     font-weight: 600;
