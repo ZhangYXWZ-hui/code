@@ -10,6 +10,9 @@ ul li{
     display: flex;
     justify-content: space-around;
 }
+input, button{
+    outline: none;
+}
 html {
     font-size : 20px!important;
 }
@@ -200,15 +203,15 @@ html {
     border-bottom: .05rem solid #ccc;
 }
 .hot img{
-    width: 7rem;
+    width: 6.5rem;
     height: 5rem;
     border-radius: .5rem;
 }
 .mess{
-    width: calc(100% - 8rem);
+    width: calc(100% - 6.5rem);
     height: 5rem;
     font-size: .8rem;
-    padding-left: 1.5rem;
+    padding-left: .5rem;
 }
 .title{
     font-weight: 600;
@@ -267,7 +270,7 @@ html {
 }
 /* 店铺详情 */
 .intro{
-    padding: .5rem;
+    padding: .5rem 1rem;
 }
 .intro img{
     border: .05rem solid orange;
@@ -314,4 +317,38 @@ html {
 }
 .right span{
     padding-top: .15rem;
+}
+/* 搜索 */
+.search{
+    width: 100%;
+    /* height: 2rem; */
+    
+}
+.search i{
+    position: absolute;
+    top: .6rem;
+    left: 11%;
+    font-size: .7rem;
+    color: #ccc;
+}
+.search form{
+    /* justify-content: space-around; */
+    position: relative;
+}
+.search input{
+    width: 70%;
+    margin-top: .3rem;
+    height: 1.2rem;
+    border: .05rem solid #ccc;
+    border-radius: .6rem;
+    padding-left: 3em;
+    margin-left: .5rem;
+}
+.search button{
+    width: 15%;
+    margin-top: .3rem;
+    border: 0;
+    background: #fff;
+    font-size: .7rem;
+    margin-left: -1.5rem;
 }

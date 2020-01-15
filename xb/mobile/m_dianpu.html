@@ -11,12 +11,17 @@
     <link rel="stylesheet" href="../css/mobile.css">
     <link rel="stylesheet" href="../css/icon-mobile/iconfont.css">
     <title>Document</title>
+    <style>
+        .a_show img{
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
     <div class="header flexed top">
         <i class="iconfont icon-left back"></i>
-        <p>UCC干洗</p>
+        <p>项目详情</p>
         <i></i>
     </div>
     <div class="blank"></div>
@@ -36,7 +41,7 @@
             <li id="three">加盟流程</li>
         </ul>
         <div class="one a_show">
-            
+            <img src="../images/xiaoer.jpg" alt="">
         </div>
         <div class="two a_show" style="display:none">
             
@@ -69,9 +74,9 @@
         if (r != null) return unescape(r[2]);
         return null;
     }
-    let store = GetQueryString(name);
+    let store = GetQueryString('name');
    
-    $('.hot img').attr('src',data.brand[store].index);
+    $('.hot img').attr('src','../firstclass/'+data.brand[store].index);
     $('.mess .title').text(data.brand[store].dianpu.program.title);
     $('.mess .instudry').text(data.brand[store].dianpu.program.instudry);
     $('.mess .count').text(data.brand[store].dianpu.program.count);

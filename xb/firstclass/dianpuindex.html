@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="../images/favicon.ico"/>
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="css/dianpuindex.css">
+    <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://robot.51lick.com/media/FormBundle/css/style.css?v1.0.00000009">
     <!-- 百度商桥 -->
@@ -29,12 +30,11 @@
             margin-top: 0;
             background: orange;
         }
-        .indexmenu{
-            width: 1200px;
-        }
-        .indexmenu li a{
-            width: 100px;
-            color: #fff;
+        
+        @media(max-width:1199px){
+           .endcont h2{
+               margin-left: 0;
+           }
         }
         .p_index{
             width: 100%;
@@ -101,13 +101,13 @@
     <div class="header">
         <div class="head-top">
             <div class="topcont">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                     <span class="topspan">你好</span>
                     <span class="topspan">欢迎来到小宝招商加盟网！</span>
                     <span class="topspan">新增<span class="gold">359</span>家企业，共<span
                             class="gold">5139</span>家企业，<span class="gold">6812</span>个项目</span>
                 </div>
-                <div class="col-lg-3 col-lg-offset-3">
+                <div class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-3">
                     <a class="topspan gove" href="http://www.51lick.com">小宝官网</a>
                     <span>客服热线：<span class="white">400-0282-801</span></span>
                 </div>
@@ -115,15 +115,15 @@
         </div>
         <div class="head-end">
             <div class="endcont">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-3 col-md-offset-1">
                     <a href="">
                         <img src="../images/logo.png" alt="小宝招商加盟网">
                     </a>
                 </div>
-                <div class="col-lg-6 col-lg-offset-1">
+                <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1">
                     <div class="search">
-                        <input id="search" type="text" placeholder="热门搜索：餐饮加盟 服装加盟">
-                        <button>查询</button>
+                        <input class="col-lg-10 col-md-10" id="search" type="search" placeholder="热门搜索：餐饮加盟 服装加盟">
+                        <button class="col-lg-2 col-md-2">查询</button>
                     </div>
                 </div>
             </div>
@@ -141,7 +141,8 @@
                         <li><a href="clothing/clothing.html">服装</a></li>
                         <li><a href="furniture/furniture.html">家具</a></li>
                         <li><a href="textiles/textiles.html">家纺</a></li>
-                        <li><a href="hotel/hotel.html">酒店</a></li>
+                        <li><a href="hotel/hotel.html">酒店娱乐</a></li>
+                        <li><a href="new/new.html">新奇特</a></li>
                     </ul>
                 </div>
             </div>
@@ -155,10 +156,10 @@
     <div class="wrap">
         <div class="dtop">
             <div class="dianputitle">
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-2">
                     <img src="" alt="">
                 </div>
-                <div class="col-lg-4 title">
+                <div class="col-lg-4 col-md-4 title">
                     <h2><span class="stitle"></span><span class="dvip">V</span></h2>
                     <span class="glyphicon glyphicon-star star"></span>
                     <span class="glyphicon glyphicon-star star"></span>
@@ -166,7 +167,7 @@
                     <span class="glyphicon glyphicon-star star"></span>
                     <span class="glyphicon glyphicon-star star"></span>
                 </div>
-                <div class="col-lg-2 col-lg-offset-4">
+                <div class="col-lg-2 col-lg-offset-4 col-md-2 col-md-offset-4">
                     <a class="icon" href="">
                         <span class="glyphicon glyphicon-home"></span>
                         <p>项目详情</p>
@@ -216,14 +217,14 @@
     </div>
     <div class="footer">
         <div class="footercont">
-            <div class="gywm floated">
+            <div class="gywm floated visible-lg">
                 <h4>新手帮助</h4>
                 <ul>
                     <li><a href="">商家参与</a></li>
                     <li><a href="">企业参与</a></li>
                 </ul>
             </div>
-            <div class="gywm floated">
+            <div class="gywm floated visible-lg">
                 <h4>兼职代理</h4>
                 <ul>
                     <li><a href="">找产品</a></li>

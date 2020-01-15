@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/data.js"></script>
+    <script src="../js/jquery-2.2.4.js"></script>
+    <script src="js/demo.json"></script>
+    <title>模糊查询</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+    <!-- <div class="search">
+        <input id="search" type="text">
+        <button>查询</button>
+    </div>
+    <div class="show"></div>
+   
+    
+    <script>
+        // let keyword= '餐饮';
+        let data = JSON.parse(mess)
+        function search(){
+            let arr ={};
+            let result = $('#search').val();
+            let seaValue = result.split('');
+            for(let item in data.brand){
+                if(data.brand[item].belong.match(result)){
+                    arr[item]=1
+                }       
+            }
+            for(let item in data.brand){
+                for(let i=0;i<seaValue.length;i++){
+                    if(data.brand[item].belong.match(seaValue[i])){
+                        if(!arr[item]){
+                            arr[item]=1
+                        }
+                    }  
+                }
+            }
+            console.log(arr);
+            return arr
+        }
+        $('button').on('click', function () {
+            search()
+        })
+        $('input').keydown(function(e){
+            if(e.which == 13){
+                search()
+            }
+        })
+
+    </script>   -->
+
+
+    <!-- <input id="myinput" type="search"> -->
+    <script>
+         //这两种都能用, 一个是在form上加id 一个是在input元素加id
+         //对于苹果手机添加一个form元素是必要的,否则只能实现功能但是键盘的文字不能变成搜索字样
+        //  $('#myform').bind('search', function () {
+        //      //coding
+         //      alert(1);
+        //  });
+        // $("#myinput").on('keypress',function(e) {
+        //         var keycode = e.keyCode;
+        //         var searchName = $(this).val();
+        //         if(keycode=='13') {
+        //             e.preventDefault();  
+        //             //请求搜索接口 
+        //             alert("test");      
+        //         }
+        //  });
+
+             
+        // $('#myinput').bind('search', function () {
+        //     //coding
+        //    var value=$("#myinput").val();
+        //    console.log(value);
+        //    $.ajax({
+        //     type:"get",
+        //     url:"",
+        //     async:true,
+        //     data:{
+        //     "val":value
+        //     },
+        //     success:function(){
+        //    
+        //     }
+        //    });
+        
+        // });
+        $.ajax({
+            url:'js/demo.json',
+            success:function(result,status,xhr){
+                let msg = JSON.parse(xhr.responseText)
+                console.log(msg)
+            }
+        })
+    </script>
+</body>
+
+</html>

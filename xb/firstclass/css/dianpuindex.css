@@ -9,6 +9,9 @@
     margin: 0 auto;
     padding: 5px 0;
 }
+.indexmenu li a{
+    color: #fff;
+}
 .dianputitle img{
     border-radius: 8px;
 }

@@ -1,0 +1,114 @@
+@media(max-width:1199px){
+    .gove{
+        margin-right: 50px;
+    }
+    .topcont{
+        width: 100%;
+        padding-left: 20px;
+    }
+    .endcont{
+        width: 100%;
+    }
+    .indexmenu{
+        width: 100%;
+    }
+    .menu{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .slide{
+        height: 372px;
+    }
+    .ad{
+        width: 95%;
+    }
+    .big img{
+        width: 100%;
+    }
+    .middle img{
+        width: 100%;
+    }
+    .small img{
+        width: 100%;
+    }
+    .article-model{
+        width: 100%;
+        padding: 0 10px;
+    }
+    .article{
+        height: 390px;
+    }
+    .banner-part{
+        width: 314px;
+    }
+    .banner-top{
+        height: 290px;
+    }
+    .banner-end{
+        height: 100px;
+    }
+    .article-part{
+        width: 430px;
+    }
+    .tab-cont li{
+        height: 26px;
+        line-height: 26px;
+    }
+    .hot-part{
+        width: 190px;
+    }
+    .hot-part li{
+        height: 100px;
+    }
+    .ad-img{
+        width: 100%;
+        height: 374px;
+        padding: 0 10px;
+    }
+    .ad-img-cont{
+        height: 335px;
+    }
+    .ad-title{
+        width: 223px;    
+    }
+    .ad-img-cont ul{
+        width: 183px;
+    }
+    .ad-img-cont li{
+        height: 167px;
+    }
+    .small-ad img{
+        height: 143px;
+    }
+    .small-ad p{
+        height: 24px;
+        line-height: 24px;
+    }
+    .footercont{
+        width: 100%;
+    }
+
+    .bread{
+        width: 100%;
+    }
+    .detail{
+        width: 900px;
+        margin: 0 auto;
+    }
+    .part{
+        width: 100%;
+        padding-left: 10px;
+    }
+    .dbox{
+        width: 900px;
+    }
+
+    .dianputitle{
+        width: 100%;
+        padding-left: 20px;
+    }
+    .dianputitle .title{
+        margin-left: 0;
+    }
+    
+}

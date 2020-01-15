@@ -11,6 +11,7 @@
     <!-- <link rel="stylesheet" href="css/index.css"> -->
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="bootstrap-3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/media.css">
     <!-- 百度商桥 -->
     <script>
         var _hmt = _hmt || [];
@@ -28,12 +29,8 @@
             margin-top: 0;
             background: orange;
         }
-        .indexmenu {
-            width: 1200px;
-            margin: 0 auto;
-        }
         .indexmenu li a {
-            width: 100px;
+            width: 100%;
             color: #fff !important;
         }
     </style>
@@ -44,13 +41,13 @@
     <div class="header">
         <div class="head-top">
             <div class="topcont">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                     <span class="topspan">你好!</span>
                     <span class="topspan">欢迎来到小宝招商加盟网！</span>
                     <span class="topspan">新增<span class="gold">359</span>家企业，共<span class="gold">5139</span>家企业，<span
                             class="gold">6812</span>个项目</span>
                 </div>
-                <div class="col-lg-3 col-lg-offset-3">
+                <div class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-1">
                     <a class="topspan gove" href="http://www.51lick.com">小宝官网</a>
                     <span>客服热线：<span class="white">400-0282-801</span></span>
                 </div>
@@ -58,15 +55,15 @@
         </div>
         <div class="head-end">
             <div class="endcont">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-3 col-md-offset-1">
                     <a href="index.html">
                         <img src="./images/logo.png" alt="小宝招商加盟网">
                     </a>
                 </div>
-                <div class="col-lg-6 col-lg-offset-1">
+                <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1">
                     <div class="search">
-                        <input id="search" type="text" placeholder="热门搜索：餐饮加盟 服装加盟">
-                        <button>查询</button>
+                        <input class="col-lg-10 col-md-10" id="search" type="search" placeholder="热门搜索：餐饮加盟 服装加盟">
+                        <button class="col-lg-2 col-md-2">查询</button>
                     </div>
                 </div>    
             </div>
@@ -84,7 +81,8 @@
                         <li><a href="./firstclass/clothing/clothing.html">服装</a></li>
                         <li><a href="./firstclass/furniture/furniture.html">家具</a></li>
                         <li><a href="./firstclass/textiles/textiles.html">家纺</a></li>
-                        <li><a href="./firstclass/hotel/hotel.html">酒店</a></li>
+                        <li><a href="./firstclass/hotel/hotel.html">酒店娱乐</a></li>
+                        <li><a href="./firstclass/new/new.html">新奇特</a></li>
                     </ul>
                 </div>
             </div>
@@ -120,8 +118,8 @@
                             <li><img store='shijishaokao' src="./images/banner2.jpg"></li>
                             <li><img store='meizhiyan' src="./images/banner3.jpg"></li>
                             <li><img store='shenyang' src="./images/banner4.jpg"></li>
-                            <li><img store='wanshili' src="./images/banner5.jpg"></li>
-                            <li><img store='hadia' src="./images/banner6.jpg"></li>
+                            <li><img class='client' src="./images/banner5.jpg"></li>
+                            <li><img class="company" src="./images/banner6.jpg"></li>
                             <li><img store='chuzongfang' src="./images/banner1.jpg"></li>
                         </ul>
                         <div class="btnc next">&gt;</div>
@@ -167,24 +165,63 @@
                 <img store='xueyuzhenqing' src="./images/xueyuzhenqing.jpg" alt="雪域真情" title="雪域真情">
             </div>
             <div class="middle box">
-                <img src="./images/ad2.gif" alt="">
+                <img store='gz8090' src="./images/8090.jpg" alt="广州8090" title="广州8090">
             </div>
             <div class="middle box">
-                <img src="./images/ad2.gif" alt="">
+                <img store='yuzhankeji' src="./images/yuzhankeji.jpg" alt="育展科技" title="育展科技">
             </div>
             <div class="middle box">
-                <img src="./images/ad2.gif" alt="">
+                <img store='fangshan' src="./images/fangshan.jpg" alt="放山娃蜂蜜" title="放山娃蜂蜜">
             </div>
             <div class="middle box">
-                <img src="./images/ad2.gif" alt="">
+                <img store='kuweiba' src="./images/kuweiba.jpg" alt="酷尾巴" title="酷尾巴">  
             </div>
             <div class="middle box">
-                <img src="./images/ad2.gif" alt="">
+                <img store='dasanxiang' src="./images/dasanxiang.jpg" alt="大三湘" title="大三湘">
+            </div>
+            <div class="middle box">
+                <img store='ensha' src="./images/ensha.jpg" alt="恩莎" title="恩莎">
+            </div>
+            <div class="middle box">
+                <img store='bamiancheng' src="./images/bamiancheng.jpg" alt="八面城" title="八面城">
+            </div>
+            <div class="middle box">
+                <img store='lanersen' src="./images/lanersen.jpg" alt="兰尔森" title="兰尔森">
+            </div>
+            <div class="middle box">
+                <img store='gelingbao' src="./images/gelingbao.jpg" alt="格凌宝" title="格凌宝">
+            </div>
+            <div class="middle box">
+                <img store='yunfeng' src="./images/yunfeng.jpg" alt="芸峰" title="芸峰">
+            </div>
+            <div class="middle box">
+                <img store='woman' src="./images/woman.jpg" alt="沃曼" title="沃曼">
             </div>
             <div class="small box">
                 <img store='handoukafei' src="./images/handoukafei.jpg" alt="憨豆咖啡" title="憨豆咖啡">
             </div>
             <div class="small box">
+                <img store='kangshun' src="./images/kangshun.jpg" alt="康顺" title="康顺">
+            </div>
+            <div class="small box">
+                <img store='shuchuan' src="./images/shuchuan.jpg" alt="蜀川" title="蜀川">
+            </div>
+            <div class="small box">
+                <img store='guanchao' src="./images/guanchao.jpg" alt="冠潮" title="冠潮">
+            </div>
+            <div class="small box">
+                <img store='boyuan' src="./images/boyuan.jpg" alt="中原酒业" title="中原酒业">
+            </div>
+            <div class="small box">
+                <img store='shangquan' src="./images/shangquan.jpg" alt="商圈" title="商圈">
+            </div>
+            <div class="small box">
+                <img store='bobi' src="./images/bobi.jpg" alt="波比英语" title="波比英语">
+            </div>
+            <div class="small box">
+                <img src="./images/ad3.gif" alt="">
+            </div>
+            <!-- <div class="small box">
                 <img src="./images/ad3.gif" alt="">
             </div>
             <div class="small box">
@@ -195,8 +232,8 @@
             </div>
             <div class="small box">
                 <img src="./images/ad3.gif" alt="">
-            </div>
-            <div class="small box">
+            </div> -->
+            <!-- <div class="small box">
                 <img src="./images/ad3.gif" alt="">
             </div>
             <div class="small box">
@@ -207,28 +244,7 @@
             </div>
             <div class="small box">
                 <img src="./images/ad3.gif" alt="">
-            </div>
-            <div class="small box">
-                <img src="./images/ad3.gif" alt="">
-            </div>
-            <div class="small box">
-                <img src="./images/ad3.gif" alt="">
-            </div>
-            <div class="small box">
-                <img src="./images/ad3.gif" alt="">
-            </div>
-            <div class="small box">
-                <img src="./images/ad3.gif" alt="">
-            </div>
-            <div class="small box">
-                <img src="./images/ad3.gif" alt="">
-            </div>
-            <div class="small box">
-                <img src="./images/ad3.gif" alt="">
-            </div>
-            <div class="small box">
-                <img src="./images/ad3.gif" alt="">
-            </div>
+            </div> -->
         </div>
         <div class="article-model">
             <h4>行业资讯</h4>
@@ -415,7 +431,7 @@
 
         </div>
         <div class="ad-img">
-            <h4>酒水饮料<a href="./firstclass/fastmoving/drink.html">查看更多></a></h4>
+            <h4>酒水饮料<a href="./firstclass/fastmoving/fastmoving.html">查看更多></a></h4>
             <div class="ad-img-cont flexed">
                 <div class="ad-title">
                     <img src="./images/pic_110.png" alt="">
@@ -562,14 +578,14 @@
     </div>
     <div class="footer">
         <div class="footercont">
-            <div class="gywm floated">
+            <div class="gywm floated visible-lg">
                 <h4>新手帮助</h4>
                 <ul>
                     <li><a href="">商家参与</a></li>
                     <li><a href="">企业参与</a></li>
                 </ul>
             </div>
-            <div class="gywm floated">
+            <div class="gywm floated visible-lg">
                 <h4>兼职代理</h4>
                 <ul>
                     <li><a href="">找产品</a></li>
@@ -633,8 +649,14 @@
         if(!IsPC()){
             location.href='mobileindex.html';
         }
+        // console.log(document.body.clientWidth)
         //轮播图模块
         // 图片变化
+        let cwidth = document.body.clientWidth;
+        let width = 1200
+        if(cwidth < 1200){
+            width = cwidth*0.9
+        }
         $(function () {
             var timer = null; //声明一个全局定时器
             var index = 0;
@@ -651,16 +673,16 @@
                     当图片到最后一张时跳回第一张，本例中在最后一张中放入了第一张的图片，为实现无缝切换图片的效果。
                     */
                     $(".pic-list").animate({
-                        left: -(index) * 1200
-                    }, 500);
+                        left: -(index) * width
+                    }, 1000);
                     index = 0;
                     $(".pic-list").animate({
                         left: 0
                     }, 0); //
                 }
                 $(".pic-list").animate({
-                    left: -index * 1200
-                }, 500);
+                    left: -index * width
+                }, 1000);
                 iconHover(index);
             }
             function prev() {
@@ -668,12 +690,12 @@
                 if (index < 0) {
                     index = 5;
                     $(".pic-list").animate({
-                        left: -(index + 1) * 1200
+                        left: -(index + 1) * width
                     }, 0);
                 }
                 $(".pic-list").animate({
-                    left: -index * 1200
-                }, 500);
+                    left: -index * width
+                }, 1000);
                 iconHover(index);
             }
             function auto() {
@@ -695,7 +717,7 @@
             $(".icon-list li").mouseover(function () {
                 var index = $(this).index();
                 $(".pic-list").animate({
-                    left: -index * 1200
+                    left: -index * width
                 }, 500);
                 iconHover(index);
             })
@@ -711,7 +733,6 @@
         })
         //行业资讯
         $('.tab li').on('click', function () {
-            // console.log($(this).attr('class'))
             $('.tab-cont').css('display', 'none');
             $('.' + $(this).attr('id')).css('display', 'block');
             $('.tab li').removeClass('active');
@@ -751,7 +772,6 @@
             }   
         })
         $('.search input').keydown(function(e){
-            
             if(e.which == 13){
                 let content = encodeURI(encodeURI($('.search input').val()));
                 if($('.search input').val()!=''){

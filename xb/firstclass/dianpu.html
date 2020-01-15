@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="../images/favicon.ico" />
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="css/dianpu.css">
+    <link rel="stylesheet" href="../css/media.css">
     <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/icon-mobile/iconfont.css">
     <!-- 百度商桥 -->
@@ -34,24 +35,22 @@
             margin-top: 0;
             background: orange;
         }
-
-        .indexmenu {
+        /* .indexmenu {
             width: 1200px;
             margin: 0 auto;
-        }
-
+        } */
         .indexmenu li a {
-            width: 100px;
-            color: #fff !important;
+            width: 100%;
+            color: #fff;
         }
-
+        
         .dao {
             display: none;
             width: 100px;
             padding: 0;
             text-align: center;
-            right: 450px;
-            top: 350px;
+            right: 17%;
+            top: 40%;
             background: #f9f9f9;
         }
 
@@ -119,6 +118,15 @@
             margin: 0 5px 0 0;
             display: inline-block;
         }
+        @media(max-width:1199px){
+           .endcont h2{
+               margin-left: 0;
+           }
+           .dao{
+               right: 0%;
+               top: 25%;
+           }
+        }
     </style>
 </head>
 
@@ -126,13 +134,13 @@
     <div class="header">
         <div class="head-top">
             <div class="topcont">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                     <span class="topspan">你好</span>
                     <span class="topspan">欢迎来到小宝招商加盟网！</span>
                     <span class="topspan">新增<span class="gold">359</span>家企业，共<span class="gold">5139</span>家企业，<span
                             class="gold">6812</span>个项目</span>
                 </div>
-                <div class="col-lg-3 col-lg-offset-3">
+                <div class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-3">
                     <a class="topspan gove" href="http://www.51lick.com">小宝官网</a>
                     <span>客服热线：<span class="white">400-0282-801</span></span>
                 </div>
@@ -140,15 +148,15 @@
         </div>
         <div class="head-end">
             <div class="endcont">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-3 col-md-offset-1">
                     <a href="">
                         <img src="../images/logo.png" alt="小宝招商加盟网">
                     </a>
                 </div>
-                <div class="col-lg-6 col-lg-offset-1">
+                <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1">
                     <div class="search">
-                        <input id="search" type="text" placeholder="热门搜索：餐饮加盟 服装加盟">
-                        <button>查询</button>
+                        <input class="col-lg-10 col-md-10" id="search" type="search" placeholder="热门搜索：餐饮加盟 服装加盟">
+                        <button class="col-lg-2 col-md-2">查询</button>
                     </div>
                 </div>
             </div>
@@ -166,7 +174,8 @@
                         <li><a href="clothing/clothing.html">服装</a></li>
                         <li><a href="furniture/furniture.html">家具</a></li>
                         <li><a href="textiles/textiles.html">家纺</a></li>
-                        <li><a href="hotel/hotel.html">酒店</a></li>
+                        <li><a href="hotel/hotel.html">酒店娱乐</a></li>
+                        <li><a href="new/new.html">新奇特</a></li>
                     </ul>
                 </div>
             </div>
@@ -188,7 +197,7 @@
             </ol>
         </div>
         <div class="detail">
-            <div class="col-lg-3 box-border border-right">
+            <div class="col-lg-3 col-md-4 box-border border-right">
                 <div class="show">
                     <img src="" alt="">
                 </div>
@@ -205,28 +214,28 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 box-border border-right">
+            <div class="col-lg-5 col-md-4 box-border border-right">
                 <h4></h4>
                 <div class="mess program">
-                    <p><span class="col-lg-12 pleft">投资金额<span id="money" myAttr='money' class="messcont big"></span>
+                    <p><span class="pleft">投资金额<span id="money" myAttr='money' class="messcont big"></span>
                     </p>
-                    <p><span class="col-lg-12 pleft">所属行业<span id="instudry" myAttr='instudry'
+                    <p><span class="pleft">所属行业<span id="instudry" myAttr='instudry'
                                 class="messcont"></span></span></p>
-                    <p><span class="col-lg-6 pleft">成立时间<span id="time" myAttr='time'
-                                class="messcont"></span></span><span class="col-lg-6 pleft">门店总数<span id="count"
+                    <p><span class="col-lg-6 col-md-12 pleft">成立时间<span id="time" myAttr='time'
+                                class="messcont"></span></span><span class="col-lg-6 col-md-12 pleft">门店总数<span id="count"
                                 myAttr='count' class="messcont"></span></span></p>
-                    <p><span class="col-lg-6 pleft">加盟区域<span id="area" myAttr='area'
-                                class="messcont"></span></span><span class="col-lg-6 pleft">适合人群<span id="people"
+                    <p><span class="col-lg-6 col-md-12 pleft">加盟区域<span id="area" myAttr='area'
+                                class="messcont"></span></span><span class="col-lg-6 col-md-12 pleft">适合人群<span id="people"
                                 myAttr='people' class="messcont"></span></span></p>
-                    <p><span class="col-lg-12 pleft">经营范围<span id="scope" myAttr='scope' class="messcont"></span></span>
+                    <p><span class="col-lg-12 col-md-12 pleft">经营范围<span id="scope" myAttr='scope' class="messcont"></span></span>
                     </p>
                 </div>
-                <div class="col-lg-12 xbad">小宝加盟广告</div>
-                <div class="share col-lg-10">   
+                <div class="col-lg-12 xbad visible-lg">小宝加盟广告</div>
+                <div class="share col-lg-12 col-md-12">   
                     <div id="share-2"></div>  
                 </div>
             </div>
-            <div class="col-lg-3 box-border">
+            <div class="col-lg-3 col-md-4 box-border">
                 <h3 style="padding-left: 15px;">公司信息</h3>
                 <img id="logo" src="" alt="">
                 <div class="mess company">
@@ -255,41 +264,41 @@
         </div>
         <div class="part">
             <div class="pro-part pro-detail">
-                <div class="col-lg-9">
+                <div class="col-lg-9 dbox">
                     <h3>项目详情</h3>
                     <div class="table details">
-                        <div class="col-lg-2 table-box pleft">品牌名称</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='title'></div>
-                        <div class="col-lg-2 table-box pleft">投资金额</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='money'></div>
-                        <div class="col-lg-2 table-box pleft">成立日期</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='time'></div>
-                        <div class="col-lg-2 table-box pleft">门店总数</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='count'></div>
-                        <div class="col-lg-2 table-box pleft">经营范围</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='scope'></div>
-                        <div class="col-lg-2 table-box pleft">适合人群</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='people'></div>
-                        <div class="col-lg-2 table-box pleft">加盟区域</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='area'></div>
-                        <div class="col-lg-2 table-box pleft">是否有区域授权</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='auth'></div>
-                        <div class="col-lg-2 table-box pleft">品牌发源地</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='birthplace'></div>
-                        <div class="col-lg-2 table-box pleft">合同期限</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='contract'></div>
-                        <div class="col-lg-2 table-box pleft">培训期限</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='train'></div>
-                        <div class="col-lg-2 table-box pleft">特许使用费</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='royalties'></div>
-                        <div class="col-lg-2 table-box pleft">营业条件要求</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='condition'></div>
-                        <div class="col-lg-2 table-box pleft">保证金</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='margin'></div>
-                        <div class="col-lg-2 table-box pleft">加盟费</div>
-                        <div class="col-lg-4 table-box pleft" myAttr='initial'></div>
-                        <div class="col-lg-2 table-box pleft"></div>
-                        <div class="col-lg-4 table-box pleft"></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">品牌名称</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='title'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">投资金额</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='money'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">成立日期</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='time'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">门店总数</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='count'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">经营范围</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='scope'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">适合人群</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='people'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">加盟区域</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='area'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">是否有区域授权</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='auth'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">品牌发源地</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='birthplace'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">合同期限</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='contract'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">培训期限</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='train'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">特许使用费</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='royalties'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">营业条件要求</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='condition'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">保证金</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='margin'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft">加盟费</div>
+                        <div class="col-lg-4 col-md-4 table-box pleft" myAttr='initial'></div>
+                        <div class="col-lg-2 col-md-2 table-box pleft"></div>
+                        <div class="col-lg-4 col-md-4 table-box pleft"></div>
                     </div>
                 </div>
                 <div class="detail-img"></div>
@@ -310,14 +319,14 @@
     </div>
     <div class="footer">
         <div class="footercont">
-            <div class="gywm floated">
+            <div class="gywm floated visible-lg">
                 <h4>新手帮助</h4>
                 <ul>
                     <li><a href="">商家参与</a></li>
                     <li><a href="">企业参与</a></li>
                 </ul>
             </div>
-            <div class="gywm floated">
+            <div class="gywm floated visible-lg">
                 <h4>兼职代理</h4>
                 <ul>
                     <li><a href="">找产品</a></li>
@@ -391,7 +400,7 @@
             $('title').html('小宝加盟网 '+title);
             $('.bread li').eq(1).html(dianpu.program['instudry']);
             $('.bread li').eq(2).html(title);
-            $('.box-border h4').html('【'+title+'】'+title+'诚邀加盟');
+            $('.box-border>h4').html('【'+title+'】'+title+'诚邀加盟');
 
             $('.show img').attr('src',dianpu.big[0])
 
@@ -432,7 +441,8 @@
             url: window.location.href,
             title: dianpu.program['title']+' 诚邀加盟',
             // description:$('.box-border h4').html(),
-            // image: '../images/logo.png',
+            // image: data.brand[url].index,
+            wechatQrcodeTitle:dianpu.program['title']+' 诚邀加盟',
             sites: ['qzone', 'qq', 'weibo', 'wechat']
         });
 

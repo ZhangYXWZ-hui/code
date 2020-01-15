@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="../../images/favicon.ico"/>
     <link rel="stylesheet" href="../../css/public.css">
-   
+    <link rel="stylesheet" href="../../css/media.css">
     <link rel="stylesheet" href="../../bootstrap-3.3.7/dist/css/bootstrap.min.css">
     <script src="../../js/jquery-2.2.4.js"></script>
     <script src="../../bootstrap-3.3.7/dist/js/bootstrap.min.js"></script>
@@ -20,8 +20,13 @@
             border-left: 2px solid #ddd;
         }
         .indexmenu li a {
-            width: 100px;
+            width: 100%;
             color: #fff;
+        }
+        @media(max-width:1200px){
+           .endcont h2{
+               margin-left: 0;
+           }
         }
     </style>
 </head>
@@ -30,13 +35,13 @@
     <div class="header">
         <div class="head-top">
             <div class="topcont">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                     <span class="topspan">你好</span>
                     <span class="topspan">欢迎来到小宝招商加盟网！</span>
                     <span class="topspan">新增<span class="gold">359</span>家企业，共<span
                             class="gold">5139</span>家企业，<span class="gold">6812</span>个项目</span>
                 </div>
-                <div class="col-lg-3 col-lg-offset-3">
+                <div class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-3">
                     <a class="topspan gove" href="http://www.51lick.com">小宝官网</a>
                     <span>客服热线：<span class="white">400-0282-801</span></span>
                 </div>
@@ -44,23 +49,23 @@
         </div>
         <div class="head-end">
             <div class="endcont">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-3">
                     <a href="">
                         <img src="../../images/logo.png" alt="小宝招商加盟网">
                     </a>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-2">
                     <h2>五金加盟</h2>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                     <div class="search">
-                        <input id="search" type="text" placeholder="热门搜索：餐饮加盟 服装加盟">
-                        <button>查询</button>
+                        <input class="col-lg-10 col-md-10" id="search" type="search" placeholder="热门搜索：餐饮加盟 服装加盟">
+                        <button class="col-lg-2 col-md-2">查询</button>
                     </div>
                 </div>
             </div>
             <div class="head-menu" style="background-color: orange;margin-top: 0;">
-                <div class="indexmenu"  style="width: 1200px; margin: 0 auto;">
+                <div class="indexmenu">
                     <ul>
                         <li><a id="first" href="../../index.html">首页</a></li>
                         <li><a href="../canyin/canyin.html">餐饮</a></li>
@@ -73,24 +78,24 @@
                         <li><a href="../clothing/clothing.html">服装</a></li>
                         <li><a href="../furniture/furniture.html">家具</a></li>
                         <li><a href="../textiles/textiles.html">家纺</a></li>
-                        <li><a href="../hotel/hotel.html">酒店</a></li>
+                        <li><a href="../hotel/hotel.html">酒店娱乐</a></li>
+                        <li><a href="../new/new.html">新奇特</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        
+       
     </div>
     <div class="wrap">
         <div class="left-ad fixed">
             <span>热门项目</span>
             <button>x</button>
             <img src="../../images/left-ad1.gif" alt="">
-            <img src="../..//images/left-ad2.gif" alt="">
+            <img src="../../images/left-ad2.gif" alt="">
             <img src="../../images/left-ad3.gif" alt="">
             <img src="../../images/left-ad4.gif" alt="">
             <img src="../../images/left-ad5.gif" alt="">
             <img src="../../images/left-ad6.gif" alt="">
-            <img src="../../images/left-ad7.jpg" alt="">
         </div>
         <div class="right-ad fixed">
             <span>热门项目</span>
@@ -101,7 +106,6 @@
             <img src="../../images/left-ad4.gif" alt="">
             <img src="../../images/left-ad5.gif" alt="">
             <img src="../../images/left-ad6.gif" alt="">
-            <img src="../../images/left-ad7.jpg" alt="">
         </div>
         <div class="ad flexed">
             <div class="big box">
@@ -249,14 +253,14 @@
     </div>
     <div class="footer">
         <div class="footercont">
-            <div class="gywm floated">
+            <div class="gywm floated visible-lg">
                 <h4>新手帮助</h4>
                 <ul>
                     <li><a href="">商家参与</a></li>
                     <li><a href="">企业参与</a></li>
                 </ul>
             </div>
-            <div class="gywm floated">
+            <div class="gywm floated visible-lg">
                 <h4>兼职代理</h4>
                 <ul>
                     <li><a href="">找产品</a></li>
